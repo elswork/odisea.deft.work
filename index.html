@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- MANDATORY: Declare support for both light and dark themes -->
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      document.querySelector('meta[name="color-scheme"]').content = localStorage.getItem("color-scheme") ?? "light dark";
+    } catch (e) {}
+  </script>
+  <title>La Odisea del .ia — Crónica de la Iniciativa Ciudadana Europea ECI(2026)000012</title>
+  <meta name="description" content="Relato real capítulo a capítulo sobre cómo nace la Iniciativa Ciudadana Europea ECI(2026)000012 para crear la Denominación de Origen .ia de la Inteligencia Artificial.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- MANDATORY: Purely decorative visual scroll progress bars MUST set aria-hidden="true" -->
+  <div id="progress" aria-hidden="true"></div>
+
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <a href="./" class="book-brand">
+        <span class="book-brand-badge">.ia</span>
+        <span id="brand-title" class="book-brand-title">La Odisea del .ia</span>
+      </a>
+      <div class="controls-group">
+        <label for="lang-select" class="visually-hidden" hidden>Idioma</label>
+        <select id="lang-select" class="lang-select" aria-label="Seleccionar idioma">
+          <option value="es">🇪🇸 Español (ES)</option>
+          <option value="en">🇬🇧 English (EN)</option>
+          <option value="fr">🇫🇷 Français (FR)</option>
+          <option value="it">🇮🇹 Italiano (IT)</option>
+          <option value="pt">🇵🇹 Português (PT)</option>
+          <option value="el">🇬🇷 Ελληνικά (EL)</option>
+          <option value="ro">🇷🇴 Română (RO)</option>
+          <option value="hu">🇭🇺 Magyar (HU)</option>
+        </select>
+        <button type="button" id="theme-toggle" class="theme-btn" aria-label="Cambiar tema de lectura">
+          🌙 Modo Noche
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="book-layout">
+    <aside class="chapter-sidebar" aria-labelledby="sidebar-heading">
+      <h2 id="sidebar-heading" class="sidebar-heading">Índice de Capítulos</h2>
+      <p id="sidebar-subtitle" class="sidebar-subtitle">
+        Crónica real de la Iniciativa Ciudadana Europea ECI(2026)000012
+      </p>
+      <ol id="chapter-list" class="chapter-list"></ol>
+    </aside>
+
+    <article class="chapter-reader">
+      <div class="chapter-meta">
+        <span id="chapter-pill" class="chapter-pill">Capítulo 1 de 10</span>
+        <span id="reading-time">Lectura: 4 min · Por Eloy López Sánchez</span>
+      </div>
+
+      <h1 id="chapter-title" class="chapter-title">La isla que alquiló el futuro</h1>
+      <p id="chapter-lead" class="chapter-lead">
+        Por qué la tecnología más poderosa de nuestro tiempo lleva el sello de un paraíso caribeño y cómo nació la idea de crear la Denominación de Origen .ia.
+      </p>
+
+      <div id="chapter-body" class="chapter-body"></div>
+
+      <section class="conversion-box" aria-labelledby="cta-title">
+        <h3 id="cta-title" class="conversion-title">
+          Sé parte de esta historia y ayúdanos a conseguir el millón de firmas
+        </h3>
+        <p id="cta-desc" class="conversion-desc">
+          Este relato se escribe capítulo a capítulo hasta alcanzar el millón de firmas ciudadanas que obligarán a Europa a crear la Denominación de Origen .ia.
+        </p>
+
+        <div class="conversion-grid">
+          <div class="conversion-card">
+            <h4 id="card1-title">1. Recibe el Capítulo 2 en tu correo</h4>
+            <p id="card1-desc">
+              Te enviaremos cada nuevo capítulo y el aviso directo en el instante en que se abra la urna oficial de votación.
+            </p>
+            <form id="subscribe-form" novalidate>
+              <div class="field">
+                <label id="email-label" for="email">Tu correo electrónico</label>
+                <!-- MANDATORY: Place format hints above the input so autocomplete popovers don't cover them during editing -->
+                <span id="email-hint" class="hint">Formato: nombre@ejemplo.com (sin spam, solo capítulos y aviso de firma)</span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="email-input"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-hint"
+                  aria-errormessage="email-error"
+                >
+                <div id="email-error" class="error-msg">
+                  <span aria-hidden="true">❌</span>
+                  <span id="email-error-text">Por favor, introduce una dirección de correo válida.</span>
+                </div>
+              </div>
+              <button type="submit" id="subscribe-btn" class="btn-primary">
+                Suscribirme al relato (.ia)
+              </button>
+              <div id="subscribe-feedback" class="subscribe-feedback" hidden></div>
+            </form>
+          </div>
+
+          <div class="conversion-card">
+            <h4 id="card2-title">2. Urna Oficial de la Unión Europea</h4>
+            <p id="card2-desc">
+              En España y en la UE basta con tu Nombre y DNI (lleva menos de 45 segundos). Conoce la iniciativa oficial y comprométete con el 6 de abril.
+            </p>
+            <a
+              id="eu-btn"
+              href="https://anticitera.deft.work/es/6abril/"
+              target="_blank"
+              rel="noopener"
+              class="btn-eu"
+            >
+              Ir a la Plataforma Oficial ICE →
+            </a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="eu-legal-footer">
+    <div>
+      <strong>Iniciativa Ciudadana Europea <code>ECI(2026)000012</code></strong> · Decisión de la Comisión Europea <code>C(2026) 7098 final</code>
+    </div>
+    <div>
+      <a href="https://citizens-initiative.europa.eu/initiatives/details/2026/000012_en" target="_blank" rel="noopener">Registro Oficial UE</a> ·
+      <a href="https://anticitera.deft.work" target="_blank" rel="noopener">anticitera.deft.work</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
