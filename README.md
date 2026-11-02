@@ -10,3 +10,4 @@ Sitio web estático preparado para **GitHub Pages** (`odisea.deft.work`) que alo
   - [`capitulos/en/01-the-island-that-rented-the-future.md`](file:///home/pirate/docker/odisea.deft.work/capitulos/en/01-the-island-that-rented-the-future.md): Borrador del Capítulo 1 en inglés.
 - [`index.html`](file:///home/pirate/docker/odisea.deft.work/index.html), [`styles.css`](file:///home/pirate/docker/odisea.deft.work/styles.css), [`app.js`](file:///home/pirate/docker/odisea.deft.work/app.js): Lector interactivo tipo libro digital con barra de progreso de lectura, modo claro/oscuro, selector de los 8 idiomas estratégicos (`es`, `en`, `fr`, `it`, `pt`, `el`, `ro`, `hu`) y bloque de doble conversión al final de cada capítulo.
 - [`CNAME`](file:///home/pirate/docker/odisea.deft.work/CNAME) y [`.nojekyll`](file:///home/pirate/docker/odisea.deft.work/.nojekyll): Configuración lista para GitHub Pages.
+

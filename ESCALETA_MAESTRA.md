@@ -62,3 +62,4 @@
 
 ### Capítulo 10: El 6 de abril de 2027 (La página que escribes tú)
 - **El desenlace en manos del lector:** La cuenta atrás hacia la apertura oficial de la urna el 6 de abril de 2027 y los 365 días de recogida. Este libro no termina con un punto final escrito por su autor: termina con un millón de nombres propios que decidieron que el futuro de la inteligencia artificial merecía llevar sello de calidad humana y europea.
+

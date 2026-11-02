@@ -76,3 +76,4 @@ In the next chapter, I will tell you why this entire journey began by looking ba
 
 * **Step 1 — Receive Chapter 2:** Subscribe below to receive the next chapter as soon as it is published, plus priority notification the day the official ballot box opens.
 * **Step 2 — Your Signature Builds the `.ia` Domain:** Supporting an official European Citizens' Initiative takes less than a minute via the European Commission's official platform (`https://eci.ec.europa.eu/068/public`).
+

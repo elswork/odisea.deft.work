@@ -76,3 +76,4 @@ En el próximo capítulo te contaré por qué todo este viaje empezó mirando ha
 
 * **Paso 1 — Recibe el Capítulo 2:** Suscríbete abajo para recibir el siguiente capítulo en cuanto se publique y el aviso directo el día que se abra la urna oficial.
 * **Paso 2 — Tu firma construye el dominio `.ia`:** En España y en la UE, apoyar oficialmente una Iniciativa Ciudadana Europea lleva menos de un minuto (solo requiere tu **Nombre y DNI** en la plataforma oficial de la Comisión Europea: `https://eci.ec.europa.eu/068/public`).
+
