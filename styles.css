@@ -265,7 +265,7 @@ body {
 .book-layout {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 2.25rem 1.25rem 5rem;
+  padding: 2.25rem 1.25rem 8.5rem;
   display: grid;
   grid-template-columns: 280px minmax(0, 720px);
   gap: 3rem;
@@ -360,15 +360,35 @@ body {
 }
 
 /* ==========================================================================
-   Reproductor de Audiolibro + Karaoke a la inversa (Read-Along)
+   Reproductor de Audiolibro Flotante + Karaoke a la inversa (Read-Along)
    ========================================================================== */
 .audiobook-player {
-  background-color: var(--bg-subtle);
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 2rem), 840px);
+  z-index: 950;
+  background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 0.95rem 1.15rem;
-  margin-bottom: 2rem;
+  border-radius: 14px;
+  padding: 0.8rem 1.25rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   font-family: var(--font-sans);
+}
+
+@media (max-width: 680px) {
+  .audiobook-player {
+    bottom: 0.75rem;
+    width: calc(100% - 1.2rem);
+    padding: 0.65rem 0.95rem;
+    border-radius: 12px;
+  }
+  .audiobook-hint {
+    display: none;
+  }
 }
 
 .audiobook-header {

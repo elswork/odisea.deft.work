@@ -211,7 +211,7 @@ function syncKaraokeHighlight(currentTime) {
 }
 
 function attachSentenceClickToSeek() {
-  const container = document.getElementById("chapter-body");
+  const container = document.querySelector(".chapter-reader");
   const audio = document.getElementById("chapter-audio");
   if (!container || !audio) return;
 
@@ -280,10 +280,10 @@ function renderLanguage(langCode) {
   document.getElementById("autoscroll-text").textContent = ui.autoscrollText;
 
   if (chapter) {
-    document.getElementById("reading-time").textContent =
-      `${ui.readingTimePrefix} ${chapter.reading_time} · ${ui.byAuthor}`;
-    document.getElementById("chapter-title").textContent = chapter.title;
-    document.getElementById("chapter-lead").textContent = chapter.subtitle;
+    document.getElementById("reading-time").innerHTML =
+      `${ui.readingTimePrefix} ${chapter.reading_time} · ${chapter.author_html || ui.byAuthor}`;
+    document.getElementById("chapter-title").innerHTML = chapter.title_html || chapter.title;
+    document.getElementById("chapter-lead").innerHTML = chapter.subtitle_html || chapter.subtitle;
     document.getElementById("chapter-body").innerHTML = chapter.html + ui.nextTeaser;
     activeSyncData = chapter.sync;
 
