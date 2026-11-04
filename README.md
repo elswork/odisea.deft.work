@@ -23,3 +23,4 @@ En este repositorio vamos a luchar por lograr 2 objetivos:
 -Será un formato flexible y abierto a numerosos formatos .pdf ebook ...
 -Incorporará botones para compartir por RRSS y patrocinar economicamente.
 El plato fuerte es que el sistema generará no tan solo el libro, sino que generará el audiolibro sin salir de GitHub.
+Me gustaría una especie de karaoke a la inversa, con el audiolibro reproduciéndose, el texto en lectura aparecería destacado, haciendo la lectura más cómoda.
