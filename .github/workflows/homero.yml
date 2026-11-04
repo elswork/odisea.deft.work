@@ -22,7 +22,7 @@ jobs:
       - name: Checkout motor Homero
         uses: actions/checkout@v4
         with:
-          repository: elswork/homero
+          repository: elswork/homero.deft.work
           path: .homero-engine
 
       - name: Instalar fuentes y dependencias de Homero
@@ -44,3 +44,4 @@ jobs:
             git commit -m "chore(homero): actualizar audiolibro, karaoke, EPUB y PDF"
             git push
           fi
+
