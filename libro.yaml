@@ -1,0 +1,67 @@
+# ==============================================================================
+# Configuración del Libro — Generado y procesado por el motor HOMERO
+# ==============================================================================
+libro:
+  id: "odisea-ia"
+  titulo: "La Odisea del .ia"
+  subtitulo: "Crónica real de la Iniciativa Ciudadana Europea ECI(2026)000012"
+  autor: "Eloy López Sánchez"
+  dominio: "https://odisea.deft.work"
+  expediente_ue: "ECI(2026)000012"
+  decision_ue: "C(2026) 7098 final"
+  urna_ue_url: "https://anticitera.deft.work/es/6abril/"
+  registro_ue_url: "https://citizens-initiative.europa.eu/initiatives/details/2026/000012_en"
+
+# Configuración de Patrocinio Económico (PayPal / Tarjeta)
+patrocinio:
+  habilitado: true
+  metodo: "PayPal / Tarjeta"
+  # Sustituir por el enlace definitivo de PayPal.me o botón de donación cuando esté listo
+  paypal_url: "https://www.paypal.com/donate/?business=elswork@gmail.com&currency_code=EUR"
+  cantidades_sugeridas:
+    - 5
+    - 15
+    - 50
+
+# Idiomas estratégicos y voces neuronales por defecto (edge-tts)
+idiomas:
+  es:
+    nombre: "Español"
+    bandera: "🇪🇸"
+    voz_tts: "es-ES-AlvaroNeural"
+    velocidad_tts: "+0%"
+  en:
+    nombre: "English"
+    bandera: "🇬🇧"
+    voz_tts: "en-US-ChristopherNeural"
+    velocidad_tts: "+0%"
+  fr:
+    nombre: "Français"
+    bandera: "🇫🇷"
+    voz_tts: "fr-FR-HenriNeural"
+    velocidad_tts: "+0%"
+  it:
+    nombre: "Italiano"
+    bandera: "🇮🇹"
+    voz_tts: "it-IT-DiegoNeural"
+    velocidad_tts: "+0%"
+  pt:
+    nombre: "Português"
+    bandera: "🇵🇹"
+    voz_tts: "pt-PT-DuarteNeural"
+    velocidad_tts: "+0%"
+  el:
+    nombre: "Ελληνικά"
+    bandera: "🇬🇷"
+    voz_tts: "el-GR-NestorasNeural"
+    velocidad_tts: "+0%"
+  ro:
+    nombre: "Română"
+    bandera: "🇷🇴"
+    voz_tts: "ro-RO-EmilNeural"
+    velocidad_tts: "+0%"
+  hu:
+    nombre: "Magyar"
+    bandera: "🇭🇺"
+    voz_tts: "hu-HU-TamasNeural"
+    velocidad_tts: "+0%"

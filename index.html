@@ -11,7 +11,7 @@
     } catch (e) {}
   </script>
   <title>La Odisea del .ia — Crónica de la Iniciativa Ciudadana Europea ECI(2026)000012</title>
-  <meta name="description" content="Relato real capítulo a capítulo sobre cómo nace la Iniciativa Ciudadana Europea ECI(2026)000012 para crear la Denominación de Origen .ia de la Inteligencia Artificial.">
+  <meta name="description" content="Relato interactivo y audiolibro con karaoke inverso sobre la Iniciativa Ciudadana Europea ECI(2026)000012 para crear la Denominación de Origen .ia.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,7 +25,16 @@
         <span id="brand-title" class="book-brand-title">La Odisea del .ia</span>
       </a>
       <div class="controls-group">
-        <label for="lang-select" class="visually-hidden" hidden>Idioma</label>
+        <a id="top-epub-link" href="descargas/odisea-ia-es.epub" download class="format-pill" title="Descargar libro en formato EPUB (eBook)">
+          📖 EPUB
+        </a>
+        <a id="top-pdf-link" href="descargas/odisea-ia-es.pdf" download class="format-pill" title="Descargar libro maquetado en PDF">
+          📄 PDF
+        </a>
+        <a id="top-mp3-link" href="audio/es/01-la-isla-que-alquilo-el-futuro.mp3" download class="format-pill" title="Descargar capítulo en MP3">
+          🎧 MP3
+        </a>
+        <label for="lang-select" hidden>Idioma</label>
         <select id="lang-select" class="lang-select" aria-label="Seleccionar idioma">
           <option value="es">🇪🇸 Español (ES)</option>
           <option value="en">🇬🇧 English (EN)</option>
@@ -50,6 +59,19 @@
         Crónica real de la Iniciativa Ciudadana Europea ECI(2026)000012
       </p>
       <ol id="chapter-list" class="chapter-list"></ol>
+
+      <div class="sidebar-downloads">
+        <span id="downloads-heading" class="sidebar-heading">Formatos Abiertos (Homero)</span>
+        <a id="side-epub-link" href="descargas/odisea-ia-es.epub" download class="format-pill">
+          📖 Descargar eBook (.epub)
+        </a>
+        <a id="side-pdf-link" href="descargas/odisea-ia-es.pdf" download class="format-pill">
+          📄 Descargar Libro (.pdf)
+        </a>
+        <a id="side-mp3-link" href="audio/es/01-la-isla-que-alquilo-el-futuro.mp3" download class="format-pill">
+          🎧 Descargar Audiolibro (.mp3)
+        </a>
+      </div>
     </aside>
 
     <article class="chapter-reader">
@@ -63,7 +85,93 @@
         Por qué la tecnología más poderosa de nuestro tiempo lleva el sello de un paraíso caribeño y cómo nació la idea de crear la Denominación de Origen .ia.
       </p>
 
+      <!-- Reproductor de Audiolibro + Karaoke a la inversa (Read-Along) -->
+      <section class="audiobook-player" aria-labelledby="audiobook-label">
+        <div class="audiobook-header">
+          <span id="audiobook-label" class="audiobook-badge">
+            🎧 Audiolibro con Lectura Sincronizada («Karaoke Inverso»)
+          </span>
+          <span id="audiobook-hint" class="audiobook-hint">
+            Haz clic en cualquier frase del texto para saltar a ese segundo
+          </span>
+        </div>
+
+        <!-- Above-the-fold audio element: omit loading="lazy" and use preload="metadata" -->
+        <audio
+          id="chapter-audio"
+          preload="metadata"
+          src="audio/es/01-la-isla-que-alquilo-el-futuro.mp3"
+        ></audio>
+
+        <div class="audiobook-controls">
+          <button type="button" id="play-pause-btn" class="play-btn">
+            ▶ Escuchar capítulo
+          </button>
+
+          <div class="seek-wrap">
+            <span id="current-time" class="time-label">0:00</span>
+            <input
+              type="range"
+              id="seek-slider"
+              class="seek-slider"
+              min="0"
+              max="100"
+              step="0.1"
+              value="0"
+              aria-label="Posición del audiolibro"
+            >
+            <span id="total-time" class="time-label">0:00</span>
+          </div>
+
+          <select id="speed-select" class="speed-select" aria-label="Velocidad de narración">
+            <option value="0.9">0.9x</option>
+            <option value="1" selected>1.0x</option>
+            <option value="1.15">1.15x</option>
+            <option value="1.3">1.3x</option>
+            <option value="1.5">1.5x</option>
+          </select>
+
+          <label class="autoscroll-label">
+            <input type="checkbox" id="autoscroll-toggle" checked>
+            <span id="autoscroll-text">Seguir lectura</span>
+          </label>
+        </div>
+      </section>
+
       <div id="chapter-body" class="chapter-body"></div>
+
+      <!-- Barra de Compartición RRSS y Patrocinio Económico -->
+      <section class="share-sponsor-bar" aria-label="Compartir y patrocinar">
+        <div class="share-box">
+          <h4 id="share-title">Comparte este capítulo</h4>
+          <p id="share-desc">
+            Cada persona que lee o escucha esta historia nos acerca al millón de firmas en Europa.
+          </p>
+          <div class="share-buttons">
+            <a id="share-x" href="#" target="_blank" rel="noopener" class="share-btn">𝕏 Postear</a>
+            <a id="share-wa" href="#" target="_blank" rel="noopener" class="share-btn">💬 WhatsApp</a>
+            <a id="share-tg" href="#" target="_blank" rel="noopener" class="share-btn">✈️ Telegram</a>
+            <a id="share-in" href="#" target="_blank" rel="noopener" class="share-btn">💼 LinkedIn</a>
+            <button type="button" id="share-copy" class="share-btn">🔗 Copiar enlace</button>
+          </div>
+        </div>
+
+        <div class="sponsor-box">
+          <h4 id="sponsor-title">Patrocina la Odisea (.ia)</h4>
+          <p id="sponsor-desc">
+            Impulsa de forma independiente la campaña europea y el desarrollo abierto de Homero.
+          </p>
+          <a
+            id="sponsor-btn"
+            href="https://www.paypal.com/donate/?business=elswork@gmail.com&currency_code=EUR"
+            target="_blank"
+            rel="noopener"
+            class="btn-paypal"
+          >
+            💳 Patrocinar con PayPal / Tarjeta
+          </a>
+        </div>
+      </section>
 
       <section class="conversion-box" aria-labelledby="cta-title">
         <h3 id="cta-title" class="conversion-title">
@@ -131,12 +239,13 @@
       <strong>Iniciativa Ciudadana Europea <code>ECI(2026)000012</code></strong> · Decisión de la Comisión Europea <code>C(2026) 7098 final</code>
     </div>
     <div>
+      Generado con <a href="https://github.com/elswork/homero" target="_blank" rel="noopener"><strong>Homero</strong></a> ·
       <a href="https://citizens-initiative.europa.eu/initiatives/details/2026/000012_en" target="_blank" rel="noopener">Registro Oficial UE</a> ·
       <a href="https://anticitera.deft.work" target="_blank" rel="noopener">anticitera.deft.work</a>
     </div>
   </footer>
 
+  <script src="homero-bundle.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
-
