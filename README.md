@@ -22,3 +22,4 @@ En este repositorio vamos a luchar por lograr 2 objetivos:
 -El sistema permitirá la creación de documentos markdown que en su versión web podran incorporar musica y videos.
 -Será un formato flexible y abierto a numerosos formatos .pdf ebook ...
 -Incorporará botones para compartir por RRSS y patrocinar economicamente.
+El plato fuerte es que el sistema generará no tan solo el libro, sino que generará el audiolibro sin salir de GitHub.
