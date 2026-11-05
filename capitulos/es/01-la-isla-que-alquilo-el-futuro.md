@@ -68,8 +68,6 @@ El **6 de octubre de 2026**, reunido en Estrasburgo, el Colegio de Comisarios de
 
 Este relato, que iré publicando capítulo a capítulo en **`odisea.deft.work`**, es la historia real de cómo llegamos hasta aquí, de cómo una Denominación de Origen `.ia` puede cambiar nuestra vida cotidiana y de cómo vamos a conseguir juntos ese millón de firmas.
 
-En el próximo capítulo te contaré por qué todo este viaje empezó mirando hacia un barco hundido hace dos mil años en el mar Egeo, y cómo siete desconocidos de siete países distintos nos unimos para girar la primera llave de Bruselas.
-
 ---
 
 ### Sé parte de esta historia
