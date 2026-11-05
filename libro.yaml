@@ -23,7 +23,7 @@ patrocinio:
     - 15
     - 50
 
-# Los 8 idiomas más hablados del mundo (incluyendo el Español)
+# Idiomas activos (Español e Inglés)
 # Voces neuronales de alta fidelidad (edge-tts)
 idiomas:
   es:
@@ -35,35 +35,5 @@ idiomas:
     nombre: "English"
     bandera: "🇬🇧"
     voz_tts: "en-US-ChristopherNeural"
-    velocidad_tts: "+0%"
-  zh:
-    nombre: "中文"
-    bandera: "🇨🇳"
-    voz_tts: "zh-CN-YunxiNeural"
-    velocidad_tts: "+0%"
-  hi:
-    nombre: "हिन्दी"
-    bandera: "🇮🇳"
-    voz_tts: "hi-IN-MadhurNeural"
-    velocidad_tts: "+0%"
-  ar:
-    nombre: "العربية"
-    bandera: "🇸🇦"
-    voz_tts: "ar-SA-HamedNeural"
-    velocidad_tts: "+0%"
-  fr:
-    nombre: "Français"
-    bandera: "🇫🇷"
-    voz_tts: "fr-FR-HenriNeural"
-    velocidad_tts: "+0%"
-  ru:
-    nombre: "Русский"
-    bandera: "🇷🇺"
-    voz_tts: "ru-RU-SvetlanaNeural"
-    velocidad_tts: "+0%"
-  pt:
-    nombre: "Português"
-    bandera: "🇵🇹"
-    voz_tts: "pt-PT-DuarteNeural"
     velocidad_tts: "+0%"
 
