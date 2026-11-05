@@ -23,7 +23,8 @@ patrocinio:
     - 15
     - 50
 
-# Idiomas estratégicos y voces neuronales por defecto (edge-tts)
+# Los 8 idiomas más hablados del mundo (incluyendo el Español)
+# Voces neuronales de alta fidelidad (edge-tts)
 idiomas:
   es:
     nombre: "Español"
@@ -35,34 +36,34 @@ idiomas:
     bandera: "🇬🇧"
     voz_tts: "en-US-ChristopherNeural"
     velocidad_tts: "+0%"
+  zh:
+    nombre: "中文"
+    bandera: "🇨🇳"
+    voz_tts: "zh-CN-YunxiNeural"
+    velocidad_tts: "+0%"
+  hi:
+    nombre: "हिन्दी"
+    bandera: "🇮🇳"
+    voz_tts: "hi-IN-MadhurNeural"
+    velocidad_tts: "+0%"
+  ar:
+    nombre: "العربية"
+    bandera: "🇸🇦"
+    voz_tts: "ar-SA-HamedNeural"
+    velocidad_tts: "+0%"
   fr:
     nombre: "Français"
     bandera: "🇫🇷"
     voz_tts: "fr-FR-HenriNeural"
     velocidad_tts: "+0%"
-  it:
-    nombre: "Italiano"
-    bandera: "🇮🇹"
-    voz_tts: "it-IT-DiegoNeural"
+  bn:
+    nombre: "বাংলা"
+    bandera: "🇧🇩"
+    voz_tts: "bn-IN-BashkarNeural"
     velocidad_tts: "+0%"
   pt:
     nombre: "Português"
     bandera: "🇵🇹"
     voz_tts: "pt-PT-DuarteNeural"
-    velocidad_tts: "+0%"
-  el:
-    nombre: "Ελληνικά"
-    bandera: "🇬🇷"
-    voz_tts: "el-GR-NestorasNeural"
-    velocidad_tts: "+0%"
-  ro:
-    nombre: "Română"
-    bandera: "🇷🇴"
-    voz_tts: "ro-RO-EmilNeural"
-    velocidad_tts: "+0%"
-  hu:
-    nombre: "Magyar"
-    bandera: "🇭🇺"
-    voz_tts: "hu-HU-TamasNeural"
     velocidad_tts: "+0%"
 
