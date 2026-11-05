@@ -59,7 +59,7 @@ idiomas:
   ru:
     nombre: "Русский"
     bandera: "🇷🇺"
-    voz_tts: "ru-RU-DmitryNeural"
+    voz_tts: "ru-RU-SvetlanaNeural"
     velocidad_tts: "+0%"
   pt:
     nombre: "Português"
