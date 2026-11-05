@@ -56,10 +56,10 @@ idiomas:
     bandera: "🇫🇷"
     voz_tts: "fr-FR-HenriNeural"
     velocidad_tts: "+0%"
-  bn:
-    nombre: "বাংলা"
-    bandera: "🇧🇩"
-    voz_tts: "bn-IN-BashkarNeural"
+  ru:
+    nombre: "Русский"
+    bandera: "🇷🇺"
+    voz_tts: "ru-RU-DmitryNeural"
     velocidad_tts: "+0%"
   pt:
     nombre: "Português"
