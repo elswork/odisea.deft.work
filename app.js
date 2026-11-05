@@ -551,6 +551,28 @@ const UserInvalidFallback = (() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const langSelect = document.getElementById("lang-select");
+
+  // Si existe HOMERO_BOOK.idiomas, sincronizar dinámicamente las opciones del selector
+  if (window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas && langSelect) {
+    const availableCodes = Object.keys(window.HOMERO_BOOK.idiomas);
+    if (availableCodes.length > 0) {
+      const currentVal = langSelect.value;
+      langSelect.innerHTML = "";
+      availableCodes.forEach((code) => {
+        const info = window.HOMERO_BOOK.idiomas[code];
+        const opt = document.createElement("option");
+        opt.value = code;
+        opt.textContent = `${info.bandera || ""} ${info.nombre || code} (${code.toUpperCase()})`.trim();
+        langSelect.appendChild(opt);
+      });
+      if (availableCodes.includes(currentVal)) {
+        langSelect.value = currentVal;
+      } else {
+        langSelect.value = availableCodes[0];
+      }
+    }
+  }
+
   renderLanguage(langSelect.value);
 
   langSelect.addEventListener("change", (e) => {
