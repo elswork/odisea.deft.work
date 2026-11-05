@@ -1,11 +1,11 @@
-name: Homero — Generar Audiolibro, Karaoke, EPUB y PDF
+name: Homero — Traducción, Audiolibro, Karaoke, EPUB y PDF
 
 on:
   push:
     branches:
       - main
     paths:
-      - "capitulos/**"
+      - "capitulos/es/**"
       - "libro.yaml"
   workflow_dispatch:
 
@@ -16,32 +16,24 @@ jobs:
   compilar-libro:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout odisea.deft.work
-        uses: actions/checkout@v4
-
-      - name: Checkout motor Homero
+      - name: Checkout repositorio del libro
         uses: actions/checkout@v4
         with:
-          repository: elswork/homero.deft.work
-          path: .homero-engine
+          fetch-depth: 0
 
-      - name: Instalar fuentes y dependencias de Homero
-        run: |
-          sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
-          pip install -r .homero-engine/requirements.txt
+      - name: Ejecutar motor Homero (Auto-traducción y Compilación)
+        uses: elswork/homero.deft.work@main
+        with:
+          book_dir: "."
+          translate: "true"
+          source_lang: "es"
 
-      - name: Compilar Audiolibro, Sincronización Karaoke, EPUB y PDF
-        run: |
-          python3 .homero-engine/homero.py build --book-dir .
-          rm -rf .homero-engine
-
-      - name: Guardar archivos generados en el repositorio
+      - name: Guardar traducciones, audiolibro, karaoke, EPUB y PDF en GitHub
         run: |
           git config user.name "Homero Bot (.ia)"
           git config user.email "elswork@gmail.com"
-          git add audio/ descargas/ homero-bundle.js
+          git add capitulos/ audio/ descargas/ homero-bundle.js
           if ! git diff --cached --quiet; then
-            git commit -m "chore(homero): actualizar audiolibro, karaoke, EPUB y PDF"
+            git commit -m "chore(homero): auto-traducción a 8 idiomas, audiolibro, karaoke, EPUB y PDF [skip ci]"
             git push
           fi
-
