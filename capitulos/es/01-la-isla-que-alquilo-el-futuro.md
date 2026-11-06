@@ -1,12 +1,16 @@
 ---
 capitulo: 1
 titulo: "La isla que alquiló el futuro"
-subtitulo: "Por qué la tecnología más poderosa de nuestro tiempo lleva el sello de un paraíso caribeño y cómo nació la idea de crear la Denominación de Origen .ia"
+subtitulo: "¿Por qué la tecnología más poderosa de nuestro tiempo lleva el sello de un paraíso caribeño y cómo nació la idea de crear la Denominación de Origen .ia?"
 tiempo_lectura: "4 min"
 estado: "Borrador para validación"
 ---
 
 # Capítulo 1: La isla que alquiló el futuro
+
+Lo primero y más importante, bienvenido seas, espero que este relato te resulte ameno y divertido.
+¿Por donde empiezo? Por presentarme, Me llamo Eloy López, tengo 47 años, resido desde hace 20 años en Alcorcón, pero vengo de Tarragona. Trabajo de informático y programador y soy un desastroso padre de familia, tengo la patética habilidad de no ser bueno en nada, bueno miento, hay algo que se me da bien, pensar, puedo pasar las horas muertas pensando en mis movidas y de eso trata este relato, de una idea que se me ocurrió y que tiene el potencial de cambiar el futuro de la civilización tal y como la conocemos y no es broma.
+¿Cúal es esa idea? Corria el año 2019 y andaba yo surfeando 🏄 por internet, por aquel entonces la Inteligencia Artificial ya estaba pegando fuerte y algunas empresas estaban adoptando el dominio .AI, lo cual me llamó poderosamente la atención, pensé, si existe la versión en castellano seguro que puedo registrar algun dominio con gran potencial, pero no, el dominio .IA no existe, es una lástima, para registrar un ccTLD solo existia una via (al menos que yo conociera en ese momento), debia asociarse a un territorio independiente, por ejemplo, Isla de Man se corresponde con .IM, por esa regla de tres me puse a pensar en islas, al principio busque islas españolas que empezasen con "A", pero en un momento dado se me ocurrió Anticitera y algo hizo Click en mi interior, fue como un match perfecto en mi interior, contra más lo analizaba más perfecta resultaba la idea. El ingenio de nuestros ancestros era un simbolo perfecto para 
 
 La primera vez que me hice la pregunta, pensé que la respuesta sería obvia.
 
