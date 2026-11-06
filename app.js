@@ -27,6 +27,7 @@ const UI_STRINGS = {
     sponsorTitle: "Patrocina la Odisea (.ia)",
     sponsorDesc: "Impulsa de forma independiente la campaña europea y el desarrollo abierto de Homero.",
     sponsorBtn: "💳 Patrocinar con PayPal / Tarjeta",
+    sponsorQrLabel: "Escanear para donar",
     chaptersList: [
       { num: "Capítulo 1", title: "La isla que alquiló el futuro", active: true },
       { num: "Capítulo 2", title: "El reloj sumergido en el Egeo (Por qué Anticitera)", active: false },
@@ -77,6 +78,7 @@ const UI_STRINGS = {
     sponsorTitle: "Sponsor the Odyssey (.ia)",
     sponsorDesc: "Support the independent European campaign and open-source development of Homero.",
     sponsorBtn: "💳 Sponsor via PayPal / Card",
+    sponsorQrLabel: "Scan to donate",
     chaptersList: [
       { num: "Chapter 1", title: "The Island That Rented Out the Future", active: true },
       { num: "Chapter 2", title: "The Clock Sunk in the Aegean (Why Antikythera)", active: false },
@@ -243,8 +245,16 @@ function updateSocialAndSponsorLinks(chapterTitle) {
   document.getElementById("share-in").href =
     `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
 
-  if (window.HOMERO_BOOK && window.HOMERO_BOOK.patrocinio && window.HOMERO_BOOK.patrocinio.paypal_url) {
-    document.getElementById("sponsor-btn").href = window.HOMERO_BOOK.patrocinio.paypal_url;
+  if (window.HOMERO_BOOK && window.HOMERO_BOOK.patrocinio) {
+    if (window.HOMERO_BOOK.patrocinio.paypal_url) {
+      document.getElementById("sponsor-btn").href = window.HOMERO_BOOK.patrocinio.paypal_url;
+      const qrLink = document.querySelector(".sponsor-qr a");
+      if (qrLink) qrLink.href = window.HOMERO_BOOK.patrocinio.paypal_url;
+    }
+    if (window.HOMERO_BOOK.patrocinio.qr_url) {
+      const qrImg = document.getElementById("sponsor-qr-img");
+      if (qrImg) qrImg.src = window.HOMERO_BOOK.patrocinio.qr_url;
+    }
   }
 }
 
@@ -324,6 +334,10 @@ function renderLanguage(langCode) {
   document.getElementById("sponsor-title").textContent = ui.sponsorTitle;
   document.getElementById("sponsor-desc").textContent = ui.sponsorDesc;
   document.getElementById("sponsor-btn").textContent = ui.sponsorBtn;
+  const qrLabelEl = document.getElementById("sponsor-qr-label");
+  if (qrLabelEl && ui.sponsorQrLabel) {
+    qrLabelEl.textContent = ui.sponsorQrLabel;
+  }
 
   document.getElementById("cta-title").textContent = ui.ctaTitle;
   document.getElementById("cta-desc").textContent = ui.ctaDesc;

@@ -16,8 +16,8 @@ libro:
 patrocinio:
   habilitado: true
   metodo: "PayPal / Tarjeta"
-  # Sustituir por el enlace definitivo de PayPal.me o botón de donación cuando esté listo
-  paypal_url: "https://www.paypal.com/donate/?business=elswork@gmail.com&currency_code=EUR"
+  paypal_url: "https://www.paypal.com/donate/?business=LFKA5YRJAFYR6&no_recurring=0&item_name=Marco+Aurelio+escribi%C3%B3%3A+%E2%80%9CLo+que+no+es+%C3%BAtil+para+la+colmena%2C+no+es+%C3%BAtil+para+la+abeja%E2%80%9D&currency_code=EUR"
+  qr_url: "img/paypal-qr.png"
   cantidades_sugeridas:
     - 5
     - 15
