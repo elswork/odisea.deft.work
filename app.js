@@ -49,7 +49,9 @@ const UI_STRINGS = {
     emailHint: "Formato: nombre@ejemplo.com (sin spam, solo capítulos y aviso de firma)",
     emailError: "Por favor, introduce una dirección de correo válida.",
     subscribeBtn: "Suscribirme al relato (.ia)",
-    subscribeSuccess: "¡Gracias! Te hemos registrado para recibir el Capítulo 2 y el aviso oficial de firma.",
+    subscribeLoading: "⏳ Registrando suscripción...",
+    subscribeSuccess: "✅ ¡Suscripción confirmada! Te enviaremos el Capítulo 2 y el aviso prioritario de firma.",
+    subscribeError: "❌ No se pudo registrar. Por favor, inténtalo de nuevo en unos momentos.",
     card2Title: "2. Urna Oficial de la Unión Europea",
     card2Desc: "En España y en la UE basta con tu Nombre y DNI (lleva menos de 45 segundos). Conoce la iniciativa oficial y comprométete con el 6 de abril.",
     euBtnText: "Ir a la Plataforma Oficial ICE →"
@@ -100,7 +102,9 @@ const UI_STRINGS = {
     emailHint: "Format: you@example.com (zero spam, only new chapters & ballot alert)",
     emailError: "Please enter a valid email address.",
     subscribeBtn: "Subscribe to the Chronicle (.ia)",
-    subscribeSuccess: "Thank you! You are registered to receive Chapter 2 and the official voting alert.",
+    subscribeLoading: "⏳ Registering subscription...",
+    subscribeSuccess: "✅ Subscription confirmed! We will send you Chapter 2 and the priority signing alert.",
+    subscribeError: "❌ Could not register. Please try again in a few moments.",
     card2Title: "2. Official European Union Ballot Box",
     card2Desc: "Signing an official European Citizens' Initiative takes less than 45 seconds with your national ID. Explore the official initiative and join the April 6 launch.",
     euBtnText: "Go to Official ECI Campaign →"
@@ -611,17 +615,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("subscribe-form");
   UserInvalidFallback.init(form);
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const emailInput = document.getElementById("email");
+    const subscribeBtn = document.getElementById("subscribe-btn");
+    const feedback = document.getElementById("subscribe-feedback");
+
     if (!emailInput.checkValidity()) {
       emailInput.focus();
       return;
     }
+
+    const email = emailInput.value.trim();
+    if (!email) return;
+
     const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
-    const feedback = document.getElementById("subscribe-feedback");
-    feedback.textContent = ui.subscribeSuccess;
-    feedback.hidden = false;
-    form.reset();
+    const prevBtnText = subscribeBtn.textContent;
+    subscribeBtn.disabled = true;
+    subscribeBtn.textContent = ui.subscribeLoading || "⏳...";
+    feedback.hidden = true;
+    feedback.className = "subscribe-feedback";
+
+    try {
+      const response = await fetch("https://us-central1-dominio-deft-work.cloudfunctions.net/subscribeICE", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email,
+          lang: `${activeLang} | odisea.deft.work`,
+          source: "odisea"
+        }),
+      });
+
+      if (response.ok) {
+        feedback.textContent = ui.subscribeSuccess;
+        feedback.className = "subscribe-feedback success";
+        feedback.hidden = false;
+        form.reset();
+        try {
+          localStorage.setItem("odisea_subscriber_email", email);
+        } catch (_) {}
+      } else {
+        feedback.textContent = ui.subscribeError;
+        feedback.className = "subscribe-feedback error";
+        feedback.hidden = false;
+      }
+    } catch (err) {
+      console.error("Subscription error:", err);
+      feedback.textContent = ui.subscribeError;
+      feedback.className = "subscribe-feedback error";
+      feedback.hidden = false;
+    } finally {
+      subscribeBtn.disabled = false;
+      subscribeBtn.textContent = prevBtnText;
+    }
   });
 });

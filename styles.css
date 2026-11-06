@@ -921,10 +921,25 @@ body {
 }
 
 .subscribe-feedback {
-  margin-top: 0.5rem;
-  font-size: 0.82rem;
-  color: var(--valid-color);
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.84rem;
+  border-radius: 6px;
   font-weight: 600;
+  line-height: 1.4;
+  display: block;
+}
+
+.subscribe-feedback.success {
+  background-color: rgba(46, 125, 50, 0.12);
+  color: var(--valid-color);
+  border: 1px solid var(--valid-color);
+}
+
+.subscribe-feedback.error {
+  background-color: rgba(211, 47, 47, 0.12);
+  color: var(--invalid-color);
+  border: 1px solid var(--invalid-color);
 }
 
 .eu-legal-footer {
