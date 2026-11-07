@@ -35,4 +35,9 @@ Recientemente he tenido la gran satisfacción de contactar con José María Álv
 
 ## Primeros pasos
 
-Pasaron 3 años y yo seguía con la idea en la cabeza, hasta que un día decidí que ya era hora de sacarla de mi cabeza y publicar un artículo en mi blog [deft.work](https://deft.work). El artículo se titula [«Isla Anticitera - Cuna de la inteligencia artificial»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) y publicarlo fue todo un alivio para mí.
+Pasaron 3 años y yo seguía con la idea en la cabeza, hasta que un día decidí que ya era hora de sacarla de mi cabeza y publicar un artículo en mi blog [deft.work](https://deft.work). El artículo se titula [«Isla Anticitera - Cuna de la inteligencia artificial»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) y publicarlo fue todo un alivio para mí, fue terapéutico, pero no fue suficiente. Rápidamente tuve la necesidad de seguir desarrollando la idea, por eso salieron otros dos artículos:
+
+- [Isla Anticitera: el futuro de la inteligencia artificial](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
+- [Isla Anticitera: no esperes más, reserva ahora tu dominio .ia](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)
+
+Llegados a este punto mi cabeza hizo otro «clic» y decidí que ya era hora de dar el siguiente paso, llevar mi idea al siguiente nivel. De esta forma nació el Proyecto .IA Isla Anticitera o Proyecto Anticitera para los amigos. Y tomé la decisión más trascendental de mi vida: hacer de este proyecto mi proyecto vitalicio; es decir, dedicarme a él en cuerpo y alma hasta conseguir mi propósito o, en caso de no conseguirlo en vida, dejar instrucciones para que otro lo consiga.

@@ -4,7 +4,7 @@ titulo: "The most important idea of ​​my life"
 subtitulo: "Why does the most powerful technology of our time bear the seal of a Caribbean paradise and how was the idea of ​​creating the .ia Denomination of Origin born?"
 tiempo_lectura: "5 min"
 estado: "Borrador para validación"
-fuente_hash: "1134f6ddd5ea1939"
+fuente_hash: "7620808122ee0eab"
 ---
 
 # Chapter 1: The most important idea of ​​my life
@@ -36,4 +36,9 @@ I recently had the great satisfaction of contacting José María Álvarez-Pallet
 
 ## First steps
 
-3 years passed and I still had the idea in my head, until one day I decided that it was time to get it out of my head and publish an article on my blog [deft.work](https://deft.work). The article is titled [«Isla Anticitera - Cradle of artificial intelligence»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) and publishing it was a relief for me.
+3 years passed and I still had the idea in my head, until one day I decided that it was time to get it out of my head and publish an article on my blog [deft.work](https://deft.work). The article is titled [«Isla Anticitera - Cradle of artificial intelligence»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) and publishing it was a relief for me, it was therapeutic, but it was not enough. I quickly had the need to continue developing the idea, which is why two other articles came out:
+
+- [Isla Anticitera: the future of artificial intelligence](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
+- [Isla Anticitera: don't wait any longer, reserve your .ia domain now](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)
+
+At this point my head made another "click" and I decided that it was time to take the next step, take my idea to the next level. In this way the .IA Antikythera Island Project or Antikythera Project for friends was born. And I made the most transcendental decision of my life: to make this project my lifelong project; That is, to dedicate myself body and soul to it until I achieve my goal or, if I do not achieve it in life, leave instructions for someone else to achieve it.
