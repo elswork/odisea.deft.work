@@ -6,8 +6,8 @@ Sitio web estático preparado para **GitHub Pages** (`odisea.deft.work`) que alo
 
 - [`ESCALETA_MAESTRA.md`](file:///home/pirate/docker/odisea.deft.work/ESCALETA_MAESTRA.md): Estructura editorial completa de los 10 capítulos y reglas de conversión.
 - `capitulos/`:
-  - [`capitulos/es/01-la-isla-que-alquilo-el-futuro.md`](file:///home/pirate/docker/odisea.deft.work/capitulos/es/01-la-isla-que-alquilo-el-futuro.md): Borrador del Capítulo 1 en español.
-  - [`capitulos/en/01-the-island-that-rented-the-future.md`](file:///home/pirate/docker/odisea.deft.work/capitulos/en/01-the-island-that-rented-the-future.md): Borrador del Capítulo 1 en inglés.
+  - [`capitulos/es/01-la-idea-mas-importante-de-mi-vida.md`](file:///home/pirate/docker/odisea.deft.work/capitulos/es/01-la-idea-mas-importante-de-mi-vida.md): Capítulo 1 en español.
+  - [`capitulos/en/01-la-idea-mas-importante-de-mi-vida.md`](file:///home/pirate/docker/odisea.deft.work/capitulos/en/01-la-idea-mas-importante-de-mi-vida.md): Capítulo 1 en inglés.
 - [`index.html`](file:///home/pirate/docker/odisea.deft.work/index.html), [`styles.css`](file:///home/pirate/docker/odisea.deft.work/styles.css), [`app.js`](file:///home/pirate/docker/odisea.deft.work/app.js): Lector interactivo tipo libro digital con barra de progreso de lectura, modo claro/oscuro, selector de idiomas y bloque de doble conversión al final de cada capítulo.
 - [`CNAME`](file:///home/pirate/docker/odisea.deft.work/CNAME) y [`.nojekyll`](file:///home/pirate/docker/odisea.deft.work/.nojekyll): Configuración lista para GitHub Pages.
 
