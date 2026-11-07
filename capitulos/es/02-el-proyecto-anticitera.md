@@ -45,22 +45,10 @@ Paralelamente, yo estaba intentando utilizar el dominio HNS **`.anticitera`** pa
 
 ## El mecanismo de la «Reserva Excepcional»
 
-Durante más de dos años, todas las respuestas institucionales que había recibido —desde la ICANN hasta el Gobierno de España, pasando por el mismísimo Vint Cerf— repetían el mismo dogma: para obtener un ccTLD de dos letras es un requisito sine qua non ser un Estado soberano reconocido por la ONU y listado formalmente en la norma ISO 3166-1. Siendo Anticitera una pequeña isla de apenas una treintena de habitantes censados, la vía clásica era un callejón sin salida.
-
-Pero Athena encontró la rendija en la coraza normativa: la figura jurídica de la **«Reserva Excepcional»** (*Exceptional Reservation*). Se trata de un mecanismo extraordinario de la Agencia de Mantenimiento de la ISO (ISO 3166/MA) en Ginebra que permite asignar códigos de dos letras a territorios o entidades que no son países soberanos cuando existen imperativos de interés público, cultural o institucional. Fue exactamente la fórmula con la que en su día se autorizaron dominios históricos como **`.eu`** para la Unión Europea o **`.uk`** para el Reino Unido.
+Athena encontró la rendija en la coraza normativa: la figura jurídica de la **«Reserva Excepcional»** (*Exceptional Reservation*). Se trata de un mecanismo extraordinario de la Agencia de Mantenimiento de la ISO (ISO 3166/MA) en Ginebra que permite asignar códigos de dos letras a territorios o entidades que no son países soberanos cuando existen imperativos de interés público, cultural o institucional. Fue exactamente la fórmula con la que en su día se autorizaron dominios históricos como **`.eu`** para la Unión Europea o **`.uk`** para el Reino Unido.
 
 La llave maestra, por tanto, no exigía que Anticitera declarase su independencia, sino una estrategia diplomática de dos pasos: primero, que el organismo nacional de normalización griego (ELOT) solicitase formalmente ante la ISO la reserva excepcional del código **`IA`** para el territorio de Anticitera; y segundo, que la IANA procediese a su delegación técnica en la raíz de internet.
-
-El 7 de enero de 2026 me vi redactando en griego moderno —recordando aquellas tablas y correos que manejaba años atrás en Famar— un dossier estratégico formal dirigido a las autoridades helenas de Citera y al Ministerio. Recuerdo reenviarle ese correo a mi amigo Omar con una frase que me salía del alma: *«Esto cada día se me va más de madre...»*.
 
 Pero para que Grecia y Bruselas escuchasen la propuesta de un ciudadano de a pie desde Alcorcón, hacía falta un instrumento legal de máxima jerarquía democrática. Y ese instrumento existía: la **Iniciativa Ciudadana Europea (ICE)**, el mecanismo oficial del Tratado de Lisboa que obliga a la Comisión Europea a pronunciarse y legislar si se reúne el apoyo de un millón de ciudadanos.
 
 La normativa europea establecía una condición de partida indispensable: formar un Comité Ciudadano de al menos siete personas residentes en siete Estados miembros diferentes de la Unión. Para una persona introvertida y solitaria como yo, convocar a siete personas en siete países parecía una barrera imposible de salvar.
-
-El 10 de enero volví a recurrir a mi ángel de la guardia en la red: le escribí a Chema Alonso contándole la maniobra y pidiéndole consejo para formar el Comité. Su respuesta fue un espaldarazo total: Chema no solo aplaudió el giro estratégico, sino que puso a nuestra disposición su red internacional para contactar a aliados de primer orden en Países Bajos (empezando por Richard Benjamins), Francia, Reino Unido o Serbia.
-
-La quijotada en solitario había terminado. Acababa de nacer la maquinaria de la Iniciativa Ciudadana Europea.
-
-***
-
-**En el próximo capítulo (Capítulo 3):** *El asalto a Bruselas*. El examen jurídico de la Comisión Europea, las negociaciones en Estrasburgo y el registro oficial de la ECI(2026)000012.

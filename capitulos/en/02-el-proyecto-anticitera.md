@@ -4,7 +4,7 @@ titulo: "The Antikythera project"
 subtitulo: "My lifelong project to obtain the ccTLD .ia as Denomination of Origin of Antikythera Island"
 tiempo_lectura: "7 min"
 estado: "Borrador"
-fuente_hash: "c4be969e4db1302b"
+fuente_hash: "d376fff98b01c7aa"
 ---
 
 # Chapter 2: The Antikythera Project
@@ -45,22 +45,10 @@ At the same time, I was trying to use the HNS domain **`.anticytera`** to host a
 
 ## The “Exceptional Reserve” mechanism
 
-For more than two years, all the institutional responses I had received—from ICANN to the Government of Spain, including Vint Cerf himself—repeated the same dogma: to obtain a two-letter ccTLD it is a sine qua non requirement to be a sovereign State recognized by the UN and formally listed in the ISO 3166-1 standard. Antikythera being a small island with barely thirty registered inhabitants, the classical route was a dead end.
-
-But Athena found the crack in the normative armor: the legal figure of the **«Exceptional Reservation»** (*Exceptional Reservation*). This is an extraordinary mechanism of the ISO Maintenance Agency (ISO 3166/MA) in Geneva that allows two-letter codes to be assigned to territories or entities that are not sovereign countries when there are imperatives of public, cultural or institutional interest. It was exactly the formula with which historical domains such as **`.eu`** for the European Union or **`.uk`** for the United Kingdom were authorized in its day.
+Athena found the crack in the normative armor: the legal figure of the **«Exceptional Reservation»** (*Exceptional Reservation*). This is an extraordinary mechanism of the ISO Maintenance Agency (ISO 3166/MA) in Geneva that allows two-letter codes to be assigned to territories or entities that are not sovereign countries when there are imperatives of public, cultural or institutional interest. It was exactly the formula with which historical domains such as **`.eu`** for the European Union or **`.uk`** for the United Kingdom were authorized in its day.
 
 The master key, therefore, did not require that Antikythera declare its independence, but rather a two-step diplomatic strategy: first, that the Greek national standardization body (ELOT) formally request before the ISO the exceptional reservation of the **`IA`** code for the territory of Antikythera; and second, that the IANA proceed with its technical delegation at the root of the Internet.
-
-On January 7, 2026, I found myself writing in modern Greek—remembering those tables and emails that I handled years ago in Famar—a formal strategic dossier addressed to the Hellenic authorities of Cythera and the Ministry. I remember forwarding that email to my friend Omar with a phrase that came from my soul: *«This is getting more crazy every day...»*.
 
 But for Greece and Brussels to listen to the proposal of an ordinary citizen from Alcorcón, a legal instrument of the highest democratic hierarchy was needed. And that instrument existed: the **European Citizens' Initiative (ECI)**, the official mechanism of the Lisbon Treaty that obliges the European Commission to speak out and legislate if the support of one million citizens is gathered.
 
 The European regulations established an essential starting condition: forming a Citizens' Committee of at least seven people residing in seven different Member States of the Union. For an introverted and lonely person like me, summoning seven people in seven countries seemed like an impossible barrier to overcome.
-
-On January 10, I once again turned to my guardian angel on the internet: I wrote to Chema Alonso telling him about the maneuver and asking for advice on forming the Committee. His response was a total endorsement: Chema not only applauded the strategic shift, but also made his international network available to us to contact leading allies in the Netherlands (starting with Richard Benjamins), France, the United Kingdom and Serbia.
-
-The solo quixotada was over. The machinery of the European Citizens' Initiative had just been born.
-
-***
-
-**In the next chapter (Chapter 3):** *The assault on Brussels*. The legal review of the European Commission, the negotiations in Strasbourg and the official registration of the ECI(2026)000012.
