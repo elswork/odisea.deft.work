@@ -687,6 +687,28 @@ blockquote.chapter-letter strong {
   opacity: 0.8;
 }
 
+.next-chapter-teaser {
+  margin: 2.5rem 0 1rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--brand-gold, #ffcc00);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.next-chapter-teaser strong {
+  color: var(--brand-gold-dark, #ffcc00);
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* ==========================================================================
    Barra de Compartición en RRSS y Patrocinio Económico (PayPal)
    ========================================================================== */

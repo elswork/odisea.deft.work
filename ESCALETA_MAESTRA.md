@@ -29,11 +29,10 @@
 
 ---
 
-### Capítulo 2: La isla que alquiló el futuro *(El negocio de Anguila y el salvaje oeste del `.ai`)*
-- **El hecho real:** La verdadera historia del dominio `.ai`. En 1995, la IANA repartió códigos geográficos de dos letras y a **Anguila**, un pequeño territorio británico de ultramar en el Caribe (90 km² y 15.000 habitantes), le tocó `.ai` por puro azar geográfico.
-- **La fiebre del oro digital:** Vince Cate y cómo una isla famosa por sus playas de coral y su régimen fiscal libre de impuestos empezó a ingresar decenas de millones de dólares cobrando peajes por alquilar direcciones web con las siglas de moda.
-- **La ausencia total de garantías:** Hoy una parte descomunal de la economía digital opera bajo esa bandera de conveniencia caribeña sin que nadie exija una sola auditoría de seguridad, privacidad o ética a quien paga la cuota anual.
-- **El gancho hacia el Capítulo 3:** Si en alimentación o medicina jamás aceptaríamos algo así, ¿por qué lo permitimos en la tecnología más decisiva de nuestro siglo?
+### Capítulo 2: El nacimiento del proyecto Anticitera
+- **El hecho real:** Tras la publicación del artículo en el blog en 2022 (*«Isla Anticitera - Cuna de la inteligencia artificial»*), la idea deja de ser una quimera personal en un cajón y empieza a articularse como un proyecto tangible.
+- **La construcción del proyecto:** Cómo se conceptualiza la iniciativa, el porqué definitivo de la elección de Anticitera (el primer computador analógico de la humanidad como faro ético y técnico frente al salvaje oeste digital) y los primeros pasos para convertir la idea en una causa compartida.
+- **El camino hacia Europa:** La constatación de que para cambiar las reglas del juego no basta con escribir artículos: hace falta una palanca jurídica de rango europeo, lo que conduce al descubrimiento y activación de la Iniciativa Ciudadana Europea (ICE).
 
 ---
 
