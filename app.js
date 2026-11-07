@@ -35,14 +35,14 @@ const UI_STRINGS = {
     nextTeaser: `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 2):</strong> El nacimiento del proyecto Anticitera. Cómo aquel primer artículo en el blog encendió los motores de lo que hoy es una iniciativa ciudadana oficial ante la Unión Europea.</div>`,
     ctaTitle: "Sé parte de esta historia y ayúdanos a conseguir el millón de firmas",
     ctaDesc: "Este relato se escribe capítulo a capítulo hasta alcanzar el millón de firmas ciudadanas que obligarán a Europa a crear la Denominación de Origen .ia.",
-    card1Title: "1. Recibe el Capítulo 2 en tu correo",
-    card1Desc: "Te enviaremos el Capítulo 2 («El nacimiento del proyecto Anticitera») y el aviso directo en el instante en que se abra la urna oficial de votación.",
+    card1Title: "1. Recibe el Capítulo 3 en tu correo",
+    card1Desc: "Te enviaremos el Capítulo 3 («El asalto a Bruselas») y el aviso directo en el instante en que se abra la urna oficial de votación.",
     emailLabel: "Tu correo electrónico",
     emailHint: "Formato: nombre@ejemplo.com (sin spam, solo capítulos y aviso de firma)",
     emailError: "Por favor, introduce una dirección de correo válida.",
     subscribeBtn: "Suscribirme al relato (.ia)",
     subscribeLoading: "⏳ Registrando suscripción...",
-    subscribeSuccess: "✅ ¡Suscripción confirmada! Te enviaremos el Capítulo 2 y el aviso prioritario de firma.",
+    subscribeSuccess: "✅ ¡Suscripción confirmada! Te enviaremos el Capítulo 3 y el aviso prioritario de firma.",
     subscribeError: "❌ No se pudo registrar. Por favor, inténtalo de nuevo en unos momentos.",
     card2Title: "2. Urna Oficial de la Unión Europea",
     card2Desc: "En España y en la UE basta con tu Nombre y DNI (lleva menos de 45 segundos). Conoce la iniciativa oficial y comprométete con el 6 de abril.",
@@ -80,8 +80,8 @@ const UI_STRINGS = {
     nextTeaser: `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 2):</strong> The birth of the Antikythera project. How that first blog post ignited the engines of what is now an official European Citizens' Initiative.</div>`,
     ctaTitle: "Be part of this story and help us reach one million signatures",
     ctaDesc: "This chronicle unfolds chapter by chapter to gather the one million citizen signatures needed to establish the European .ia Designation of Origin.",
-    card1Title: "1. Receive Chapter 2 in your inbox",
-    card1Desc: "We will send you Chapter 2 ('The Birth of the Antikythera Project') and a priority alert the moment the official EU ballot box opens.",
+    card1Title: "1. Receive Chapter 3 in your inbox",
+    card1Desc: "We will send you Chapter 3 ('Storming Brussels') and a priority alert the moment the official EU ballot box opens.",
     emailLabel: "Your email address",
     emailHint: "Format: you@example.com (zero spam, only new chapters & ballot alert)",
     emailError: "Please enter a valid email address.",
@@ -96,6 +96,7 @@ const UI_STRINGS = {
 };
 
 let activeLang = "es";
+let activeChapterIndex = 0;
 let activeSyncData = null;
 let lastActiveSentenceId = null;
 let lastActiveWordId = null;
@@ -247,10 +248,13 @@ function updateSocialAndSponsorLinks(chapterTitle) {
   }
 }
 
-function renderLanguage(langCode) {
+function renderLanguage(langCode, chapterIdx) {
   const effKey = getEffectiveLangKey(langCode);
   const ui = UI_STRINGS[effKey] || UI_STRINGS.es;
   activeLang = effKey;
+  if (typeof chapterIdx === "number") {
+    activeChapterIndex = chapterIdx;
+  }
   document.documentElement.lang = langCode;
 
   const audio = document.getElementById("chapter-audio");
@@ -261,7 +265,11 @@ function renderLanguage(langCode) {
 
   const bundleLang =
     window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[effKey] : null;
-  const chapter = bundleLang && bundleLang.chapters && bundleLang.chapters[0] ? bundleLang.chapters[0] : null;
+  const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+  if (activeChapterIndex >= chapters.length) {
+    activeChapterIndex = 0;
+  }
+  const chapter = chapters[activeChapterIndex] || null;
 
   document.getElementById("brand-title").textContent = ui.brandTitle;
   document.getElementById("sidebar-heading").textContent = ui.sidebarHeading;
@@ -272,7 +280,8 @@ function renderLanguage(langCode) {
   document.getElementById("side-mp3-link").textContent = ui.sideMp3;
   document.getElementById("theme-toggle").setAttribute("aria-label", ui.themeBtnLabel);
 
-  document.getElementById("chapter-pill").textContent = ui.chapterPill;
+  const chNum = chapter ? chapter.capitulo : (activeChapterIndex + 1);
+  document.getElementById("chapter-pill").textContent = effKey === "en" ? `Chapter ${chNum}` : `Capítulo ${chNum}`;
   document.getElementById("audiobook-label").textContent = ui.audiobookLabel;
   document.getElementById("audiobook-hint").textContent = ui.audiobookHint;
   document.getElementById("play-pause-btn").textContent = ui.playText;
@@ -283,7 +292,19 @@ function renderLanguage(langCode) {
       `${ui.readingTimePrefix} ${chapter.reading_time} · ${chapter.author_html || ui.byAuthor}`;
     document.getElementById("chapter-title").innerHTML = chapter.title_html || chapter.title;
     document.getElementById("chapter-lead").innerHTML = chapter.subtitle_html || chapter.subtitle;
-    document.getElementById("chapter-body").innerHTML = chapter.html + ui.nextTeaser;
+
+    let teaserHtml = "";
+    if (activeChapterIndex === 0) {
+      teaserHtml = effKey === "en"
+        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 2):</strong> The Antikythera Project. The birth of the initiative, the early tech discussions, and the discovery of the "Exceptional Reservation".</div>`
+        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 2):</strong> El proyecto Anticitera. El nacimiento de la iniciativa, el debate con los primeros gigantes tech y el descubrimiento de la «Reserva Excepcional».</div>`;
+    } else {
+      teaserHtml = effKey === "en"
+        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 3):</strong> Storming Brussels. The legal scrutiny of the European Commission, the negotiations in Strasbourg, and the official registration of ECI(2026)000012.</div>`
+        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 3):</strong> El asalto a Bruselas. El examen jurídico de la Comisión Europea, las negociaciones en Estrasburgo y el registro oficial de la ECI(2026)000012.</div>`;
+    }
+
+    document.getElementById("chapter-body").innerHTML = chapter.html + teaserHtml;
     activeSyncData = chapter.sync;
 
     audio.src = chapter.audio_url;
@@ -310,12 +331,35 @@ function renderLanguage(langCode) {
 
   const listEl = document.getElementById("chapter-list");
   listEl.innerHTML = "";
-  ui.chaptersList.forEach((ch) => {
-    const li = document.createElement("li");
-    li.className = `chapter-item ${ch.active ? "is-active" : "is-upcoming"}`;
-    li.innerHTML = `<span class="chapter-num">${ch.num}</span>${ch.title}`;
-    listEl.appendChild(li);
-  });
+  if (chapters.length > 0) {
+    chapters.forEach((ch, idx) => {
+      const li = document.createElement("li");
+      const isActive = idx === activeChapterIndex;
+      li.className = `chapter-item ${isActive ? "is-active" : "is-clickable"}`;
+      li.style.cursor = "pointer";
+      const numLabel = effKey === "en" ? `Chapter ${ch.capitulo}` : `Capítulo ${ch.capitulo}`;
+      li.innerHTML = `<span class="chapter-num">${numLabel}</span>${ch.title}`;
+      li.addEventListener("click", () => {
+        renderLanguage(activeLang, idx);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      listEl.appendChild(li);
+    });
+
+    const upcomingLi = document.createElement("li");
+    upcomingLi.className = "chapter-item is-upcoming";
+    const upNum = effKey === "en" ? "Chapter 3" : "Capítulo 3";
+    const upTitle = effKey === "en" ? "Storming Brussels (Upcoming)" : "El asalto a Bruselas (Próximamente)";
+    upcomingLi.innerHTML = `<span class="chapter-num">${upNum}</span>${upTitle}`;
+    listEl.appendChild(upcomingLi);
+  } else {
+    ui.chaptersList.forEach((ch) => {
+      const li = document.createElement("li");
+      li.className = `chapter-item ${ch.active ? "is-active" : "is-upcoming"}`;
+      li.innerHTML = `<span class="chapter-num">${ch.num}</span>${ch.title}`;
+      listEl.appendChild(li);
+    });
+  }
 
   document.getElementById("share-title").textContent = ui.shareTitle;
   document.getElementById("share-desc").textContent = ui.shareDesc;
