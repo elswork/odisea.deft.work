@@ -4,7 +4,7 @@ titulo: "The most important idea of ​​my life"
 subtitulo: "Why does the most powerful technology of our time bear the seal of a Caribbean paradise and how was the idea of ​​creating the .ia Denomination of Origin born?"
 tiempo_lectura: "5 min"
 estado: "Borrador para validación"
-fuente_hash: "4c2d38e486ac1613"
+fuente_hash: "1134f6ddd5ea1939"
 ---
 
 # Chapter 1: The most important idea of ​​my life
@@ -33,3 +33,7 @@ I recently had the great satisfaction of contacting José María Álvarez-Pallet
 > 
 > Best regards,  
 > **José M.ª**
+
+## First steps
+
+3 years passed and I still had the idea in my head, until one day I decided that it was time to get it out of my head and publish an article on my blog [deft.work](https://deft.work). The article is titled [«Isla Anticitera - Cradle of artificial intelligence»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) and publishing it was a relief for me.

@@ -32,3 +32,7 @@ Recientemente he tenido la gran satisfacción de contactar con José María Álv
 > 
 > Un cordial saludo,  
 > **José M.ª**
+
+## Primeros pasos
+
+Pasaron 3 años y yo seguía con la idea en la cabeza, hasta que un día decidí que ya era hora de sacarla de mi cabeza y publicar un artículo en mi blog [deft.work](https://deft.work). El artículo se titula [«Isla Anticitera - Cuna de la inteligencia artificial»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) y publicarlo fue todo un alivio para mí.
