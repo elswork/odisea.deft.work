@@ -31,4 +31,4 @@ Recientemente he tenido la gran satisfacción de contactar con José María Álv
 > Muchas gracias por tu mensaje y por lo que en él me detallas. Que aquel artículo de ABC haya dado lugar a una iniciativa como la tuya me da mucha alegría y te agradezco muy sinceramente que me hayas escrito para contármelo. Aprovecho además para felicitarte por ello, porque me parece especialmente necesario en estos tiempos.
 > 
 > Un cordial saludo,  
-> **José María Álvarez-Pallete**
+> **José M.ª**

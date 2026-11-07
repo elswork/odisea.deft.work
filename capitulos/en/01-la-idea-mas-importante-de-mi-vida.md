@@ -4,7 +4,7 @@ titulo: "The most important idea of ​​my life"
 subtitulo: "Why does the most powerful technology of our time bear the seal of a Caribbean paradise and how was the idea of ​​creating the .ia Denomination of Origin born?"
 tiempo_lectura: "5 min"
 estado: "Borrador para validación"
-fuente_hash: "4e6aa1586beaedb7"
+fuente_hash: "4c2d38e486ac1613"
 ---
 
 # Chapter 1: The most important idea of ​​my life
@@ -32,4 +32,4 @@ I recently had the great satisfaction of contacting José María Álvarez-Pallet
 > Thank you very much for your message and for what you detail in it. That that ABC article has given rise to an initiative like yours makes me very happy and I sincerely thank you for writing to tell me about it. I also take this opportunity to congratulate you on this, because I find it especially necessary in these times.
 > 
 > Best regards,  
-> **José María Álvarez-Pallete**
+> **José M.ª**
