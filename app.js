@@ -222,6 +222,7 @@ function attachSentenceClickToSeek() {
   if (!container || !audio) return;
 
   container.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return;
     const sentEl = e.target.closest(".hm-sentence");
     if (!sentEl || !activeSyncData) return;
     const sId = parseInt(sentEl.getAttribute("data-s"), 10);
