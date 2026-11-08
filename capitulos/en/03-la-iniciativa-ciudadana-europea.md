@@ -4,7 +4,7 @@ titulo: "The European Citizens' Initiative"
 subtitulo: "Seven keys in seven countries to force Brussels to create the .ia Denomination of Origin"
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "038fbbfd89288c75"
+fuente_hash: "d768700932b51ba6"
 ---
 
 # Chapter 3: The European Citizens' Initiative
@@ -16,8 +16,6 @@ Why would the bureaucrats of Geneva or the government of Athens listen to a rand
 And that instrument exists. It's called **European Citizens' Initiative (ECI)**.
 
 ## Beyond the click: Real direct democracy
-
-Many people confuse a European Citizens' Initiative with an online petition on platforms such as Change.org. The difference is like that between signing a napkin in a bar or signing before a notary with binding value.
 
 Signatures on the Internet usually end up in the recycling bin because they do not commit anyone; They are testimonial. Instead, the ECI is a direct democracy tool introduced by the Lisbon Treaty. If you manage to articulate a proposal within the powers of the European Union and gather the citizen support required by law, the European Commission and the European Parliament are **obliged by regulation** to formally receive you, open a legislative debate and issue a reasoned official response.
 

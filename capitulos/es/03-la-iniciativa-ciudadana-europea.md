@@ -16,8 +16,6 @@ Y ese instrumento existe. Se llama **Iniciativa Ciudadana Europea (ICE)**.
 
 ## Más allá del clic: Democracia directa de verdad
 
-Mucha gente confunde una Iniciativa Ciudadana Europea con una petición online en plataformas tipo Change.org. La diferencia es como la que hay entre firmar una servilleta en un bar o firmar ante un notario con valor vinculante. 
-
 Las firmas en internet suelen terminar en la papelera de reciclaje porque no comprometen a nadie; son testimoniales. En cambio, la ICE es una herramienta de democracia directa introducida por el Tratado de Lisboa. Si logras articular una propuesta dentro de las competencias de la Unión Europea y reúnes el apoyo ciudadano exigido por la ley, la Comisión Europea y el Parlamento Europeo están **obligados por reglamento** a recibirte formalmente, abrir un debate legislativo y emitir una respuesta oficial motivada. 
 
 Era la palanca que necesitábamos. Pero el reglamento europeo guardaba una primera trampa para evitar que cualquiera colapsara las instituciones: antes de poder recoger una sola firma, debías registrar oficialmente la iniciativa. Y para registrarla, la ley imponía un requisito que a mí me heló la sangre: el **Comité de Organizadores**.

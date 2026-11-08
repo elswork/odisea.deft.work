@@ -1,12 +1,12 @@
 ---
 capitulo: 4
-titulo: "8 de octubre: La resolución de la Unión Europea"
+titulo: "6 de octubre: La resolución de la Unión Europea"
 subtitulo: "El día en que el Colegio de Comisarios en Estrasburgo declaró legalmente viable la Denominación de Origen .ia"
 tiempo_lectura: "5 min"
 estado: "Publicado"
 ---
 
-# Capítulo 4: 8 de octubre: La resolución de la Unión Europea
+# Capítulo 4: 6 de octubre: La resolución de la Unión Europea
 
 Entre el envío de los formularios a Bruselas y la resolución oficial transcurrieron semanas de una tensa calma que se me hicieron eternas. 
 
@@ -20,7 +20,7 @@ Era una tarde cualquiera frente a la pantalla en mi casa de Alcorcón, con el ca
 
 Abrí el archivo adjunto con el corazón en un puño. 
 
-Reunido en Estrasburgo, el Colegio de Comisarios de la Unión Europea había adoptado formalmente la **Decisión de Ejecución C(2026) 7098 final**. No solo admitían a trámite nuestra propuesta; declaraban oficialmente registrada la iniciativa bajo el código legal **`ECI(2026)000012`**:
+Reunido en Estrasburgo el **6 de octubre de 2026**, el Colegio de Comisarios de la Unión Europea había adoptado formalmente la **Decisión de Ejecución C(2026) 7098 final**. No solo admitían a trámite nuestra propuesta; declaraban oficialmente registrada la iniciativa bajo el código legal **`ECI(2026)000012`**:
 
 > **«Creación del Distrito Digital Europeo (.IA) para la Gobernanza de la Inteligencia Artificial Soberana»**.
 
@@ -36,5 +36,8 @@ Haber superado el filtro jurídico de Bruselas no significaba haber ganado la gu
 
 Un millón de firmas. No retuits, no apoyos anónimos en redes sociales, sino ciudadanos de carne y hueso acreditando su identidad con su DNI o pasaporte en la urna electrónica oficial de la Comisión Europea.
 
-La pelota ya no estaba en el tejado de los burócratas de Bruselas ni en el de los diplomáticos de Atenas. La pelota acababa de caer directamente en el tejado de los ciudadanos.
+Afortunadamente, el reglamento europeo no te arroja al ruedo de la noche a la mañana. La ley nos concedía un margen de hasta seis meses desde el registro oficial para preparar el despliegue continental antes de activar la recogida. Decidí apurar ese plazo al máximo para llegar con las mejores herramientas posibles: el **6 de abril de 2027** sería el Día D, el momento exacto en que la urna electrónica comunitaria abriría sus puertas y comenzaría a correr el año decisivo para reunir el millón de voluntades.
 
+Para tratar de difundir al máximo la recogida de firmas, creé una página de encuentro para ir reclutando simpatizantes: [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
+
+Y es precisamente en ese punto en el que nos encontramos hoy: con el respaldo de la ley comunitaria en la mano, un continente entero por movilizar y la certeza de que la pelota ya no está en el tejado de los burócratas de Bruselas, sino en las manos de los ciudadanos: ciudadanos como tú, con derecho a firma y con un entorno de amistades y familia que también puede participar.

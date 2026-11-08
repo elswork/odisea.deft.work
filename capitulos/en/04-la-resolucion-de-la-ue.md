@@ -1,13 +1,13 @@
 ---
 capitulo: 4
-titulo: "October 8: The European Union resolution"
+titulo: "October 6: The European Union resolution"
 subtitulo: "The day the College of Commissioners in Strasbourg declared the Denomination of Origin legally viable."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "e497c70d7299c47d"
+fuente_hash: "86cc7b3b6e77d048"
 ---
 
-# Chapter 4: October 8: The European Union resolution
+# Chapter 4: October 6: The European Union resolution
 
 Between the sending of the forms to Brussels and the official resolution, weeks of tense calm passed that seemed eternal to me.
 
@@ -21,7 +21,7 @@ It was an ordinary afternoon in front of the screen at my house in Alcorcón, wi
 
 I opened the attachment with my heart in my mouth.
 
-Meeting in Strasbourg, the College of Commissioners of the European Union had formally adopted **Implementing Decision C(2026) 7098 final**. Not only did they accept our proposal for processing; They officially declared the initiative registered under the legal code **`ECI(2026)000012`**:
+Meeting in Strasbourg on **6 October 2026**, the College of Commissioners of the European Union had formally adopted **Implementing Decision C(2026) 7098 final**. Not only did they accept our proposal for processing; They officially declared the initiative registered under the legal code **`ECI(2026)000012`**:
 
 > **«Creation of the European Digital District (.IA) for the Governance of Sovereign Artificial Intelligence»**.
 
@@ -37,4 +37,8 @@ Having passed the legal filter of Brussels did not mean having won the war; It j
 
 One million signatures. No retweets, no anonymous support on social networks, but citizens of the flesh proving their identity with their ID or passport in the official electronic ballot box of the European Commission.
 
-The ball was no longer in the court of the bureaucrats in Brussels or the diplomats in Athens. The ball had just fallen directly into the citizens' court.
+Fortunately, the European regulation does not throw you into the ring overnight. The law granted us a margin of up to six months from official registration to prepare for continental deployment before activating collection. I decided to speed up that deadline as much as possible to arrive with the best possible tools: **April 6, 2027** would be D-Day, the exact moment in which the community electronic ballot box would open its doors and the decisive year to gather the million wills would begin to run.
+
+To try to spread the collection of signatures as much as possible, I created a meeting page to recruit supporters: [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
+
+And it is precisely at that point that we find ourselves today: with the support of the community law in hand, an entire continent to mobilize and the certainty that the ball is no longer in the court of the Brussels bureaucrats, but in the hands of citizens: citizens like you, with the right to sign and with an environment of friends and family that can also participate.

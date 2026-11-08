@@ -32,7 +32,7 @@ const UI_STRINGS = {
       { num: "Capítulo 1", title: "La idea más importante de mi vida", active: true },
       { num: "Capítulo 2", title: "El proyecto Anticitera", active: false },
       { num: "Capítulo 3", title: "La Iniciativa Ciudadana Europea", active: false },
-      { num: "Capítulo 4", title: "8 de octubre: La resolución de la Unión Europea", active: false }
+      { num: "Capítulo 4", title: "6 de octubre: La resolución de la Unión Europea", active: false }
     ],
     nextTeaser: `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 2):</strong> El proyecto Anticitera. El nacimiento de la iniciativa, el debate con los primeros gigantes tech y el descubrimiento de la «Reserva Excepcional».</div>`,
     ctaTitle: "Sé parte de esta historia y ayúdanos a conseguir el millón de firmas",
@@ -79,7 +79,7 @@ const UI_STRINGS = {
       { num: "Chapter 1", title: "The Most Important Idea of My Life", active: true },
       { num: "Chapter 2", title: "The Antikythera Project", active: false },
       { num: "Chapter 3", title: "The European Citizens' Initiative", active: false },
-      { num: "Chapter 4", title: "October 8: The European Union Resolution", active: false }
+      { num: "Chapter 4", title: "October 6: The European Union Resolution", active: false }
     ],
     nextTeaser: `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 2):</strong> The Antikythera project. The birth of the initiative, early tech discussions, and the discovery of the "Exceptional Reservation".</div>`,
     ctaTitle: "Be part of this story and help us reach one million signatures",
@@ -308,8 +308,8 @@ function renderLanguage(langCode, chapterIdx) {
         : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 3):</strong> La Iniciativa Ciudadana Europea. Siete llaves en siete países para obligar a Bruselas a crear la Denominación de Origen .ia.</div>`;
     } else if (activeChapterIndex === 2) {
       teaserHtml = effKey === "en"
-        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 4):</strong> October 8: The European Union Resolution. The legal verdict of the Strasbourg College of Commissioners and the one million signatures threshold.</div>`
-        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 4):</strong> 8 de octubre: La resolución de la Unión Europea. El veredicto del Colegio de Comisarios en Estrasburgo y el vértigo del millón de firmas.</div>`;
+        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 4):</strong> October 6: The European Union Resolution. The legal verdict of the Strasbourg College of Commissioners and the path to April 6 for the one million signatures threshold.</div>`
+        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 4):</strong> 6 de octubre: La resolución de la Unión Europea. El veredicto del Colegio de Comisarios en Estrasburgo y el horizonte del 6 de abril frente al millón de firmas.</div>`;
     } else if (activeChapterIndex === 3) {
       teaserHtml = effKey === "en"
         ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 5):</strong> The Designation of Origin the World Needs. How explaining around a bar table why a European quality mark in AI protects our work, health, and children.</div>`

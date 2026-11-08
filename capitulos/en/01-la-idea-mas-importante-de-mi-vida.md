@@ -4,12 +4,14 @@ titulo: "The most important idea of ​​my life"
 subtitulo: "Why does the most powerful technology of our time bear the seal of a Caribbean paradise and how was the idea of ​​creating the .ia Denomination of Origin born?"
 tiempo_lectura: "5 min"
 estado: "Borrador para validación"
-fuente_hash: "93d4b49c797e3180"
+fuente_hash: "00d7884cca3b43a9"
 ---
 
 # Chapter 1: The most important idea of ​​my life
 
 First and most important: welcome. I hope you find this story enjoyable and fun.
+
+We are going to make this book different from the rest, I want it to be collaborative and that several people can do their part, correcting, expanding and even publishing an entire chapter. It is published on a GitHub platform that allows just that; In any case, if you need help, ask me.
 
 Where do I start? To introduce myself: my name is Eloy López, I am 47 years old, I have lived in Alcorcón for twenty years, but I come from Tarragona. I work as a computer scientist and programmer, and I am a disastrous father. I have the pathetic ability of not being good at almost anything. Well, I lie: there is something I am good at, thinking. I can spend hours thinking about my moves. Since I was little I have always had the feeling that I thought more than the rest. This doesn't mean I'm smarter; On the contrary, I have always thought that in terms of intelligence I was one step behind average, but, thanks to that extra ability to think things through, I was capable of solving any problem that crossed my path.
 

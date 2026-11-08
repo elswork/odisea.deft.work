@@ -49,11 +49,11 @@
 
 ---
 
-### Capítulo 4: 8 de octubre: La resolución de la Unión Europea *(📝 Borrador redactado)*
+### Capítulo 4: 6 de octubre: La resolución de la Unión Europea *(✅ Publicado en producción)*
 - **La tensa espera del examen jurídico:** El filtro donde muere la inmensa mayoría de propuestas ciudadanas: los juristas de la Comisión escudriñando cada término para rechazarla si invade competencias ajenas.
-- **El veredicto de Estrasburgo (8 de octubre de 2026):** El Colegio de Comisarios de la UE aprueba formalmente la **Decisión de Ejecución C(2026) 7098 final**, registrando oficialmente la iniciativa bajo el código **`ECI(2026)000012`**: *«Creación del Distrito Digital Europeo (.IA) para la Gobernanza de la Inteligencia Artificial Soberana»*.
+- **El veredicto de Estrasburgo (6 de octubre de 2026):** El Colegio de Comisarios de la UE aprueba formalmente la **Decisión de Ejecución C(2026) 7098 final**, registrando oficialmente la iniciativa bajo el código **`ECI(2026)000012`**: *«Creación del Distrito Digital Europeo (.IA) para la Gobernanza de la Inteligencia Artificial Soberana»*.
 - **El triunfo del encaje legal:** La Comisión reconoce explícitamente que la Unión Europea posee competencias legales plenas bajo los **artículos 16, 114, 172 y 173 del TFUE** para legislar sobre la infraestructura soberana del dominio `.ia`.
-- **Del alivio al vértigo — El millón de firmas:** Superar el examen jurídico solo da permiso para entrar en la arena: el Tratado exige recoger **1.000.000 de firmas verificadas en al menos 7 países** en exactamente 365 días desde la apertura del sistema central de recogida. La pelota ya no está en los despachos de Bruselas, sino en las manos de los ciudadanos.
+- **Del alivio al vértigo — La ventana hacia el 6 de abril:** El reglamento comunitario concede hasta seis meses para preparar la campaña continental antes de iniciar la recogida. El **6 de abril de 2027** abrirá la urna electrónica comunitaria para el año decisivo de recogida del millón de firmas. Creación de la página de desembarco `anticitera.deft.work/6abril`. La pelota pasa definitivamente a las manos de los ciudadanos.
 
 ---
 
