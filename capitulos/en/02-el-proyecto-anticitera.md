@@ -4,7 +4,7 @@ titulo: "The Antikythera project"
 subtitulo: "My lifelong project to obtain the ccTLD .ia as Denomination of Origin of Antikythera Island"
 tiempo_lectura: "7 min"
 estado: "Borrador"
-fuente_hash: "d376fff98b01c7aa"
+fuente_hash: "6e05adc81453ff21"
 ---
 
 # Chapter 2: The Antikythera Project
@@ -35,7 +35,7 @@ Through the Handshake (HNS) protocol – a kind of parallel internet – and the
 
 But the euphoria blinded us a little. Our true desire was still **`.ia`**, and we discovered that in Handshake it was already in the hands of a speculator. The guy had bought it months ago for just 700 euros and now he was asking us for an exorbitant amount, ranging between 2,500 and 1,500 euros depending on the day. Arquímedes, with his algorithmic logic of expansion, encouraged me to fight for it as if it were "buying a plot of land on Gran Vía before the cars arrived."
 
-That's when my wife, Ángeles, intervened. With implacable lucidity and with his feet firmly planted on the ground, he placed a mirror in front of me. It reminded me of where we came from, the value of family effort, the health and stability that had cost us so much to achieve after very difficult years. It made no sense to empty the family coffers to enrich an opportunistic middleman for a volatile asset. And he left me a phrase etched in stone that could well be the motto of this book: *«Recover your voice... I want to talk to my husband, the one who makes me laugh and get angry, not with a machine»*.
+That's when my wife, Ángeles, intervened. With implacable lucidity and with his feet firmly planted on the ground, he placed a mirror in front of me. It reminded me of where we came from, the value of family effort, the health and stability that had cost us so much to achieve after very difficult years. It made no sense to empty the family coffers to enrich an opportunistic middleman for a volatile asset. I tried to persuade her using texts that I requested from Archimedes. It was then that he left me a phrase etched in stone that could well be the motto of our marriage: *«Recover your voice... I want to talk to my husband, the one who makes me laugh and get angry, not with a machine»*.
 
 That cure of humility and good sense was providential. Web3 had been a fascinating laboratory and had allowed us to conquer `.antikythera`, but the real `.ia` domain, the one that should serve society and honor the first computer in history, could not be born from a private trench or a speculative whim.
 
