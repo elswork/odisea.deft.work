@@ -3,19 +3,21 @@ capitulo: 2
 titulo: "The Antikythera project"
 subtitulo: "My lifelong project to obtain the ccTLD .ia as Denomination of Origin of Antikythera Island"
 tiempo_lectura: "7 min"
-estado: "Borrador"
-fuente_hash: "6e05adc81453ff21"
+estado: "Publicado"
+fuente_hash: "45caa698f184d1a8"
 ---
 
 # Chapter 2: The Antikythera Project
 
 Until that moment I had had contact with LLM-type AIs (Large Language Models), basically with ChatGPT for writing texts and articles; but it was at that moment when I discovered the potential of these AIs to develop other types of code projects.
 
-I made the decision that my blog was not the right place to develop my personal project, and I decided to create a new portal and specific domain: **anticitera.deft.work**
+I made the decision that my blog was not the right place to develop my personal project, and I decided to create a new portal and specific domain: **anticitera.deft.work**.
 
 I built it from scratch with the invaluable help of ChatGPT; We went step by step designing the website and its content. ChatGPT helped me with both the texts and the code. The result was a simple, clean, elegant and modern portal, which met all the requirements that I had for my personal project. It was a particularly pleasant experience to work hand-in-hand with an AI assistant, and I haven't stopped doing it since.
 
 The fruit of this close collaboration was the birth of [**GPT Anticitera**](https://chat.openai.com/g/g-fnpHOClUW-anticitera), a GPT specialized in the project and in the search for solutions to complex problems.
+
+![The bronze gear of the Antikythera mechanism, founding symbol of the project and avatar of the GPT Antikythera](img/anticitera.webp)
 
 ## The evolution of the Antikythera Project
 

@@ -3,7 +3,7 @@ capitulo: 2
 titulo: "El proyecto Anticitera"
 subtitulo: "Mi proyecto vitalicio para conseguir el ccTLD .ia como Denominación de Origen de Isla Anticitera"
 tiempo_lectura: "7 min"
-estado: "Borrador"
+estado: "Publicado"
 ---
 
 # Capítulo 2: El proyecto Anticitera
@@ -11,11 +11,13 @@ estado: "Borrador"
 
 Hasta ese momento yo había tenido contacto con IAs de tipo LLM (Large Language Models), básicamente con ChatGPT para la redacción de textos y artículos; pero fue en ese momento cuando descubrí el potencial de estas IAs para desarrollar otros tipos de proyectos de código.
 
-Tomé la decisión de que mi blog no era el sitio adecuado para desarrollar mi proyecto personal, y decidí crear un nuevo portal y dominio específico: **anticitera.deft.work**
+Tomé la decisión de que mi blog no era el sitio adecuado para desarrollar mi proyecto personal, y decidí crear un nuevo portal y dominio específico: **anticitera.deft.work**.
 
 Lo construí desde cero con la incalculable ayuda de ChatGPT; fuimos paso a paso diseñando la web y su contenido. ChatGPT me ayudó tanto con los textos como con el código. El resultado fue un portal sencillo, limpio, elegante y moderno, que cumplía con todos los requisitos que yo tenía para mi proyecto personal. Fue una experiencia particularmente agradable trabajar mano a mano con un asistente de IA y, desde entonces, no he dejado de hacerlo.
 
 El fruto de esta colaboración tan estrecha fue el nacimiento del [**GPT Anticitera**](https://chat.openai.com/g/g-fnpHOClUW-anticitera), un GPT especializado en el proyecto y en la búsqueda de soluciones a problemas complejos.
+
+![El engranaje de bronce del mecanismo de Anticitera, símbolo fundacional del proyecto y avatar del GPT Anticitera](img/anticitera.webp)
 
 ## La evolución del Proyecto Anticitera
 
