@@ -874,35 +874,82 @@ const UserInvalidFallback = (() => {
   return { init };
 })();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const langSelect = document.getElementById("lang-select");
+function detectBrowserLanguage(availableCodes) {
+  // 1. Parámetro en URL (?lang=xx)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const qLang = (urlParams.get("lang") || "").toLowerCase().trim();
+    if (qLang && availableCodes.includes(qLang)) {
+      return qLang;
+    }
+  } catch (e) {}
 
-  // Si existe HOMERO_BOOK.idiomas, sincronizar dinámicamente las opciones del selector
-  if (window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas && langSelect) {
-    const availableCodes = Object.keys(window.HOMERO_BOOK.idiomas);
-    if (availableCodes.length > 0) {
-      const currentVal = langSelect.value;
-      langSelect.innerHTML = "";
-      availableCodes.forEach((code) => {
-        const info = window.HOMERO_BOOK.idiomas[code];
-        const opt = document.createElement("option");
-        opt.value = code;
-        opt.textContent = `${info.bandera || ""} ${info.nombre || code} (${code.toUpperCase()})`.trim();
-        langSelect.appendChild(opt);
-      });
-      if (availableCodes.includes(currentVal)) {
-        langSelect.value = currentVal;
-      } else {
-        langSelect.value = availableCodes[0];
-      }
+  // 2. Preferencia guardada previamente por el usuario
+  try {
+    const saved = localStorage.getItem("preferred_lang");
+    if (saved && availableCodes.includes(saved)) {
+      return saved;
+    }
+  } catch (e) {}
+
+  // 3. Idioma(s) configurados en el navegador del usuario
+  const navLangs = navigator.languages && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language || navigator.userLanguage || "es"];
+
+  for (const raw of navLangs) {
+    if (!raw) continue;
+    const lower = String(raw).toLowerCase().trim();
+    // Coincidencia exacta (ej. "es", "zh")
+    if (availableCodes.includes(lower)) {
+      return lower;
+    }
+    // Coincidencia por prefijo base (ej. "es-ES" -> "es", "fr-FR" -> "fr", "zh-CN" -> "zh")
+    const base = lower.split("-")[0];
+    if (availableCodes.includes(base)) {
+      return base;
     }
   }
 
-  renderLanguage(langSelect.value);
+  // 4. Fallback por defecto: español si está disponible, o el primero disponible
+  return availableCodes.includes("es") ? "es" : availableCodes[0];
+}
 
-  langSelect.addEventListener("change", (e) => {
-    renderLanguage(e.target.value);
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("lang-select");
+
+  let availableCodes = ["es", "en", "fr", "pt", "el", "hu", "hr", "zh", "ru"];
+  if (window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas) {
+    const fromBook = Object.keys(window.HOMERO_BOOK.idiomas);
+    if (fromBook.length > 0) availableCodes = fromBook;
+  }
+
+  const initialLang = detectBrowserLanguage(availableCodes);
+
+  // Si existe HOMERO_BOOK.idiomas, sincronizar dinámicamente las opciones del selector
+  if (window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas && langSelect) {
+    langSelect.innerHTML = "";
+    availableCodes.forEach((code) => {
+      const info = window.HOMERO_BOOK.idiomas[code];
+      const opt = document.createElement("option");
+      opt.value = code;
+      opt.textContent = `${info.bandera || ""} ${info.nombre || code} (${code.toUpperCase()})`.trim();
+      langSelect.appendChild(opt);
+    });
+  }
+
+  if (langSelect) {
+    langSelect.value = initialLang;
+    langSelect.addEventListener("change", (e) => {
+      const chosen = e.target.value;
+      try {
+        localStorage.setItem("preferred_lang", chosen);
+      } catch (err) {}
+      renderLanguage(chosen);
+    });
+  }
+
+  renderLanguage(initialLang);
 
   initAudiobookPlayer();
   initThemeToggle();
