@@ -28,6 +28,8 @@ Cuando leí los fundamentos de derecho junto a Athena, se me puso la piel de gal
 
 Aquella resolución era una enmienda a la totalidad a todos los que durante años nos habían dicho que «no se podía». Ya no éramos unos soñadores en internet discutiendo con especuladores Web3 ni recogiendo firmas informales. Teníamos en la mano un acto jurídico vinculante de la Unión Europea que certificaba que la creación de la Denominación de Origen `.ia` en Anticitera era legítima, viable y de competencia comunitaria.
 
+![Soberanía digital europea: la Unión Europea reconoce su competencia legal sobre el dominio .ia y la gobernanza de la inteligencia artificial](img/ia_sovereignty.png)
+
 ## Del alivio al vértigo: El millón de firmas
 
 La euforia inicial duró exactamente lo que tardé en procesar la segunda parte del reglamento de la Unión Europea. 

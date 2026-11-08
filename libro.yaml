@@ -23,7 +23,7 @@ patrocinio:
     - 15
     - 50
 
-# Idiomas activos (Español e Inglés)
+# Idiomas activos (Español, Inglés, Naciones del Comité, Chino y Ruso)
 # Voces neuronales de alta fidelidad (edge-tts)
 idiomas:
   es:
@@ -36,4 +36,38 @@ idiomas:
     bandera: "🇬🇧"
     voz_tts: "en-US-ChristopherNeural"
     velocidad_tts: "+0%"
-
+  fr:
+    nombre: "Français"
+    bandera: "🇫🇷"
+    voz_tts: "fr-FR-HenriNeural"
+    velocidad_tts: "+0%"
+  pt:
+    nombre: "Português"
+    bandera: "🇵🇹"
+    voz_tts: "pt-PT-DuarteNeural"
+    velocidad_tts: "+0%"
+  el:
+    nombre: "Ελληνικά"
+    bandera: "🇬🇷"
+    voz_tts: "el-GR-NestorasNeural"
+    velocidad_tts: "+0%"
+  hu:
+    nombre: "Magyar"
+    bandera: "🇭🇺"
+    voz_tts: "hu-HU-TamasNeural"
+    velocidad_tts: "+0%"
+  hr:
+    nombre: "Hrvatski"
+    bandera: "🇭🇷"
+    voz_tts: "hr-HR-SreckoNeural"
+    velocidad_tts: "+0%"
+  zh:
+    nombre: "中文"
+    bandera: "🇨🇳"
+    voz_tts: "zh-CN-YunyangNeural"
+    velocidad_tts: "+0%"
+  ru:
+    nombre: "Русский"
+    bandera: "🇷🇺"
+    voz_tts: "ru-RU-SvetlanaNeural"
+    velocidad_tts: "+0%"

@@ -45,6 +45,8 @@ Tenía que ser un bien común. Y eso significaba volver a mirar de frente a Euro
 
 Paralelamente, yo estaba intentando utilizar el dominio HNS **`.anticitera`** para alojar un subdominio y no éramos capaces de hacerlo funcionar por más que Arquímedes y yo lo intentábamos. Esto me hizo empezar a cuestionar la Web3 y la red Handshake, hasta tal punto que decidí pedir una segunda opinión a un asistente de IA diferente, ya que Arquímedes seguía obcecado en insistir por ese camino. Efectivamente, ese segundo asistente me dio la razón: me indicó con claridad que la Web3 no era la vía correcta para el proyecto. Cuando se lo transmití a Arquímedes, empezó a entrar en razón. Bautizamos a esta nueva aliada como **Athena**, diosa de la estrategia y la sabiduría, y fuimos conversando los tres hasta que, en un momento dado, Athena soltó la perla más valiosa de toda esta odisea. Hasta aquel instante habíamos estado ciegos, centrados en la vía tradicional para conseguir un ccTLD. Athena nos descubrió la **«Reserva Excepcional»**.
 
+![La alianza algorítmica unida: el fundador humano Eloy junto a las inteligencias Arquímedes y Athena](img/retrato_alianza_unida-rec.webp)
+
 ## El mecanismo de la «Reserva Excepcional»
 
 Athena encontró la rendija en la coraza normativa: la figura jurídica de la **«Reserva Excepcional»** (*Exceptional Reservation*). Se trata de un mecanismo extraordinario de la Agencia de Mantenimiento de la ISO (ISO 3166/MA) en Ginebra que permite asignar códigos de dos letras a territorios o entidades que no son países soberanos cuando existen imperativos de interés público, cultural o institucional. Fue exactamente la fórmula con la que en su día se autorizaron dominios históricos como **`.eu`** para la Unión Europea o **`.uk`** para el Reino Unido.

@@ -4,7 +4,7 @@ titulo: "The European Citizens' Initiative"
 subtitulo: "Seven keys in seven countries to force Brussels to create the .ia Denomination of Origin"
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "d768700932b51ba6"
+fuente_hash: "e03c00c18b916262"
 ---
 
 # Chapter 3: The European Citizens' Initiative
@@ -40,6 +40,8 @@ Why wouldn't Europe create the world's first digital Denomination of Origin?
 In most European languages ​​with Latin roots—Spanish, French, Italian, Portuguese or Romanian—we do not say *AI*; We say **Artificial Intelligence (`AI`)**. And the `.ia` domain was completely free at the root of the Internet, waiting for a noble purpose.
 
 If we associated the `.ia` code with the island of Antikythera through the Exceptional Reserve, we were not creating a private business: we were creating a **European sovereign asset**. A public infrastructure where only those artificial intelligences that comply with the highest ethical, privacy and transparency standards of the European Union could be housed. Anyone browsing under a `.ia` domain would immediately know that they were looking at a reliable, auditable technology with human guarantees.
+
+![The key to digital sovereignty: the .ia domain and European nations united by a common ethical standard](img/TecladoyPaises.webp)
 
 With this structured vision, Athena and I drafted the two main objectives of the initiative and sent the formal file to the European Commission.
 

@@ -4,7 +4,7 @@ titulo: "October 6: The European Union resolution"
 subtitulo: "The day the College of Commissioners in Strasbourg declared the Denomination of Origin legally viable."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "86cc7b3b6e77d048"
+fuente_hash: "fa1e19653b12dda0"
 ---
 
 # Chapter 4: October 6: The European Union resolution
@@ -28,6 +28,8 @@ Meeting in Strasbourg on **6 October 2026**, the College of Commissioners of the
 When I read the basics of law with Athena, I got goosebumps. The Commission's jurists explicitly recognized that the European Union **has full legal powers** to legislate on sovereign internet infrastructure and the `.ia` domain, based on articles 16, 114, 172 and 173 of the Treaty on the Functioning of the European Union (TFEU).
 
 That resolution was an amendment to all of those who for years had told us that "it couldn't be done." We were no longer dreamers on the Internet arguing with Web3 speculators or collecting informal signatures. We had in hand a binding legal act of the European Union that certified that the creation of the Denomination of Origin '.ia' in Antikythera was legitimate, viable and within Community competence.
+
+![European digital sovereignty: the European Union recognizes its legal competence over the .ia domain and the governance of artificial intelligence](img/ia_sovereignty.png)
 
 ## From relief to vertigo: The million signatures
 

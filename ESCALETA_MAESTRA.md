@@ -12,7 +12,7 @@
 2. **La idea fuerza central — «Denominación de Origen `.ia`»:** Todo el mundo entiende qué es una Denominación de Origen: un sello que certifica **calidad intrínseca, trazabilidad y normas claras de elaboración**. Frente al salvaje oeste actual donde cualquiera usa `.ai` sin garantías bajo una bandera de conveniencia caribeña, Europa puede y debe crear la Denominación de Origen digital `.ia`.
 3. **Ritmo de lectura ágil (3–5 minutos por capítulo / ~600–1.000 palabras):** Cada capítulo abre con un hecho real sorprendente o una anécdota personal, desarrolla una pieza clave de la historia y deja un gancho nítido (*cliffhanger*) hacia el capítulo siguiente.
 4. **Doble conversión al final de cada capítulo:**
-   - **Bloque 1 (Fidelización / Newsletter):** *«Recibe el próximo capítulo en tu correo y el aviso directo el día que se abra la urna oficial»*.
+   - **Bloque 1 (Fidelización / Newsletter):** *«Apúntate a nuestra lista de correo para mantenerte informado de todas las novedades y el aviso prioritario de firma»*.
    - **Bloque 2 (Acción directa ICE):** Acceso y compromiso con la urna oficial de la Unión Europea (`Nombre + DNI` en 45 segundos).
 5. **Despliegue bilingüe prioritario (Español e Inglés):**
    - Publicación y validación directa en **Español (`es`)** e **Inglés (`en`)**, con audiolibro neuronal de alta fidelidad (`es-ES-AlvaroNeural` y `en-US-ChristopherNeural`) y karaoke inverso sincronizado al milisegundo mediante el motor Homero.

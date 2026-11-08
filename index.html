@@ -42,8 +42,15 @@
         </a>
         <label for="lang-select" hidden>Idioma</label>
         <select id="lang-select" class="lang-select" aria-label="Seleccionar idioma">
-          <option value="es">🇪🇸 Español (ES)</option>
-          <option value="en">🇬🇧 English (EN)</option>
+          <option value="es">🇪🇸 Español</option>
+          <option value="en">🇬🇧 English</option>
+          <option value="fr">🇫🇷 Français</option>
+          <option value="pt">🇵🇹 Português</option>
+          <option value="el">🇬🇷 Ελληνικά</option>
+          <option value="hu">🇭🇺 Magyar</option>
+          <option value="hr">🇭🇷 Hrvatski</option>
+          <option value="zh">🇨🇳 中文</option>
+          <option value="ru">🇷🇺 Русский</option>
         </select>
         <button type="button" id="theme-toggle" class="theme-btn" aria-label="Cambiar tema de lectura">
           🌙 Modo Noche
@@ -178,16 +185,16 @@
 
         <div class="conversion-grid">
           <div class="conversion-card">
-            <h4 id="card1-title">1. Recibe el Capítulo 2 en tu correo</h4>
+            <h4 id="card1-title">1. Apúntate a nuestra lista de correo</h4>
             <p id="card1-desc">
-              Te enviaremos cada nuevo capítulo y el aviso directo en el instante en que se abra la urna oficial de
-              votación.
+              Te mantendremos informado de todas las novedades de la iniciativa, nuevos capítulos y el aviso directo en
+              el instante en que se abra la urna oficial de votación.
             </p>
             <form id="subscribe-form" novalidate>
               <div class="field">
                 <label id="email-label" for="email">Tu correo electrónico</label>
                 <!-- MANDATORY: Place format hints above the input so autocomplete popovers don't cover them during editing -->
-                <span id="email-hint" class="hint">Formato: nombre@ejemplo.com (sin spam, solo capítulos y aviso de
+                <span id="email-hint" class="hint">Formato: nombre@ejemplo.com (sin spam, solo novedades y aviso de
                   firma)</span>
                 <input type="email" id="email" name="email" class="email-input" required autocomplete="email"
                   aria-describedby="email-hint" aria-errormessage="email-error">
@@ -197,7 +204,7 @@
                 </div>
               </div>
               <button type="submit" id="subscribe-btn" class="btn-primary">
-                Suscribirme al relato (.ia)
+                Apuntarme a la lista (.ia)
               </button>
               <div id="subscribe-feedback" class="subscribe-feedback" hidden></div>
             </form>

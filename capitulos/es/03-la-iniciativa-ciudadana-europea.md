@@ -40,6 +40,8 @@ En la mayoría de lenguas europeas de raíz latina —español, francés, italia
 
 Si asociábamos el código `.ia` a la isla de Anticitera mediante la Reserva Excepcional, no estábamos creando un negocio privado: estábamos creando un **activo soberano europeo**. Una infraestructura pública donde solo podrían alojarse aquellas inteligencias artificiales que cumpliesen con los más altos estándares éticos, de privacidad y de transparencia de la Unión Europea. Quien navegase bajo un dominio `.ia` sabría de inmediato que estaba ante una tecnología confiable, auditable y con garantías humanas.
 
+![La tecla de la soberanía digital: el dominio .ia y las naciones europeas unidas por un estándar ético común](img/TecladoyPaises.webp)
+
 Con esa visión estructurada, Athena y yo redactamos los dos grandes objetivos de la iniciativa y enviamos el expediente formal a la Comisión Europea. 
 
 Empezaba la cuenta atrás. Estábamos a punto de descubrir si los juristas de Bruselas aplastarían nuestro sueño bajo una montaña de tecnicismos o si, por primera vez en la historia, Europa se atrevería a desafiar el mapa de Internet.

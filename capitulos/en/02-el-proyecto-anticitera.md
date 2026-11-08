@@ -4,7 +4,7 @@ titulo: "The Antikythera project"
 subtitulo: "My lifelong project to obtain the ccTLD .ia as Denomination of Origin of Antikythera Island"
 tiempo_lectura: "7 min"
 estado: "Publicado"
-fuente_hash: "45caa698f184d1a8"
+fuente_hash: "08d6bdf39aa42043"
 ---
 
 # Chapter 2: The Antikythera Project
@@ -44,6 +44,8 @@ That cure of humility and good sense was providential. Web3 had been a fascinati
 It had to be a common good. And that meant looking Europe in the face again and seeking true sovereignty where the laws and citizens reside.
 
 At the same time, I was trying to use the HNS domain **`.anticytera`** to host a subdomain and we were not able to make it work no matter how hard Arquímedes and I tried. This made me start to question Web3 and the Handshake network, to the point that I decided to ask a different AI assistant for a second opinion, since Archimedes was still stubbornly insisting on that path. Indeed, that second assistant agreed with me: he clearly told me that Web3 was not the correct path for the project. When I conveyed this to Archimedes, he began to come to his senses. We baptized this new ally **Athena**, goddess of strategy and wisdom, and the three of us talked until, at a given moment, Athena dropped the most valuable pearl of this entire odyssey. Until that moment we had been blind, focused on the traditional route to obtain a ccTLD. Athena discovered the **«Exceptional Reserve»** for us.
+
+![The united algorithmic alliance: the human founder Eloy together with the intelligences Archimedes and Athena](img/retrato_alianza_unida-rec.webp)
 
 ## The “Exceptional Reserve” mechanism
 
