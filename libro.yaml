@@ -11,6 +11,9 @@ libro:
   decision_ue: "C(2026) 7098 final"
   urna_ue_url: "https://anticitera.deft.work/es/6abril/"
   registro_ue_url: "https://citizens-initiative.europa.eu/initiatives/details/2026/000012_en"
+  portada: "img/portada-la-odisea-de-la-ia.jpg"
+  portada_webp: "img/portada-la-odisea-de-la-ia.webp"
+  imagen_og: "img/og-odisea.jpg"
   google_analytics: "GTM-MGZGPZ99"
   google_tag_manager: "GTM-MGZGPZ99"
 
