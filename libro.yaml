@@ -11,6 +11,14 @@ libro:
   decision_ue: "C(2026) 7098 final"
   urna_ue_url: "https://anticitera.deft.work/es/6abril/"
   registro_ue_url: "https://citizens-initiative.europa.eu/initiatives/details/2026/000012_en"
+  google_analytics: "GTM-MGZGPZ99"
+  google_tag_manager: "GTM-MGZGPZ99"
+
+# Configuración de Analítica Web (Google Analytics / Google Tag Manager)
+analitica:
+  habilitado: true
+  google_tag_manager_id: "GTM-MGZGPZ99"
+  google_analytics_id: "GTM-MGZGPZ99"
 
 # Configuración de Patrocinio Económico (PayPal / Tarjeta)
 patrocinio:
