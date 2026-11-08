@@ -1032,3 +1032,29 @@ blockquote.chapter-letter strong {
 .eu-legal-footer a {
   color: var(--brand-primary);
 }
+
+/* Ilustraciones editoriales dentro de los capítulos */
+.chapter-figure {
+  margin: 2.25rem 0;
+  text-align: center;
+}
+
+.chapter-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  display: block;
+  margin: 0 auto;
+}
+
+.chapter-figure figcaption {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.4;
+}
+

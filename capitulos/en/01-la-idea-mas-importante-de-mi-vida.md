@@ -3,8 +3,8 @@ capitulo: 1
 titulo: "The most important idea of ​​my life"
 subtitulo: "Why does the most powerful technology of our time bear the seal of a Caribbean paradise and how was the idea of ​​creating the .ia Denomination of Origin born?"
 tiempo_lectura: "5 min"
-estado: "Borrador para validación"
-fuente_hash: "00d7884cca3b43a9"
+estado: "Publicado"
+fuente_hash: "73aec0a30ffc747d"
 ---
 
 # Chapter 1: The most important idea of ​​my life
@@ -17,7 +17,9 @@ Where do I start? To introduce myself: my name is Eloy López, I am 47 years old
 
 And that's what this story is about: an idea that occurred to me that has the potential to change the future of civilization as we know it. And I'm not exaggerating.
 
-What is that idea? The year was 2019 and I was surfing 🏄 on the internet. At that time, artificial intelligence was already hitting hard and some companies were beginning to adopt the **`.ai`** domain, which caught my attention. I thought: if there is an English version, surely in Spanish I can register a domain with great potential. But no: the domain **`.ia`** does not exist. A pity. To register a ccTLD (special two-letter domain) there was only one way (at least that I knew of at the time): it had to be associated with an independent geographic territory. For example, Isle of Man corresponds to `.im`. Because of that rule of three, I started looking for islands. At first I looked for Spanish islands that began with "A", but at one point Antikythera occurred to me and something "clicked" in my head. It was an absolute crush: the more I analyzed it, the more perfect the idea became. Antikythera Island is the place where in 1901 some divers found the remains of a Roman ship, among whose remains the Antikythera mechanism was found, a device of our ancestors that is considered the first analog computer in history. The mechanism and its creators are the perfect symbol for modern artificial intelligence. But well, this was still a nice chimera in my head. Impossible, you say? «Hold my cubata»... and thus began the Odyssey of the `.ia`.
+What is that idea? The year was 2019 and I was surfing 🏄 on the internet. At that time, artificial intelligence was already hitting hard and some companies were beginning to adopt the **`.ai`** domain, which caught my attention. I thought: if there is an English version, surely in Spanish I can register a domain with great potential. But no: the domain **`.ia`** does not exist. A pity. To register a ccTLD (special two-letter domain) there was only one way (at least that I knew of at the time): it had to be associated with an independent geographic territory. For example, Isle of Man corresponds to `.im`. Because of that rule of three, I started looking for islands. At first I looked for Spanish islands that began with "A", but at one point Antikythera occurred to me and something "clicked" in my head. It was an absolute crush: the more I analyzed it, the more perfect the idea became. Antikythera Island is the place where in 1901 some divers found the remains of a Roman ship, inside which the Antikythera mechanism was found, a device of our ancestors that is considered the first analog computer in history. The mechanism and its creators are the perfect symbol for modern artificial intelligence. But well, this was still a nice chimera in my head. Impossible, you say? «Hold my cubata»... and thus began the Odyssey of the `.ia`.
+
+![The wreck of Antikythera: sponge divers rescuing the remains and gears of the first analog computer in history](img/PecioAnticitera.webp)
 
 ---
 
@@ -38,7 +40,7 @@ I recently had the great satisfaction of contacting José María Álvarez-Pallet
 
 ## First steps
 
-3 years passed and I still had the idea in my head, until one day I decided that it was time to get it out of my head and publish an article on my blog [deft.work](https://deft.work). The article is titled [«Isla Anticitera - Cradle of artificial intelligence»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) and publishing it was a relief for me, it was therapeutic, but it was not enough. Just a few months later two other articles came out almost like shots from a machine gun:
+Three years passed and I still had the idea in my head, until one day I decided that it was time to get it out of my head and publish an article on my blog [deft.work](https://deft.work). The article is titled [«Isla Anticitera - Cradle of artificial intelligence»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) and publishing it was a relief for me, it was therapeutic, but it was not enough. Just a few months later two other articles came out almost like shots from a machine gun:
 
 - [Isla Anticitera: the future of artificial intelligence](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
 - [Isla Anticitera: don't wait any longer, reserve your .ia domain now](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)

@@ -3,7 +3,7 @@ capitulo: 1
 titulo: "La idea más importante de mi vida"
 subtitulo: "¿Por qué la tecnología más poderosa de nuestro tiempo lleva el sello de un paraíso caribeño y cómo nació la idea de crear la Denominación de Origen .ia?"
 tiempo_lectura: "5 min"
-estado: "Borrador para validación"
+estado: "Publicado"
 ---
 
 # Capítulo 1: La idea más importante de mi vida
@@ -16,7 +16,9 @@ Vamos a hacer este libro diferente al resto, deseo que sea colaborativo y que va
 
 Y de eso trata este relato: de una idea que se me ocurrió y que tiene el potencial de cambiar el futuro de la civilización tal y como la conocemos. Y no exagero.
 
-¿Cuál es esa idea? Corría el año 2019 y andaba yo surfeando 🏄 por internet. Por aquel entonces la inteligencia artificial ya estaba pegando fuerte y algunas empresas empezaban a adoptar el dominio **`.ai`**, lo cual me llamó poderosamente la atención. Pensé: si existe la versión en inglés, seguro que en castellano puedo registrar algún dominio con gran potencial. Pero no: el dominio **`.ia`** no existe. Una lástima. Para registrar un ccTLD (dominio especial de dos letras) solo existía una vía (al menos que yo conociera en ese momento): debía asociarse a un territorio geográfico independiente. Por ejemplo, la Isla de Man se corresponde con `.im`. Por esa regla de tres, me puse a buscar islas. Al principio busqué islas españolas que empezasen por «A», pero en un momento dado se me ocurrió Anticitera y algo hizo «clic» en mi cabeza. Fue un flechazo absoluto: cuanto más lo analizaba, más perfecta resultaba la idea. Isla Anticitera es el lugar donde en 1901 unos buzos encontraron los restos de una nave romana, entre cuyos restos se halló el mecanismo de Anticitera, un ingenio de nuestros ancestros que es considerado el primer computador analógico de la historia. El mecanismo y sus creadores son el símbolo perfecto para la moderna inteligencia artificial. Pero bueno, esto no dejaba de ser una bonita quimera en mi cabeza. ¿Imposible, dices? «Sujétame el cubata»... y así comenzó la Odisea del `.ia`.
+¿Cuál es esa idea? Corría el año 2019 y andaba yo surfeando 🏄 por internet. Por aquel entonces la inteligencia artificial ya estaba pegando fuerte y algunas empresas empezaban a adoptar el dominio **`.ai`**, lo cual me llamó poderosamente la atención. Pensé: si existe la versión en inglés, seguro que en castellano puedo registrar algún dominio con gran potencial. Pero no: el dominio **`.ia`** no existe. Una lástima. Para registrar un ccTLD (dominio especial de dos letras) solo existía una vía (al menos que yo conociera en ese momento): debía asociarse a un territorio geográfico independiente. Por ejemplo, la Isla de Man se corresponde con `.im`. Por esa regla de tres, me puse a buscar islas. Al principio busqué islas españolas que empezasen por «A», pero en un momento dado se me ocurrió Anticitera y algo hizo «clic» en mi cabeza. Fue un flechazo absoluto: cuanto más lo analizaba, más perfecta resultaba la idea. Isla Anticitera es el lugar donde en 1901 unos buzos encontraron los restos de una nave romana, en cuyo interior se halló el mecanismo de Anticitera, un ingenio de nuestros ancestros que es considerado el primer computador analógico de la historia. El mecanismo y sus creadores son el símbolo perfecto para la moderna inteligencia artificial. Pero bueno, esto no dejaba de ser una bonita quimera en mi cabeza. ¿Imposible, dices? «Sujétame el cubata»... y así comenzó la Odisea del `.ia`.
+
+![El pecio de Anticitera: buceadores de esponjas rescatando los restos y engranajes del primer computador analógico de la historia](img/PecioAnticitera.webp)
 
 ---
 
@@ -37,7 +39,7 @@ Recientemente he tenido la gran satisfacción de contactar con José María Álv
 
 ## Primeros pasos
 
-Pasaron 3 años y yo seguía con la idea en la cabeza, hasta que un día decidí que ya era hora de sacarla de mi cabeza y publicar un artículo en mi blog [deft.work](https://deft.work). El artículo se titula [«Isla Anticitera - Cuna de la inteligencia artificial»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) y publicarlo fue todo un alivio para mí, fue terapéutico, pero no fue suficiente. Apenas unos meses más tarde salieron otros dos artículos casi como disparos de una ametralladora:
+Pasaron tres años y yo seguía con la idea en la cabeza, hasta que un día decidí que ya era hora de sacarla de mi cabeza y publicar un artículo en mi blog [deft.work](https://deft.work). El artículo se titula [«Isla Anticitera - Cuna de la inteligencia artificial»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) y publicarlo fue todo un alivio para mí, fue terapéutico, pero no fue suficiente. Apenas unos meses más tarde salieron otros dos artículos casi como disparos de una ametralladora:
 
 - [Isla Anticitera: el futuro de la inteligencia artificial](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
 - [Isla Anticitera: no esperes más, reserva ahora tu dominio .ia](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)
