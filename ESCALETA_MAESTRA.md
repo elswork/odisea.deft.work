@@ -1,4 +1,4 @@
-# La Odisea del `.ia` — Escaleta Maestra del Relato (`odisea.deft.work`)
+# La Odisea de la `.IA` — Escaleta Maestra del Relato (`odisea.deft.work`)
 
 > **Subtítulo:** *Crónica real de cómo un grupo de ciudadanos europeos decidió crear la Denominación de Origen de la Inteligencia Artificial.*  
 > **Autor / Voz narrativa:** Eloy López Sánchez (Representante Oficial de la Iniciativa Ciudadana Europea `ECI(2026)000012`).  
