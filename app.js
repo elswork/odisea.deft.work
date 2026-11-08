@@ -4,7 +4,7 @@
 
 const UI_STRINGS = {
   es: {
-    brandTitle: "La Odisea del .ia",
+    brandTitle: "La Odisea de la .IA",
     sidebarHeading: "Índice de Capítulos",
     sidebarSubtitle: "Crónica real de la Iniciativa Ciudadana Europea ECI(2026)000012",
     downloadsHeading: "Formatos Abiertos (Homero)",
@@ -51,7 +51,7 @@ const UI_STRINGS = {
     euBtnText: "Ir a la Plataforma Oficial ICE →"
   },
   en: {
-    brandTitle: "The .ia Odyssey",
+    brandTitle: "The .IA Odyssey",
     sidebarHeading: "Chapter Index",
     sidebarSubtitle: "True chronicle of European Citizens' Initiative ECI(2026)000012",
     downloadsHeading: "Open Formats (Homero)",
@@ -98,7 +98,7 @@ const UI_STRINGS = {
     euBtnText: "Go to Official ECI Campaign →"
   },
   fr: {
-    brandTitle: "L'Odyssée du .ia",
+    brandTitle: "L'Odyssée de la .IA",
     sidebarHeading: "Index des chapitres",
     sidebarSubtitle: "Chronique réelle de l'Initiative Citoyenne Européenne ECI(2026)000012",
     downloadsHeading: "Formats Ouverts (Homero)",
@@ -136,7 +136,7 @@ const UI_STRINGS = {
     euBtnText: "Accéder à la plateforme ICE →"
   },
   pt: {
-    brandTitle: "A Odisseia do .ia",
+    brandTitle: "A Odisseia da .IA",
     sidebarHeading: "Índice de Capítulos",
     sidebarSubtitle: "Crónica real da Iniciativa de Cidadania Europeia ECI(2026)000012",
     downloadsHeading: "Formatos Abertos (Homero)",
@@ -174,7 +174,7 @@ const UI_STRINGS = {
     euBtnText: "Ir para a Plataforma Oficial ICE →"
   },
   el: {
-    brandTitle: "Η Οδύσσεια του .ia",
+    brandTitle: "Η Οδύσσεια της .ΙΑ",
     sidebarHeading: "Ευρετήριο Κεφαλαίων",
     sidebarSubtitle: "Πραγματικό χρονικό της Ευρωπαϊκής Πρωτοβουλίας Πολιτών ECI(2026)000012",
     downloadsHeading: "Ανοιχτές Μορφές (Homero)",
@@ -212,7 +212,7 @@ const UI_STRINGS = {
     euBtnText: "Μετάβαση στην Επίσημη Πλατφόρμα ECI →"
   },
   hu: {
-    brandTitle: "A .ia Odüsszeia",
+    brandTitle: "A .IA Odüsszeia",
     sidebarHeading: "Fejezetjegyzék",
     sidebarSubtitle: "Az ECI(2026)000012 európai polgári kezdeményezés valós krónikája",
     downloadsHeading: "Nyílt formátumok (Homero)",
@@ -250,7 +250,7 @@ const UI_STRINGS = {
     euBtnText: "Ugrás a Hivatalos ECI oldalra →"
   },
   hr: {
-    brandTitle: "Odiseja .ia",
+    brandTitle: "Odiseja .IA",
     sidebarHeading: "Indeks poglavlja",
     sidebarSubtitle: "Stvarna kronika Europske građanske inicijative ECI(2026)000012",
     downloadsHeading: "Otvoreni formati (Homero)",
@@ -288,7 +288,7 @@ const UI_STRINGS = {
     euBtnText: "Idi na službenu ECI platformu →"
   },
   zh: {
-    brandTitle: ".ia 史诗之程",
+    brandTitle: ".IA 奥德赛",
     sidebarHeading: "章节目录",
     sidebarSubtitle: "欧洲公民倡议 ECI(2026)000012 真实记录",
     downloadsHeading: "开放格式 (Homero)",
@@ -326,7 +326,7 @@ const UI_STRINGS = {
     euBtnText: "前往欧盟官方 ECI 平台 →"
   },
   ru: {
-    brandTitle: "Одиссея .ia",
+    brandTitle: "Одиссея .IA",
     sidebarHeading: "Оглавление глав",
     sidebarSubtitle: "Реальная хроника Европейской гражданской инициативы ECI(2026)000012",
     downloadsHeading: "Открытые форматы (Homero)",
@@ -494,7 +494,7 @@ function attachSentenceClickToSeek() {
 
 function updateSocialAndSponsorLinks(chapterTitle) {
   const pageUrl = window.location.href.split("#")[0];
-  const shareText = `${chapterTitle} — La Odisea del .ia (Iniciativa Ciudadana Europea ECI(2026)000012)`;
+  const shareText = `${chapterTitle} — La Odisea de la .IA (Iniciativa Ciudadana Europea ECI(2026)000012)`;
 
   document.getElementById("share-x").href =
     `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`;
