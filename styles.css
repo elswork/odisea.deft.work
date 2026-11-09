@@ -690,24 +690,94 @@ blockquote.chapter-letter strong {
 
 .next-chapter-teaser {
   margin: 2.5rem 0 1rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.35rem 1.6rem;
   background-color: var(--bg-subtle);
   border: 1px solid var(--border-color);
   border-left: 4px solid var(--brand-gold, #ffcc00);
-  border-radius: 8px;
+  border-radius: 10px;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-main);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.next-chapter-teaser strong {
+.next-chapter-teaser.is-clickable {
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.next-chapter-teaser.is-clickable:hover,
+.next-chapter-teaser.is-clickable:focus-visible {
+  background-color: var(--bg-surface-elevated, #ffffff);
+  border-color: var(--brand-gold, #ffcc00);
+  border-left-width: 6px;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+[data-theme="dark"] .next-chapter-teaser.is-clickable:hover,
+[data-theme="dark"] .next-chapter-teaser.is-clickable:focus-visible {
+  background-color: #1a2234;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.next-chapter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.next-chapter-header strong {
   color: var(--brand-gold-dark, #ffcc00);
-  display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0;
   font-size: 0.88rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.next-chapter-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--brand-blue, #003399);
+  background: rgba(0, 51, 153, 0.08);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .next-chapter-cta-badge {
+  color: var(--brand-gold, #ffcc00);
+  background: rgba(255, 204, 0, 0.12);
+}
+
+.next-chapter-teaser.is-clickable:hover .next-chapter-cta-badge {
+  background: var(--brand-blue, #003399);
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+[data-theme="dark"] .next-chapter-teaser.is-clickable:hover .next-chapter-cta-badge {
+  background: var(--brand-gold, #ffcc00);
+  color: #0b1120;
+}
+
+.next-chapter-teaser .upcoming-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-hover, rgba(148, 163, 184, 0.15));
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
 }
 
 /* ==========================================================================

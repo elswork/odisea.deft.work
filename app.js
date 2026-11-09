@@ -34,7 +34,7 @@ const UI_STRINGS = {
       { num: "Capítulo 3", title: "La Iniciativa Ciudadana Europea", active: false },
       { num: "Capítulo 4", title: "6 de octubre: La resolución de la Unión Europea", active: false }
     ],
-    nextTeaser: `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 2):</strong> El proyecto Anticitera. El nacimiento de la iniciativa, el debate con los primeros gigantes tech y el descubrimiento de la «Reserva Excepcional».</div>`,
+    nextTeaser: `<div class="next-chapter-teaser is-clickable" onclick="goToChapter(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); goToChapter(1);}" role="button" tabindex="0" aria-label="Leer Capítulo 2"><div class="next-chapter-header"><strong>En el próximo capítulo (Capítulo 2)</strong><span class="next-chapter-cta-badge">Leer Capítulo 2 →</span></div><div><strong>El proyecto Anticitera</strong>: El nacimiento de la iniciativa, el debate con los primeros gigantes tech y el descubrimiento de la «Reserva Excepcional».</div></div>`,
     ctaTitle: "Sé parte de esta historia y ayúdanos a conseguir el millón de firmas",
     ctaDesc: "Este relato se escribe capítulo a capítulo hasta alcanzar el millón de firmas ciudadanas que obligarán a Europa a crear la Denominación de Origen .ia.",
     card1Title: "1. Apúntate a nuestra lista de correo",
@@ -81,7 +81,7 @@ const UI_STRINGS = {
       { num: "Chapter 3", title: "The European Citizens' Initiative", active: false },
       { num: "Chapter 4", title: "October 6: The European Union Resolution", active: false }
     ],
-    nextTeaser: `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 2):</strong> The Antikythera project. The birth of the initiative, early tech discussions, and the discovery of the "Exceptional Reservation".</div>`,
+    nextTeaser: `<div class="next-chapter-teaser is-clickable" onclick="goToChapter(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); goToChapter(1);}" role="button" tabindex="0" aria-label="Read Chapter 2"><div class="next-chapter-header"><strong>In the next chapter (Chapter 2)</strong><span class="next-chapter-cta-badge">Read Chapter 2 →</span></div><div><strong>The Antikythera project</strong>: The birth of the initiative, early tech discussions, and the discovery of the "Exceptional Reservation".</div></div>`,
     ctaTitle: "Be part of this story and help us reach one million signatures",
     ctaDesc: "This chronicle unfolds chapter by chapter to gather the one million citizen signatures needed to establish the European .ia Designation of Origin.",
     card1Title: "1. Join our mailing list",
@@ -518,6 +518,11 @@ function updateSocialAndSponsorLinks(chapterTitle) {
   }
 }
 
+window.goToChapter = function (targetIdx) {
+  renderLanguage(activeLang, targetIdx);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 function renderLanguage(langCode, chapterIdx) {
   const effKey = getEffectiveLangKey(langCode);
   const ui = UI_STRINGS[effKey] || UI_STRINGS.es;
@@ -564,22 +569,100 @@ function renderLanguage(langCode, chapterIdx) {
     document.getElementById("chapter-lead").innerHTML = chapter.subtitle_html || chapter.subtitle;
 
     let teaserHtml = "";
-    if (activeChapterIndex === 0) {
-      teaserHtml = effKey === "en"
-        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 2):</strong> The Antikythera Project. The birth of the initiative, the early tech discussions, and the discovery of the "Exceptional Reservation".</div>`
-        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 2):</strong> El proyecto Anticitera. El nacimiento de la iniciativa, el debate con los primeros gigantes tech y el descubrimiento de la «Reserva Excepcional».</div>`;
-    } else if (activeChapterIndex === 1) {
-      teaserHtml = effKey === "en"
-        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 3):</strong> The European Citizens' Initiative. Seven keys in seven countries to oblige Brussels to create the .ia Designation of Origin.</div>`
-        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 3):</strong> La Iniciativa Ciudadana Europea. Siete llaves en siete países para obligar a Bruselas a crear la Denominación de Origen .ia.</div>`;
-    } else if (activeChapterIndex === 2) {
-      teaserHtml = effKey === "en"
-        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 4):</strong> October 6: The European Union Resolution. The legal verdict of the Strasbourg College of Commissioners and the path to April 6 for the one million signatures threshold.</div>`
-        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 4):</strong> 6 de octubre: La resolución de la Unión Europea. El veredicto del Colegio de Comisarios en Estrasburgo y el horizonte del 6 de abril frente al millón de firmas.</div>`;
-    } else if (activeChapterIndex === 3) {
-      teaserHtml = effKey === "en"
-        ? `<div class="next-chapter-teaser"><strong>In the next chapter (Chapter 5):</strong> The Designation of Origin the World Needs. How explaining around a bar table why a European quality mark in AI protects our work, health, and children.</div>`
-        : `<div class="next-chapter-teaser"><strong>En el próximo capítulo (Capítulo 5):</strong> La Denominación de Origen que el mundo necesita. Cómo explicar en la mesa de un bar por qué un sello de calidad europeo en la IA protegerá el trabajo, la salud y los datos de nuestros hijos.</div>`;
+    const teaserData = {
+      es: [
+        {
+          num: 2,
+          badge: "En el próximo capítulo (Capítulo 2)",
+          action: "Leer Capítulo 2",
+          title: "El proyecto Anticitera",
+          summary: "El nacimiento de la iniciativa, el debate con los primeros gigantes tech y el descubrimiento de la «Reserva Excepcional»."
+        },
+        {
+          num: 3,
+          badge: "En el próximo capítulo (Capítulo 3)",
+          action: "Leer Capítulo 3",
+          title: "La Iniciativa Ciudadana Europea",
+          summary: "Siete llaves en siete países para obligar a Bruselas a crear la Denominación de Origen .ia."
+        },
+        {
+          num: 4,
+          badge: "En el próximo capítulo (Capítulo 4)",
+          action: "Leer Capítulo 4",
+          title: "6 de octubre: La resolución de la Unión Europea",
+          summary: "El veredicto del Colegio de Comisarios en Estrasburgo y el horizonte del 6 de abril frente al millón de firmas."
+        },
+        {
+          num: 5,
+          badge: "Próximo capítulo (Capítulo 5)",
+          upcoming: true,
+          badgeUpcoming: "Próximamente",
+          title: "La Denominación de Origen que el mundo necesita",
+          summary: "Cómo explicar en la mesa de un bar por qué un sello de calidad europeo en la IA protegerá el trabajo, la salud y los datos de nuestros hijos."
+        }
+      ],
+      en: [
+        {
+          num: 2,
+          badge: "In the next chapter (Chapter 2)",
+          action: "Read Chapter 2",
+          title: "The Antikythera Project",
+          summary: "The birth of the initiative, the early tech discussions, and the discovery of the \"Exceptional Reservation\"."
+        },
+        {
+          num: 3,
+          badge: "In the next chapter (Chapter 3)",
+          action: "Read Chapter 3",
+          title: "The European Citizens' Initiative",
+          summary: "Seven keys in seven countries to oblige Brussels to create the .ia Designation of Origin."
+        },
+        {
+          num: 4,
+          badge: "In the next chapter (Chapter 4)",
+          action: "Read Chapter 4",
+          title: "October 6: The European Union Resolution",
+          summary: "The legal verdict of the Strasbourg College of Commissioners and the path to April 6 for the one million signatures threshold."
+        },
+        {
+          num: 5,
+          badge: "Upcoming chapter (Chapter 5)",
+          upcoming: true,
+          badgeUpcoming: "Coming Soon",
+          title: "The Designation of Origin the World Needs",
+          summary: "How explaining around a bar table why a European quality mark in AI protects our work, health, and children."
+        }
+      ]
+    };
+
+    const langTeasers = teaserData[effKey] || teaserData.es;
+    const currentTeaser = langTeasers[activeChapterIndex];
+
+    if (currentTeaser) {
+      const nextIdx = activeChapterIndex + 1;
+      const nextChapterObj = chapters[nextIdx] || null;
+      const displayTitle = (nextChapterObj && nextChapterObj.title) ? nextChapterObj.title : currentTeaser.title;
+
+      if (!currentTeaser.upcoming && nextIdx < chapters.length) {
+        teaserHtml = `
+          <div class="next-chapter-teaser is-clickable" onclick="goToChapter(${nextIdx})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); goToChapter(${nextIdx});}" role="button" tabindex="0" aria-label="${currentTeaser.action}: ${displayTitle}">
+            <div class="next-chapter-header">
+              <strong>${currentTeaser.badge}</strong>
+              <span class="next-chapter-cta-badge">${currentTeaser.action} →</span>
+            </div>
+            <div><strong>${displayTitle}</strong>: ${currentTeaser.summary}</div>
+          </div>
+        `;
+      } else {
+        teaserHtml = `
+          <div class="next-chapter-teaser is-upcoming-teaser" tabindex="0">
+            <div class="next-chapter-header">
+              <strong>${currentTeaser.badge}</strong>
+              <span class="upcoming-badge">${currentTeaser.badgeUpcoming || (effKey === "en" ? "Coming Soon" : "Próximamente")}</span>
+            </div>
+            <div><strong>${displayTitle}</strong>: ${currentTeaser.summary}</div>
+          </div>
+        `;
+      }
     }
 
     document.getElementById("chapter-body").innerHTML = chapter.html + teaserHtml;
