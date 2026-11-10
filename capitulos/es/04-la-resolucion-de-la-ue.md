@@ -43,3 +43,11 @@ Afortunadamente, el reglamento europeo no te arroja al ruedo de la noche a la ma
 Para tratar de difundir al máximo la recogida de firmas, creé una página de encuentro para ir reclutando simpatizantes: [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
 
 Y es precisamente en ese punto en el que nos encontramos hoy: con el respaldo de la ley comunitaria en la mano, un continente entero por movilizar y la certeza de que la pelota ya no está en el tejado de los burócratas de Bruselas, sino en las manos de los ciudadanos: ciudadanos como tú, con derecho a firma y con un entorno de amistades y familia que también puede participar.
+
+---
+
+Y hasta aquí el relato, nos encontramos en el presente y el resto de capitulos de esta historia esta por escribir, espero que os haya gustado y que pronto nos volvamos a ver. 
+
+Un saludo,
+
+[Eloy López](mailto:elswork@mypublicinbox.email)
