@@ -5,12 +5,25 @@ subtitulo: "¿Por qué la tecnología más poderosa de nuestro tiempo lleva el s
 tiempo_lectura: "5 min"
 estado: "Publicado"
 ---
+## Agradecimientos
 
-# Capítulo 1: La idea más importante de mi vida
+A toda mi familia, sois increibles, os quiero.
+
+## Prologo
 
 Lo primero y más importante: bienvenido seas. Espero que este relato te resulte ameno y divertido.
 
 Vamos a hacer este libro diferente al resto, deseo que sea colaborativo y que varias personas puedan poner su granito de arena, corrigiendo, ampliando e incluso publicando un capítulo entero. Está publicado en una plataforma GitHub que justamente permite eso; en cualquier caso, si necesitas ayuda, pídemela. 
+
+Este libro esta abierto para todos los publicos, Tiene una serie de características que lo hacen único. Esta disponible para todo el mundo en:
+
+[Odisea de la .IA](https://odisea.deft.work)
+
+Podeis contactar conmigo en:
+
+elswork@mypublicinbox.email o [MyPublicInbox](https://mypublicinbox.com/elswork)
+
+# Capítulo 1: La idea más importante de mi vida
 
 ¿Por dónde empiezo? Por presentarme: me llamo Eloy López, tengo 47 años, resido desde hace veinte en Alcorcón, pero vengo de Tarragona. Trabajo de informático y programador, y soy un desastroso padre de familia. Tengo la patética habilidad de no ser bueno en casi nada. Bueno, miento: hay algo que se me da bien, pensar. Puedo pasarme horas muertas pensando en mis movidas. Desde pequeño siempre he tenido la sensación de que pensaba más que el resto. Esto no quiere decir que yo sea más inteligente; al contrario, siempre he pensado que en cuestión de inteligencia andaba un paso por detrás de la media, pero, gracias a esa capacidad extra de darle vueltas a las cosas, era capaz de resolver cualquier problema que se cruzara en mi camino.
 
