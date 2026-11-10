@@ -161,20 +161,26 @@
       </p>
 
       <!-- Reproductor de Audiolibro + Karaoke a la inversa (Read-Along) -->
-      <section class="audiobook-player" aria-labelledby="audiobook-label">
+      <section id="audiobook-player" class="audiobook-player" aria-labelledby="audiobook-label">
         <div class="audiobook-header">
-          <span id="audiobook-label" class="audiobook-badge">
-            🎧 Audiolibro con Lectura Sincronizada («Karaoke Inverso»)
-          </span>
-          <span id="audiobook-hint" class="audiobook-hint">
-            Haz clic en cualquier frase del texto para saltar a ese segundo
-          </span>
+          <div class="audiobook-title-wrap">
+            <span id="audiobook-label" class="audiobook-badge">
+              🎧 Audiolibro con Lectura Sincronizada («Karaoke Inverso»)
+            </span>
+            <span id="audiobook-hint" class="audiobook-hint">
+              Haz clic en cualquier frase del texto para saltar a ese segundo
+            </span>
+          </div>
+          <button type="button" id="player-toggle-btn" class="player-toggle-btn" aria-expanded="true" aria-controls="audiobook-controls" aria-label="Ocultar control de reproducción">
+            <span class="player-toggle-icon" aria-hidden="true">▾</span>
+            <span id="player-toggle-text" class="player-toggle-text">Minimizar</span>
+          </button>
         </div>
 
         <!-- Above-the-fold audio element: omit loading="lazy" and use preload="metadata" -->
         <audio id="chapter-audio" preload="metadata" src="audio/es/00-prologo-y-agradecimientos.mp3"></audio>
 
-        <div class="audiobook-controls">
+        <div id="audiobook-controls" class="audiobook-controls">
           <button type="button" id="play-pause-btn" class="play-btn">
             ▶ Escuchar capítulo
           </button>

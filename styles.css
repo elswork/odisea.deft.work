@@ -405,8 +405,63 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+  flex-wrap: nowrap;
+}
+
+.audiobook-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
   flex-wrap: wrap;
-  margin-bottom: 0.65rem;
+  min-width: 0;
+}
+
+.player-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-block-size: 24px;
+  min-inline-size: 24px;
+  padding: 0.25rem 0.6rem;
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.player-toggle-btn:hover {
+  background-color: var(--border-color);
+  color: var(--text-main);
+}
+
+.player-toggle-btn:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.player-toggle-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.audiobook-player.is-collapsed .player-toggle-icon {
+  transform: rotate(-90deg);
+}
+
+.audiobook-player.is-collapsed .audiobook-header {
+  margin-bottom: 0;
+}
+
+.audiobook-player.is-collapsed .audiobook-controls {
+  display: none;
 }
 
 .audiobook-badge {
@@ -428,6 +483,8 @@ body {
   align-items: center;
   gap: 0.75rem;
   flex-wrap: wrap;
+  margin-top: 0.65rem;
+}
 }
 
 .play-btn {

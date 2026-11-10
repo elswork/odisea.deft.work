@@ -25,6 +25,10 @@ const UI_STRINGS = {
     byAuthor: "Por Eloy López Sánchez",
     audiobookLabel: "🎧 Audiolibro con Lectura Sincronizada («Karaoke Inverso»)",
     audiobookHint: "Haz clic en cualquier frase del texto para saltar a ese segundo",
+    playerCollapse: "Minimizar",
+    playerExpand: "Mostrar",
+    playerCollapseAria: "Ocultar control de reproducción",
+    playerExpandAria: "Mostrar control de reproducción",
     playText: "▶ Escuchar capítulo",
     pauseText: "⏸ Pausar narración",
     autoscrollText: "Seguir lectura",
@@ -81,6 +85,10 @@ const UI_STRINGS = {
     byAuthor: "By Eloy López Sánchez",
     audiobookLabel: "🎧 Audiobook with Synchronized Read-Along ('Inverse Karaoke')",
     audiobookHint: "Click on any sentence in the text to jump to that exact moment",
+    playerCollapse: "Minimize",
+    playerExpand: "Show",
+    playerCollapseAria: "Hide playback controls",
+    playerExpandAria: "Show playback controls",
     playText: "▶ Listen to chapter",
     pauseText: "⏸ Pause narration",
     autoscrollText: "Auto-scroll",
@@ -577,6 +585,7 @@ function renderLanguage(langCode, chapterIdx) {
   document.getElementById("chapter-pill").textContent = effKey === "en" ? `Chapter ${chNum} of 10` : `Capítulo ${chNum} de 10`;
   document.getElementById("audiobook-label").textContent = ui.audiobookLabel;
   document.getElementById("audiobook-hint").textContent = ui.audiobookHint;
+  updatePlayerToggleUI();
   document.getElementById("play-pause-btn").textContent = ui.playText;
   document.getElementById("autoscroll-text").textContent = ui.autoscrollText;
 
@@ -916,7 +925,55 @@ function initAudiobookPlayer() {
     audio.playbackRate = parseFloat(e.target.value) || 1.0;
   });
 
+  initPlayerCollapse();
   attachSentenceClickToSeek();
+}
+
+/* ==========================================================================
+   Mostrar / Ocultar Control de Reproducción (Two-State Toggle conforme a modern-web-guidance)
+   ========================================================================== */
+let isPlayerCollapsed = false;
+
+function updatePlayerToggleUI() {
+  const toggleBtn = document.getElementById("player-toggle-btn");
+  const player = document.getElementById("audiobook-player");
+  const toggleText = document.getElementById("player-toggle-text");
+  if (!toggleBtn || !player) return;
+
+  const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+  if (isPlayerCollapsed) {
+    player.classList.add("is-collapsed");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    toggleBtn.setAttribute("aria-label", ui.playerExpandAria || "Mostrar control de reproducción");
+    if (toggleText) toggleText.textContent = ui.playerExpand || "Mostrar";
+  } else {
+    player.classList.remove("is-collapsed");
+    toggleBtn.setAttribute("aria-expanded", "true");
+    toggleBtn.setAttribute("aria-label", ui.playerCollapseAria || "Ocultar control de reproducción");
+    if (toggleText) toggleText.textContent = ui.playerCollapse || "Minimizar";
+  }
+}
+
+function initPlayerCollapse() {
+  const toggleBtn = document.getElementById("player-toggle-btn");
+  if (!toggleBtn) return;
+
+  try {
+    const saved = localStorage.getItem("odisea-player-collapsed");
+    if (saved === "true") {
+      isPlayerCollapsed = true;
+    }
+  } catch (e) {}
+
+  updatePlayerToggleUI();
+
+  toggleBtn.addEventListener("click", () => {
+    isPlayerCollapsed = !isPlayerCollapsed;
+    try {
+      localStorage.setItem("odisea-player-collapsed", isPlayerCollapsed ? "true" : "false");
+    } catch (e) {}
+    updatePlayerToggleUI();
+  });
 }
 
 /* ==========================================================================
