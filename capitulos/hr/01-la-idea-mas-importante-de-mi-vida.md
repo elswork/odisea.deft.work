@@ -4,22 +4,18 @@ titulo: "Najvažnija ideja mog života"
 subtitulo: "Zašto najmoćnija tehnologija našeg doba nosi pečat karipskog raja i kako se rodila ideja o stvaranju .ia Denomination of Origin?"
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "73aec0a30ffc747d"
+fuente_hash: "c655f70e487ef263"
 ---
 
 # Poglavlje 1: Najvažnija ideja mog života
-
-Prvo i najvažnije: dobrodošli. Nadam se da vam je ova priča ugodna i zabavna.
-
-Ovu ćemo knjigu učiniti drugačijom od ostalih, želim da bude suradnička i da nekoliko ljudi može učiniti svoj dio, ispravljati, proširivati, pa čak i objavljivati ​​cijelo poglavlje. Objavljen je na GitHub platformi koja omogućuje upravo to; U svakom slučaju, ako vam treba pomoć, obratite se meni.
 
 Gdje da počnem? Da se predstavim: zovem se Eloy López, imam 47 godina, živim u Alcorcónu dvadeset godina, ali dolazim iz Tarragone. Radim kao informatičar i programer i katastrofalan sam otac. Imam jadnu sposobnost da nisam dobar ni u čemu. Pa, lažem: postoji nešto u čemu sam dobar, mislim. Mogu satima razmišljati o svojim potezima. Od malena sam uvijek imao osjećaj da sam mislio više od ostalih. To ne znači da sam pametniji; Naprotiv, oduvijek sam mislio da sam u inteligenciji korak iza prosjeka, ali sam zahvaljujući toj ekstra sposobnosti promišljanja mogao riješiti svaki problem koji mi se našao na putu.
 
 I o tome govori ova priča: ideja koja mi je pala na pamet i koja ima potencijal promijeniti budućnost civilizacije kakvu poznajemo. I ne pretjerujem.
 
-Koja je to ideja? Godina je bila 2019. i ja sam surfao 🏄 internetom. U to je vrijeme umjetna inteligencija već bila na udaru i neke su tvrtke počele usvajati domenu **`.ai`**, što je privuklo moju pozornost. Pomislio sam: ako postoji engleska verzija, sigurno je da na španjolskom mogu registrirati domenu s velikim potencijalom. Ali ne: domena **`.ia`** ne postoji. Šteta. Za registraciju ccTLD-a (posebne dvoslovne domene) postojao je samo jedan način (barem za koji sam ja znao u to vrijeme): morao je biti povezan s neovisnim geografskim teritorijem. Na primjer, Isle of Man odgovara ".im". Zbog tog pravila tri, počeo sam tražiti otoke. Prvo sam tražio španjolske otoke koji počinju na "A", ali u jednom trenutku pala mi je na pamet Antikitera i nešto mi je "kliknulo" u glavi. Bila je to apsolutna simpatija: što sam više analizirao, to je ideja postajala savršenija. Otok Antikitera je mjesto gdje su 1901. godine neki ronioci pronašli ostatke rimskog broda, unutar kojeg je pronađen antikiterski mehanizam, uređaj naših predaka koji se smatra prvim analognim računalom u povijesti. Mehanizam i njegovi tvorci savršeni su simbol moderne umjetne inteligencije. Ali dobro, ovo je još uvijek bila lijepa himera u mojoj glavi. Nemoguće, kažete? «Drži mi cubata»... i tako je počela Odiseja `.ia`.
+Koja je to ideja? Godina je bila 2019. i ja sam surfao 🏄 internetom. U to je vrijeme umjetna inteligencija već bila na udaru i neke su tvrtke počele usvajati domenu **`.ai`**, što je privuklo moju pozornost. Pomislio sam: ako postoji engleska verzija, sigurno je da na španjolskom mogu registrirati domenu s velikim potencijalom. Ali ne: domena **`.ia`** ne postoji. Šteta. Za registraciju ccTLD-a (posebne dvoslovne domene) postojao je samo jedan način (barem za koji sam ja znao u to vrijeme): morao je biti povezan s neovisnim geografskim teritorijem. Na primjer, Isle of Man odgovara ".im". Zbog tog pravila tri, počeo sam tražiti otoke. Prvo sam tražio španjolske otoke koji počinju na "A", ali u jednom trenutku pala mi je na pamet Antikitera i nešto mi je "kliknulo" u glavi. Bila je to apsolutna simpatija: što sam više analizirao, ideja je postajala savršenija. Otok Antikitera je mjesto gdje su 1901. godine neki ronioci pronašli ostatke rimskog broda, unutar kojeg je pronađen antikiterski mehanizam, uređaj naših predaka koji se smatra prvim analognim računalom u povijesti. Mehanizam i njegovi tvorci savršeni su simbol moderne umjetne inteligencije. Ali dobro, ovo je još uvijek bila lijepa himera u mojoj glavi. Nemoguće, kažete? «Drži mi cubata»... i tako je počela Odiseja `.ia`.
 
-![Olupina Antikitere: spužvari spašavaju ostatke i zupčanike prvog analognog računala u povijesti](img/PecioAnticitera.webp)
+![Olupina Antikitere: spužvari spašavaju ostatke i opremu prvog analognog računala u povijesti](img/PecioAnticitera.webp)
 
 ---
 
@@ -33,16 +29,16 @@ Nedavno sam imao veliko zadovoljstvo kontaktirati Joséa Maríu Álvarez-Pallete
 
 > **Draga Eloy:**
 > 
-> Hvala vam puno na vašoj poruci i na detaljima koje ste u njoj opisali. To što je taj ABC članak pokrenuo inicijativu kao što je vaša čini me vrlo sretnim i iskreno vam zahvaljujem što ste mi pisali o tome. Koristim i ovu priliku da vam na tome čestitam jer smatram da je to u ovim vremenima posebno potrebno.
+> Hvala vam puno na vašoj poruci i na detaljima koje ste u njoj opisali. To što je taj članak na ABC-ju pokrenuo inicijativu kao što je vaša čini me vrlo sretnim i iskreno vam zahvaljujem što ste mi pisali o tome. Koristim i ovu priliku da vam na tome čestitam jer mi se čini da je to u ovim vremenima posebno potrebno.
 > 
 > Srdačan pozdrav,  
 > **José M.ª**
 
 ## Prvi koraci
 
-Prošle su tri godine, a ja sam još imao ideju u glavi, dok jednog dana nisam odlučio da je vrijeme da je izbacim iz glave i objavim članak na svom blogu [deft.work](https://deft.work). Članak je naslovljen [«Isla Anticitera – kolijevka umjetne inteligencije»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) i njegovo objavljivanje bilo mi je olakšanje, bilo je terapeutsko, ali nije bilo dovoljno. Samo nekoliko mjeseci kasnije još dva članka pojavila su se gotovo kao pucnji iz mitraljeza:
+Prošle su tri godine, a ja sam još imao ideju u glavi, dok jednog dana nisam odlučio da je vrijeme da je izbacim iz glave i objavim članak na svom blogu [deft.work](https://deft.work). Članak je naslovljen [«Isla Anticitera – kolijevka umjetne inteligencije»](https://deft.work/blog/2022/09/16/isla-anticitera-cuna-de-la-inteligencia-artificial/) i njegovo objavljivanje bilo mi je olakšanje, bilo je terapeutsko, ali nije bilo dovoljno. Samo nekoliko mjeseci kasnije još su dva članka izašla gotovo kao pucnji iz mitraljeza:
 
 - [Isla Anticitera: budućnost umjetne inteligencije](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
 - [Isla Anticitera: nemojte više čekati, rezervirajte svoju .ia domenu sada](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)
 
-U tom trenutku u glavi mi je još jednom "kliknulo" i odlučio sam da je vrijeme da napravim sljedeći korak, podignem svoju ideju na višu razinu. Na taj je način rođen **.IA Antikythera Island Project** ili **Antikythera Project** za prijatelje. I donio sam najtranscendentalniju odluku u svom životu: da ovaj projekt postane moj cjeloživotni projekt; Odnosno, posvetiti se tome dušom i tijelom dok ne postignem svoj cilj ili, ako ga ne postignem u životu, ostaviti upute nekom drugom da to postigne.
+U tom trenutku u glavi mi je još jednom "kliknulo" i odlučio sam da je vrijeme da napravim sljedeći korak, podignem svoju ideju na višu razinu. Na taj je način rođen **.IA Antikythera Island Project** ili **Antikythera Project** za prijatelje. I donio sam najtranscendentalniju odluku u svom životu: da ovaj projekt postane moj cjeloživotni projekt; odnosno da se tome posvetim tijelom i dušom dok ne postignem svoj cilj ili, ako ga ne postignem u životu, ostavim upute nekom drugom da to postigne.

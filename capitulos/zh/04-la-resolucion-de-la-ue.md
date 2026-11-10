@@ -4,7 +4,7 @@ titulo: "10 月 6 日：欧盟决议"
 subtitulo: "斯特拉斯堡专员学院宣布原产地名称在法律上可行的那一天。"
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "fa1e19653b12dda0"
+fuente_hash: "8f5497041a463486"
 ---
 
 # 第 4 章：10 月 6 日：欧盟决议
@@ -44,3 +44,11 @@ fuente_hash: "fa1e19653b12dda0"
 为了尽可能地传播签名集合，我创建了一个会议页面来招募支持者：[anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/)。
 
 正是在这一点上，我们今天发现自己：在共同体法的支持下，整个大陆都可以动员起来，并且可以肯定的是，球不再是在布鲁塞尔官僚的法庭上，而是在公民手中：像你这样的公民，有签名权，有朋友和家人也可以参与的环境。
+
+---
+
+故事就这样结束了，我们处于现在，这个故事的其余章节还没有写完，我希望你喜欢它，我们很快就会再次见面。
+
+一切顺利，
+
+[埃洛伊·洛佩斯](mailto:elswork@mypublicinbox.email)

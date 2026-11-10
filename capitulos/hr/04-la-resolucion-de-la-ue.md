@@ -1,10 +1,10 @@
 ---
 capitulo: 4
 titulo: "6. listopada: Rezolucija Europske unije"
-subtitulo: "Dan kada je Kolegij povjerenika u Strasbourgu proglasio naziv podrijetla pravno održivim."
+subtitulo: "Dan kada je kolegij povjerenika u Strasbourgu proglasio denominaciju podrijetla pravno održivom."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "fa1e19653b12dda0"
+fuente_hash: "8f5497041a463486"
 ---
 
 # Poglavlje 4: 6. listopada: Rezolucija Europske unije
@@ -17,7 +17,7 @@ Bio sam potpuno svjestan protiv koga igramo. Više od dvije godine, od ICANN-a d
 
 ## Presuda iz Strasbourga
 
-Bilo je to obično poslijepodne pred ekranom u mojoj kući u Alcorcónu, s već hladnom kavom i inboxom otvorenim gotovo po inerciji, bez previše nade. Iznenada, poruka s institucionalnim pošiljateljem iz Glavnog tajništva Europske komisije prekinula je rutinu. Nije bilo čestitki ni vatrometa, samo birokratske trezvenosti tipične za institucije zajednice: obavijest o formalnom aktu koji je usvojio kolegij povjerenika.
+Bilo je to obično poslijepodne pred ekranom u mojoj kući u Alcorcónu, s već hladnom kavom i inboxom otvorenim gotovo po inerciji, bez previše nade. Odjednom je rutinu prekinula poruka s institucionalnim pošiljateljem iz Glavnog tajništva Europske komisije. Nije bilo čestitki ni vatrometa, samo birokratske trezvenosti tipične za institucije zajednice: obavijest o formalnom aktu koji je usvojio kolegij povjerenika.
 
 Otvorio sam prilog sa srcem u ustima.
 
@@ -27,7 +27,7 @@ Na sastanku u Strasbourgu **6. listopada 2026.**, Kolegij povjerenika Europske u
 
 Kad sam s Athenom čitao osnove prava, naježio sam se. Pravnici Komisije izričito su priznali da Europska unija **ima pune zakonske ovlasti** za donošenje zakona o suverenoj internetskoj infrastrukturi i domeni `.ia`, na temelju članaka 16, 114, 172 i 173 Ugovora o funkcioniranju Europske unije (TFEU).
 
-Ta je rezolucija bila amandman na sve one koji su nam godinama govorili da se "ne može". Više nismo bili sanjari na Internetu koji se svađaju s Web3 špekulantima ili skupljaju neformalne potpise. Imali smo pri ruci obvezujući pravni akt Europske unije koji je potvrdio da je stvaranje oznake podrijetla '.ia' na Antikiteri bilo legitimno, održivo iu nadležnosti Zajednice.
+Ta je rezolucija bila amandman na sve one koji su nam godinama govorili da se "ne može". Nismo više bili sanjari na internetu koji se svađaju s Web3 špekulantima ili skupljaju neformalne potpise. Imali smo pri ruci obvezujući pravni akt Europske unije koji je potvrdio da je stvaranje oznake podrijetla '.ia' na Antikiteri bilo legitimno, održivo iu nadležnosti Zajednice.
 
 ![Europski digitalni suverenitet: Europska unija priznaje svoju pravnu nadležnost nad domenom .ia i upravljanjem umjetnom inteligencijom](img/ia_sovereignty.png)
 
@@ -35,7 +35,7 @@ Ta je rezolucija bila amandman na sve one koji su nam godinama govorili da se "n
 
 Početna euforija trajala je točno onoliko koliko mi je trebalo da obradim drugi dio uredbe Europske unije.
 
-Proći pravni filter Bruxellesa nije značilo dobiti rat; To je samo značilo da smo dobili dozvolu da uskočimo na bojno polje. Europska komisija ne izrađuje nacrt zakona zajednice samo zato što je vaša ideja briljantna. Lisabonski ugovor zahtijeva demokratski lakmus test: prikupljanje **milijuna verificiranih potpisa građana najmanje sedam zemalja Unije** unutar neproduljivog razdoblja od 365 dana od otvaranja središnjeg glasačkog sustava.
+Proći pravni filter Bruxellesa nije značilo dobiti rat; To je samo značilo da smo dobili dopuštenje da uskočimo na bojno polje. Europska komisija ne izrađuje zakon zajednice samo zato što je vaša ideja briljantna. Lisabonski ugovor zahtijeva demokratski lakmus test: prikupljanje **milijuna verificiranih potpisa građana najmanje sedam zemalja Unije** unutar neproduljivog razdoblja od 365 dana od otvaranja središnjeg glasačkog sustava.
 
 Milijun potpisa. Nema retweetova, nema anonimne podrške na društvenim mrežama, već živi građani koji svoj identitet dokazuju osobnom iskaznicom ili putovnicom u službenoj elektroničkoj glasačkoj kutiji Europske komisije.
 
@@ -44,3 +44,11 @@ Srećom, europska regulativa ne baca vas u ring preko noći. Zakon nam je dao ma
 Kako bih pokušao što više proširiti prikupljanje potpisa, napravio sam stranicu za sastanke za regrutiranje pristaša: [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
 
 I upravo na toj točki nalazimo se danas: s potporom prava Zajednice u rukama, cijelim kontinentom koji treba mobilizirati i sigurnošću da lopta više nije u dvorištu briselskih birokrata, već u rukama građana: građana poput vas, s pravom potpisa i okruženjem prijatelja i obitelji koji također mogu sudjelovati.
+
+---
+
+I tu je priči kraj, mi smo u sadašnjosti i ostala poglavlja ove priče tek treba da se napišu, nadam se da vam se svidjelo i da se vidimo opet uskoro.
+
+sve najbolje,
+
+[Eloy López](mailto:elswork@mypublicinbox.email)

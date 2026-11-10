@@ -4,20 +4,16 @@ titulo: "L'idée la plus importante de ma vie"
 subtitulo: "Pourquoi la technologie la plus puissante de notre époque porte-t-elle le sceau d'un paradis caribéen et comment est née l'idée de créer l'Appellation d'Origine .ia ?"
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "73aec0a30ffc747d"
+fuente_hash: "c655f70e487ef263"
 ---
 
 # Chapitre 1 : L'idée la plus importante de ma vie
-
-Avant tout : bienvenue. J'espère que vous trouverez cette histoire agréable et amusante.
-
-Nous allons rendre ce livre différent des autres, je veux qu'il soit collaboratif et que plusieurs personnes puissent faire leur part, en corrigeant, en élargissant et même en publiant un chapitre entier. Il est publié sur une plateforme GitHub qui permet exactement cela ; Dans tous les cas, si vous avez besoin d'aide, demandez-moi.
 
 Par où commencer ? Pour me présenter : je m'appelle Eloy López, j'ai 47 ans, je vis à Alcorcón depuis vingt ans, mais je viens de Tarragone. Je travaille comme informaticien et programmeur et je suis un père désastreux. J’ai la pathétique capacité de ne pas être bon dans presque tout. Eh bien, je mens : il y a quelque chose pour lequel je suis doué : penser. Je peux passer des heures à réfléchir à mes mouvements. Depuis que je suis petite, j'ai toujours eu le sentiment de penser plus que les autres. Cela ne veut pas dire que je suis plus intelligent ; Au contraire, j'ai toujours pensé qu'en termes d'intelligence j'étais un peu en retard sur la moyenne, mais, grâce à cette capacité supplémentaire de réflexion, j'étais capable de résoudre n'importe quel problème qui se présentait sur mon chemin.
 
 Et c’est de cela dont parle cette histoire : une idée qui m’est venue et qui a le potentiel de changer l’avenir de la civilisation telle que nous la connaissons. Et je n'exagère pas.
 
-Quelle est cette idée ? C'était en 2019 et je surfais 🏄 sur internet. À cette époque, l’intelligence artificielle frappait déjà fort et certaines entreprises commençaient à adopter le domaine **`.ai`**, ce qui a retenu mon attention. J'ai pensé : s'il existe une version anglaise, sûrement en espagnol, je peux enregistrer un domaine avec un grand potentiel. Mais non : le domaine **`.ia`** n'existe pas. Dommage. Pour enregistrer un ccTLD (domaine spécial à deux lettres), il n'y avait qu'un seul moyen (du moins celui que je connaissais à l'époque) : il fallait l'associer à un territoire géographique indépendant. Par exemple, l'Île de Man correspond à « .im ». À cause de cette règle de trois, j’ai commencé à chercher des îles. Au début, j'ai cherché des îles espagnoles qui commençaient par « A », mais à un moment donné, Anticythère m'est venue à l'esprit et quelque chose a « cliqué » dans ma tête. Ce fut un véritable coup de cœur : plus je l’analysais, plus l’idée devenait parfaite. L'île d'Anticythère est l'endroit où, en 1901, des plongeurs ont découvert les restes d'un navire romain, à l'intérieur desquels a été découvert le mécanisme d'Anticythère, un appareil de nos ancêtres considéré comme le premier ordinateur analogique de l'histoire. Le mécanisme et ses créateurs sont le symbole parfait de l’intelligence artificielle moderne. Mais bon, c'était quand même une jolie chimère dans ma tête. Impossible, dites-vous ? «Tiens mon cubata»... et ainsi commença l'Odyssée du `.ia`.
+Quelle est cette idée ? C'était en 2019 et je surfais 🏄 sur internet. À cette époque, l’intelligence artificielle frappait déjà fort et certaines entreprises commençaient à adopter le domaine **`.ai`**, ce qui a retenu mon attention. J'ai pensé : s'il existe une version anglaise, sûrement en espagnol, je peux enregistrer un domaine avec un grand potentiel. Mais non : le domaine **`.ia`** n'existe pas. Dommage. Pour enregistrer un ccTLD (domaine spécial à deux lettres), il n'y avait qu'un seul moyen (du moins celui que je connaissais à l'époque) : il fallait l'associer à un territoire géographique indépendant. Par exemple, l'Île de Man correspond à « .im ». À cause de cette règle de trois, j’ai commencé à chercher des îles. Au début, j'ai cherché des îles espagnoles qui commençaient par « A », mais à un moment donné, Anticythère m'est venue à l'esprit et quelque chose a « cliqué » dans ma tête. Ce fut un véritable coup de cœur : plus je l’analysais, plus l’idée devenait parfaite. L'île d'Anticythère est l'endroit où, en 1901, des plongeurs ont trouvé les restes d'un navire romain, à l'intérieur desquels a été découvert le mécanisme d'Anticythère, un appareil de nos ancêtres considéré comme le premier ordinateur analogique de l'histoire. Le mécanisme et ses créateurs sont le symbole parfait de l’intelligence artificielle moderne. Mais bon, c'était quand même une jolie chimère dans ma tête. Impossible, dites-vous ? «Tiens mon cubata»... et ainsi commença l'Odyssée du `.ia`.
 
 ![L'épave d'Anticythère : des plongeurs d'éponges sauvant les restes et les engrenages du premier ordinateur analogique de l'histoire](img/PecioAnticitera.webp)
 
@@ -33,7 +29,7 @@ J'ai récemment eu la grande satisfaction de contacter José María Álvarez-Pal
 
 > **Cher Éloy :**
 > 
-> Merci beaucoup pour votre message et pour ce que vous y détaillez. Que cet article d'ABC ait donné lieu à une initiative comme la vôtre me fait très plaisir et je vous remercie sincèrement de m'avoir écrit pour m'en parler. J’en profite également pour vous en féliciter, car je trouve cela particulièrement nécessaire en ces temps.
+> Merci beaucoup pour votre message et pour ce que vous y détaillez. Que cet article d'ABC ait donné lieu à une initiative comme la vôtre me fait très plaisir et je vous remercie sincèrement de m'avoir écrit pour m'en parler. J’en profite également pour vous en féliciter, car cela me semble particulièrement nécessaire en ces temps.
 > 
 > Bien cordialement,  
 > **José M.ª**
@@ -45,4 +41,4 @@ Trois ans ont passé et j'avais toujours l'idée en tête, jusqu'au jour où j'a
 - [Isla Anticitera : le futur de l'intelligence artificielle](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
 - [Isla Anticitera : n'attendez plus, réservez votre domaine .ia dès maintenant](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)
 
-À ce stade, ma tête a fait un autre « clic » et j’ai décidé qu’il était temps de passer à l’étape suivante, de faire passer mon idée au niveau supérieur. C'est ainsi qu'est né le **.IA Antikythera Island Project** ou **Antikythera Project** pour les amis. Et j'ai pris la décision la plus transcendantale de ma vie : faire de ce projet mon projet de vie ; C'est-à-dire m'y consacrer corps et âme jusqu'à ce que j'atteigne mon objectif ou, si je ne l'atteins pas dans la vie, laisser des instructions à quelqu'un d'autre pour l'atteindre.
+À ce stade, ma tête a fait un autre « clic » et j’ai décidé qu’il était temps de passer à l’étape suivante, de faire passer mon idée au niveau supérieur. C'est ainsi qu'est né le **.IA Antikythera Island Project** ou **Antikythera Project** pour les amis. Et j'ai pris la décision la plus transcendantale de ma vie : faire de ce projet mon projet de vie ; c'est-à-dire m'y consacrer corps et âme jusqu'à ce que j'atteigne mon objectif ou, si je ne l'atteins pas dans la vie, laisser des instructions à quelqu'un d'autre pour l'atteindre.

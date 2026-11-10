@@ -1,0 +1,30 @@
+---
+capitulo: 0
+titulo: "Prólogo y Agradecimientos"
+subtitulo: "Bienvenida a una obra abierta, libre y colaborativa por la soberanía digital europea"
+tiempo_lectura: "2 min"
+estado: "Publicado"
+---
+
+# Capítulo 0: Prólogo y Agradecimientos
+
+## Agradecimientos
+
+A toda mi familia, sois increíbles, os quiero.
+
+---
+
+## Prólogo
+
+Lo primero y más importante: bienvenido seas. Espero que este relato te resulte ameno y divertido.
+
+Este libro está abierto a todos los públicos —disponible para todo el mundo en [Odisea de la .IA](https://odisea.deft.work)— y destaca por un enfoque completamente colaborativo: está alojado en su [Repositorio GitHub](https://github.com/elswork/odisea.deft.work/), permitiendo que varias personas pongan su granito de arena corrigiendo, ampliando o incluso publicando un capítulo entero (y recuerda que, si necesitas ayuda, puedes pedírmela).
+
+![Código QR para acceder a https://odisea.deft.work](img/qrcode_odisea.deft.work.png)
+
+[La Odisea de la .IA](https://odisea.deft.work) ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work), ningún árbol 🎄 ha resultado dañado en el proceso.
+
+Podéis contactar conmigo en:
+
+[Eloy López](mailto:elswork@mypublicinbox.email) o [MyPublicInbox](https://mypublicinbox.com/elswork)
+

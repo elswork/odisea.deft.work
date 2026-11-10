@@ -1,62 +1,98 @@
-# `odisea.deft.work` — La Odisea del `.ia`
+# 🏛️ La Odisea de la `.IA` — `odisea.deft.work`
 
-Sitio web estático preparado para **GitHub Pages** (`odisea.deft.work`) que aloja el relato por entregas de la Iniciativa Ciudadana Europea **`ECI(2026)000012`** (*Creación del Distrito Digital Europeo `.IA` — Denominación de Origen para la Inteligencia Artificial*).
+> **Un informático en el laberinto de Bruselas.**  
+> Relato vivo, interactivo y multilingüe de la Iniciativa Ciudadana Europea **`ECI(2026)000012`** (*Creación del Distrito Digital Europeo `.IA` — Denominación de Origen para la Inteligencia Artificial*).
 
-## Estructura del Repositorio
-
-- [`ESCALETA_MAESTRA.md`](file:///home/pirate/docker/odisea.deft.work/ESCALETA_MAESTRA.md): Estructura editorial completa de los 10 capítulos y reglas de conversión.
-- `capitulos/`:
-  - [`capitulos/es/01-la-idea-mas-importante-de-mi-vida.md`](file:///home/pirate/docker/odisea.deft.work/capitulos/es/01-la-idea-mas-importante-de-mi-vida.md): Capítulo 1 en español.
-  - [`capitulos/en/01-la-idea-mas-importante-de-mi-vida.md`](file:///home/pirate/docker/odisea.deft.work/capitulos/en/01-la-idea-mas-importante-de-mi-vida.md): Capítulo 1 en inglés.
-- [`index.html`](file:///home/pirate/docker/odisea.deft.work/index.html), [`styles.css`](file:///home/pirate/docker/odisea.deft.work/styles.css), [`app.js`](file:///home/pirate/docker/odisea.deft.work/app.js): Lector interactivo tipo libro digital con barra de progreso de lectura, modo claro/oscuro, selector de idiomas y bloque de doble conversión al final de cada capítulo.
-- [`CNAME`](file:///home/pirate/docker/odisea.deft.work/CNAME) y [`.nojekyll`](file:///home/pirate/docker/odisea.deft.work/.nojekyll): Configuración lista para GitHub Pages.
+- 🌐 **Leer y escuchar online:** [https://odisea.deft.work](https://odisea.deft.work)
+- 🏛️ **Iniciativa Ciudadana Europea (`ECI(2026)000012`):** [https://anticitera.deft.work](https://anticitera.deft.work)
+- ⚙️ **Motor de publicación open-source:** [Homero (`homero.deft.work`)](https://github.com/elswork/homero.deft.work)
 
 ---
 
-## Cómo Traducir y Generar los Audiolibros
+## ✏️ Cómo colaborar o corregir cualquier capítulo (en 3 clics, sin saber programar)
 
-Para evitar sobrecostes de tiempo y conflictos de concurrencia en GitHub Actions, la traducción y la compilación de audiolibros se ejecutan localmente con el motor **Homero** antes de publicar.
+Este libro es una obra viva y colaborativa. Cualquier lector puede corregir una errata, mejorar una traducción o proponer una nota directamente desde el navegador:
 
-### Opción 1: Con Python (Entorno virtual local)
+1. **Desde la web ([odisea.deft.work](https://odisea.deft.work)):**
+   - En cada capítulo verás el botón **`✏️ Editar en GitHub`** (en la cabecera del capítulo, en el índice lateral junto a cada título y al final de la lectura).
+2. **Haz tus cambios en el navegador:**
+   - Al pulsar **`✏️ Editar en GitHub`**, se abrirá directamente el archivo de texto (`.md`) de ese capítulo e idioma en GitHub.
+   - Corrige el texto como en cualquier bloc de notas.
+3. **Envía tu propuesta (*Pull Request*):**
+   - Pulsa el botón verde **`Commit changes...` -> `Propose changes`** al final de la página. ¡Listo!
+
+---
+
+## 📚 Índice de capítulos (Ver y Editar en GitHub)
+
+Los capítulos maestros se escriben en español dentro de [`capitulos/es/`](capitulos/es/) y el motor **Homero** los traduce y convierte automáticamente en audiolibro neuronal (`.mp3` + Karaoke Read-Along), `.epub` (Kindle) y `.pdf` en **9 idiomas** (`es`, `en`, `fr`, `de`, `it`, `pt`, `el`, `hu`, `hr`, `zh`).
+
+| Cap. | Título | Leer archivo (`.md`) | Editar en GitHub | Estado |
+| :--- | :--- | :--- | :--- | :--- |
+| **Cap. 0** | **Prólogo y Agradecimientos** | [`00-prologo-y-agradecimientos.md`](capitulos/es/00-prologo-y-agradecimientos.md) | [✏️ Editar Cap. 0](https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/00-prologo-y-agradecimientos.md) | ✅ Publicado |
+| **Cap. 1** | **La idea más importante de mi vida** | [`01-la-idea-mas-importante-de-mi-vida.md`](capitulos/es/01-la-idea-mas-importante-de-mi-vida.md) | [✏️ Editar Cap. 1](https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/01-la-idea-mas-importante-de-mi-vida.md) | ✅ Publicado |
+| **Cap. 2** | **El Proyecto Anticitera** | [`02-el-proyecto-anticitera.md`](capitulos/es/02-el-proyecto-anticitera.md) | [✏️ Editar Cap. 2](https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/02-el-proyecto-anticitera.md) | ✅ Publicado |
+| **Cap. 3** | **La Iniciativa Ciudadana Europea** | [`03-la-iniciativa-ciudadana-europea.md`](capitulos/es/03-la-iniciativa-ciudadana-europea.md) | [✏️ Editar Cap. 3](https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/03-la-iniciativa-ciudadana-europea.md) | ✅ Publicado |
+| **Cap. 4** | **La resolución de la UE** | [`04-la-resolucion-de-la-ue.md`](capitulos/es/04-la-resolucion-de-la-ue.md) | [✏️ Editar Cap. 4](https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/04-la-resolucion-de-la-ue.md) | ✅ Publicado |
+| **Cap. 5–10** | **Próximos capítulos en preparación** | Ver [`ESCALETA_MAESTRA.md`](ESCALETA_MAESTRA.md) | [✏️ Editar Escaleta](https://github.com/elswork/odisea.deft.work/edit/main/ESCALETA_MAESTRA.md) | ⏳ En curso |
+
+---
+
+## 🚀 Guía rápida: Cómo añadir o actualizar un capítulo
+
+### Paso 1: Escribir o editar en español (`capitulos/es/`)
+Cada capítulo es un sencillo archivo Markdown en `capitulos/es/` con una pequeña cabecera informativa al principio:
+
+```markdown
+---
+capitulo: 5
+titulo: "La fiebre del oro de tres mil millones"
+subtitulo: "Mientras un dominio .ai bate récords, Europa debate si merece su propia dirección"
+fecha: "2026"
+tiempo_lectura: "8 min"
+---
+
+# Capítulo 5: La fiebre del oro de tres mil millones
+
+Aquí comienza el texto del capítulo...
+```
+
+### Paso 2: Traducir y generar audiolibros, EPUB y PDF (con 1 solo comando)
+Una vez guardado tu cambio en `capitulos/es/`, ejecuta el motor **Homero** para que traduzca automáticamente las novedades y regenere los audiolibros, el karaoke sincronizado, los `.epub` (con ilustraciones listas para Kindle) y los `.pdf`:
 
 ```bash
-# Ejecutar desde cualquier directorio usando el entorno virtual de Homero:
-
-# 1. Solo traducir los capítulos nuevos o modificados en español al resto de idiomas:
-/home/pirate/docker/homero.deft.work/.venv/bin/python3 /home/pirate/docker/homero.deft.work/homero.py translate --book-dir /home/pirate/docker/odisea.deft.work
-
-# 2. Compilar el libro (genera audios neuronales MP3, karaoke .sync.json, EPUB, PDF y bundle web):
-/home/pirate/docker/homero.deft.work/.venv/bin/python3 /home/pirate/docker/homero.deft.work/homero.py build --book-dir /home/pirate/docker/odisea.deft.work
-
-# 3. Traducir y compilar todo en un único comando:
 /home/pirate/docker/homero.deft.work/.venv/bin/python3 /home/pirate/docker/homero.deft.work/homero.py build --book-dir /home/pirate/docker/odisea.deft.work --translate
 ```
 
-### Opción 2: Con Docker (Cero dependencias locales)
-
+*(Alternativa con Docker si no usas entorno Python local)*:
 ```bash
-# Compilar el libro montando este directorio en el contenedor:
 docker run --rm -v /home/pirate/docker/odisea.deft.work:/book homero:latest build --translate
 ```
 
-### Flujo de publicación paso a paso
+### Paso 3: Publicar en la web (`git push`)
+Sube los cambios a GitHub y la web `https://odisea.deft.work` se actualizará sola en menos de 30 segundos:
 
-1. **Escribir o corregir:** Edita o añade capítulos en [`capitulos/es/`](file:///home/pirate/docker/odisea.deft.work/capitulos/es/).
-2. **Generar:** Ejecuta el comando de compilación (`build --translate`).
-3. **Subir a GitHub:**
-   ```bash
-   cd /home/pirate/docker/odisea.deft.work
-   git add capitulos/ audio/ descargas/ homero-bundle.js libro.yaml
-   git commit -m "feat: nuevo capítulo y audiolibro generado"
-   git push
-   ```
-4. **Despliegue automático:** GitHub Pages detecta los cambios y actualiza https://odisea.deft.work en menos de 30 segundos.
-
+```bash
+cd /home/pirate/docker/odisea.deft.work
+git add .
+git commit -m "feat: actualizar capítulo y regenerar audiolibros y ebooks"
+git push
+```
 
 ---
 
-Actualizar este README.md ==> Hay que actualizar este Readme.md (odisea) y la escaleta y todo el repositorio de (homero) para que las instrucciones de uso de la plataforma sean fáciles y sencillas.
+## 🗂️ Estructura del repositorio
 
-Prologo + Agradecimiento ==> Meter en el capítulo 0
-
-Editame en GitHub ==> Me gustaria que el libro tenga un acceso directo a su repositorio además de botónes de editar en casa uno de los capitulos.
+```text
+odisea.deft.work/
+├── libro.yaml                  # Configuración del libro, idiomas, voces neuronales y enlaces GitHub
+├── ESCALETA_MAESTRA.md         # Plan editorial completo (Capítulos 0 al 10)
+├── capitulos/
+│   ├── es/                     # ✍️ Capítulos originales en español (edita aquí)
+│   └── en, fr, de, it, pt...   # 🌍 Traducciones generadas y sincronizadas por Homero
+├── img/                        # Portada, ilustraciones de capítulos y código QR
+├── audio/                      # 🎧 Audiolibros (.mp3) y sincronización Karaoke (.sync.json)
+├── descargas/                  # 📥 Libros completos en .epub (Kindle) y .pdf en cada idioma
+├── index.html, styles.css, app.js  # Lector web interactivo con modo claro/oscuro y Karaoke
+└── homero-bundle.js            # Paquete de datos autocompilado por Homero para la web
+```

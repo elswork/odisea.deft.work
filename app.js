@@ -11,8 +11,16 @@ const UI_STRINGS = {
     sideEpub: "📖 Descargar eBook (.epub)",
     sidePdf: "📄 Descargar Libro (.pdf)",
     sideMp3: "🎧 Descargar Audiolibro (.mp3)",
+    githubHeading: "Libro Colaborativo (GitHub)",
+    sideEdit: "✏️ Editar capítulo actual",
+    sideRepo: "💻 Ver Repositorio en GitHub",
+    chapterEditText: "Editar en GitHub",
+    collabTitle: "🤝 Obra abierta y colaborativa",
+    collabDesc: "¿Has visto una errata o quieres mejorar o ampliar este capítulo? Edítalo directamente en GitHub.",
+    bottomEditText: "Editar este capítulo en GitHub",
+    bottomRepoText: "Repositorio completo",
     themeBtnLabel: "Cambiar tema de lectura",
-    chapterPill: "Capítulo 1",
+    chapterPill: "Capítulo 0",
     readingTimePrefix: "Lectura:",
     byAuthor: "Por Eloy López Sánchez",
     audiobookLabel: "🎧 Audiolibro con Lectura Sincronizada («Karaoke Inverso»)",
@@ -29,7 +37,8 @@ const UI_STRINGS = {
     sponsorBtn: "💳 Patrocinar con PayPal / Tarjeta",
     sponsorQrLabel: "Escanear para donar",
     chaptersList: [
-      { num: "Capítulo 1", title: "La idea más importante de mi vida", active: true },
+      { num: "Capítulo 0", title: "Prólogo y Agradecimientos", active: true },
+      { num: "Capítulo 1", title: "La idea más importante de mi vida", active: false },
       { num: "Capítulo 2", title: "El proyecto Anticitera", active: false },
       { num: "Capítulo 3", title: "La Iniciativa Ciudadana Europea", active: false },
       { num: "Capítulo 4", title: "6 de octubre: La resolución de la Unión Europea", active: false }
@@ -58,8 +67,16 @@ const UI_STRINGS = {
     sideEpub: "📖 Download eBook (.epub)",
     sidePdf: "📄 Download Book (.pdf)",
     sideMp3: "🎧 Download Audiobook (.mp3)",
+    githubHeading: "Collaborative Book (GitHub)",
+    sideEdit: "✏️ Edit current chapter",
+    sideRepo: "💻 View Repository on GitHub",
+    chapterEditText: "Edit on GitHub",
+    collabTitle: "🤝 Open & collaborative work",
+    collabDesc: "Spotted a typo or want to improve or expand this chapter? Edit it directly on GitHub.",
+    bottomEditText: "Edit this chapter on GitHub",
+    bottomRepoText: "Full repository",
     themeBtnLabel: "Toggle reading theme",
-    chapterPill: "Chapter 1",
+    chapterPill: "Chapter 0",
     readingTimePrefix: "Read time:",
     byAuthor: "By Eloy López Sánchez",
     audiobookLabel: "🎧 Audiobook with Synchronized Read-Along ('Inverse Karaoke')",
@@ -76,7 +93,8 @@ const UI_STRINGS = {
     sponsorBtn: "💳 Sponsor via PayPal / Card",
     sponsorQrLabel: "Scan to donate",
     chaptersList: [
-      { num: "Chapter 1", title: "The Most Important Idea of My Life", active: true },
+      { num: "Chapter 0", title: "Prologue and Acknowledgments", active: true },
+      { num: "Chapter 1", title: "The Most Important Idea of My Life", active: false },
       { num: "Chapter 2", title: "The Antikythera Project", active: false },
       { num: "Chapter 3", title: "The European Citizens' Initiative", active: false },
       { num: "Chapter 4", title: "October 6: The European Union Resolution", active: false }
@@ -555,12 +573,59 @@ function renderLanguage(langCode, chapterIdx) {
   document.getElementById("side-mp3-link").textContent = ui.sideMp3;
   document.getElementById("theme-toggle").setAttribute("aria-label", ui.themeBtnLabel);
 
-  const chNum = chapter ? chapter.capitulo : (activeChapterIndex + 1);
+  const chNum = (chapter && typeof chapter.capitulo === "number") ? chapter.capitulo : activeChapterIndex;
   document.getElementById("chapter-pill").textContent = effKey === "en" ? `Chapter ${chNum} of 10` : `Capítulo ${chNum} de 10`;
   document.getElementById("audiobook-label").textContent = ui.audiobookLabel;
   document.getElementById("audiobook-hint").textContent = ui.audiobookHint;
   document.getElementById("play-pause-btn").textContent = ui.playText;
   document.getElementById("autoscroll-text").textContent = ui.autoscrollText;
+
+  const repoUrl = (window.HOMERO_BOOK && window.HOMERO_BOOK.libro && window.HOMERO_BOOK.libro.repositorio_url)
+    ? window.HOMERO_BOOK.libro.repositorio_url.replace(/\/$/, "")
+    : "https://github.com/elswork/odisea.deft.work";
+  const repoBranch = (window.HOMERO_BOOK && window.HOMERO_BOOK.libro && window.HOMERO_BOOK.libro.rama_edicion)
+    ? window.HOMERO_BOOK.libro.rama_edicion
+    : "main";
+  const editUrl = (chapter && chapter.edit_url)
+    ? chapter.edit_url
+    : `${repoUrl}/edit/${repoBranch}/capitulos/${effKey}/${chapter ? chapter.slug : "00-prologo-y-agradecimientos"}.md`;
+
+  const topRepoEl = document.getElementById("top-repo-link");
+  if (topRepoEl) topRepoEl.href = repoUrl;
+  const sideRepoEl = document.getElementById("side-repo-link");
+  if (sideRepoEl) {
+    sideRepoEl.href = repoUrl;
+    sideRepoEl.textContent = ui.sideRepo || (effKey === "en" ? "💻 View Repository on GitHub" : "💻 Ver Repositorio en GitHub");
+  }
+  const sideEditEl = document.getElementById("side-edit-link");
+  if (sideEditEl) {
+    sideEditEl.href = editUrl;
+    sideEditEl.textContent = ui.sideEdit || (effKey === "en" ? "✏️ Edit current chapter" : "✏️ Editar capítulo actual");
+  }
+  const ghHeadingEl = document.getElementById("github-heading");
+  if (ghHeadingEl) {
+    ghHeadingEl.textContent = ui.githubHeading || (effKey === "en" ? "Collaborative Book (GitHub)" : "Libro Colaborativo (GitHub)");
+  }
+  const chEditBtn = document.getElementById("chapter-edit-btn");
+  if (chEditBtn) {
+    chEditBtn.href = editUrl;
+  }
+  const chEditText = document.getElementById("chapter-edit-text");
+  if (chEditText) {
+    chEditText.textContent = ui.chapterEditText || (effKey === "en" ? "Edit on GitHub" : "Editar en GitHub");
+  }
+  const bottomEditBtn = document.getElementById("bottom-edit-btn");
+  if (bottomEditBtn) bottomEditBtn.href = editUrl;
+  const bottomRepoBtn = document.getElementById("bottom-repo-btn");
+  if (bottomRepoBtn) bottomRepoBtn.href = repoUrl;
+  const collabTitleEl = document.getElementById("collab-title");
+  if (collabTitleEl) collabTitleEl.textContent = ui.collabTitle || (effKey === "en" ? "🤝 Open & collaborative work" : "🤝 Obra abierta y colaborativa");
+  const collabDescEl = document.getElementById("collab-desc");
+  if (collabDescEl) collabDescEl.textContent = ui.collabDesc || (effKey === "en" ? "Spotted a typo or want to improve or expand this chapter? Edit it directly on GitHub." : "¿Has visto una errata o quieres mejorar o ampliar este capítulo? Edítalo directamente en GitHub.");
+  const bottomEditTextEl = document.getElementById("bottom-edit-text");
+  if (bottomEditTextEl) bottomEditTextEl.textContent = ui.bottomEditText || (effKey === "en" ? "Edit this chapter on GitHub" : "Editar este capítulo en GitHub");
+  const bottomRepoTextEl = document.getElementById("bottom-repo-text");
+  if (bottomRepoTextEl) bottomRepoTextEl.textContent = ui.bottomRepoText || (effKey === "en" ? "Full repository" : "Repositorio completo");
 
   if (chapter) {
     document.getElementById("reading-time").innerHTML =
@@ -572,6 +637,15 @@ function renderLanguage(langCode, chapterIdx) {
     const teaserData = {
       es: [
         {
+          fromCap: 0,
+          num: 1,
+          badge: "En el próximo capítulo (Capítulo 1)",
+          action: "Leer Capítulo 1",
+          title: "La idea más importante de mi vida",
+          summary: "¿Por qué la tecnología más poderosa de nuestro tiempo lleva el sello de un paraíso caribeño y cómo nació la idea de crear la Denominación de Origen .ia?"
+        },
+        {
+          fromCap: 1,
           num: 2,
           badge: "En el próximo capítulo (Capítulo 2)",
           action: "Leer Capítulo 2",
@@ -579,6 +653,7 @@ function renderLanguage(langCode, chapterIdx) {
           summary: "El nacimiento de la iniciativa, el debate con los primeros gigantes tech y el descubrimiento de la «Reserva Excepcional»."
         },
         {
+          fromCap: 2,
           num: 3,
           badge: "En el próximo capítulo (Capítulo 3)",
           action: "Leer Capítulo 3",
@@ -586,6 +661,7 @@ function renderLanguage(langCode, chapterIdx) {
           summary: "Siete llaves en siete países para obligar a Bruselas a crear la Denominación de Origen .ia."
         },
         {
+          fromCap: 3,
           num: 4,
           badge: "En el próximo capítulo (Capítulo 4)",
           action: "Leer Capítulo 4",
@@ -593,6 +669,7 @@ function renderLanguage(langCode, chapterIdx) {
           summary: "El veredicto del Colegio de Comisarios en Estrasburgo y el horizonte del 6 de abril frente al millón de firmas."
         },
         {
+          fromCap: 4,
           num: 5,
           badge: "Próximo capítulo (Capítulo 5)",
           upcoming: true,
@@ -603,6 +680,15 @@ function renderLanguage(langCode, chapterIdx) {
       ],
       en: [
         {
+          fromCap: 0,
+          num: 1,
+          badge: "In the next chapter (Chapter 1)",
+          action: "Read Chapter 1",
+          title: "The Most Important Idea of My Life",
+          summary: "Why the most powerful technology of our time bears the stamp of a Caribbean tax haven and how the idea of creating the .ia Designation of Origin was born."
+        },
+        {
+          fromCap: 1,
           num: 2,
           badge: "In the next chapter (Chapter 2)",
           action: "Read Chapter 2",
@@ -610,6 +696,7 @@ function renderLanguage(langCode, chapterIdx) {
           summary: "The birth of the initiative, the early tech discussions, and the discovery of the \"Exceptional Reservation\"."
         },
         {
+          fromCap: 2,
           num: 3,
           badge: "In the next chapter (Chapter 3)",
           action: "Read Chapter 3",
@@ -617,6 +704,7 @@ function renderLanguage(langCode, chapterIdx) {
           summary: "Seven keys in seven countries to oblige Brussels to create the .ia Designation of Origin."
         },
         {
+          fromCap: 3,
           num: 4,
           badge: "In the next chapter (Chapter 4)",
           action: "Read Chapter 4",
@@ -624,6 +712,7 @@ function renderLanguage(langCode, chapterIdx) {
           summary: "The legal verdict of the Strasbourg College of Commissioners and the path to April 6 for the one million signatures threshold."
         },
         {
+          fromCap: 4,
           num: 5,
           badge: "Upcoming chapter (Chapter 5)",
           upcoming: true,
@@ -635,7 +724,7 @@ function renderLanguage(langCode, chapterIdx) {
     };
 
     const langTeasers = teaserData[effKey] || teaserData.es;
-    const currentTeaser = langTeasers[activeChapterIndex];
+    const currentTeaser = langTeasers.find((t) => t.fromCap === chNum);
 
     if (currentTeaser) {
       const nextIdx = activeChapterIndex + 1;
@@ -699,8 +788,23 @@ function renderLanguage(langCode, chapterIdx) {
       li.className = `chapter-item ${isActive ? "is-active" : "is-clickable"}`;
       li.style.cursor = "pointer";
       const numLabel = effKey === "en" ? `Chapter ${ch.capitulo}` : `Capítulo ${ch.capitulo}`;
-      li.innerHTML = `<span class="chapter-num">${numLabel}</span>${ch.title}`;
-      li.addEventListener("click", () => {
+      const chEditHref = ch.edit_url || `${repoUrl}/edit/${repoBranch}/capitulos/${effKey}/${ch.slug}.md`;
+      const editAria = effKey === "en"
+        ? `Edit ${numLabel}: ${ch.title} on GitHub`
+        : `Editar ${numLabel}: ${ch.title} en GitHub`;
+
+      li.innerHTML = `
+        <div class="chapter-item-row">
+          <div class="chapter-item-main">
+            <span class="chapter-num">${numLabel}</span>${ch.title}
+          </div>
+          <a href="${chEditHref}" target="_blank" rel="noopener noreferrer" class="chapter-item-edit" aria-label="${editAria}">
+            <span aria-hidden="true">✏️</span>
+          </a>
+        </div>
+      `;
+      li.addEventListener("click", (e) => {
+        if (e.target.closest(".chapter-item-edit")) return;
         renderLanguage(activeLang, idx);
         window.scrollTo({ top: 0, behavior: "smooth" });
       });

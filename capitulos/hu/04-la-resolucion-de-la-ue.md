@@ -4,14 +4,14 @@ titulo: "Október 6.: Az Európai Unió állásfoglalása"
 subtitulo: "Azon a napon, amikor a strasbourgi biztosi testület jogilag életképesnek nyilvánította a származási felekezetet."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "fa1e19653b12dda0"
+fuente_hash: "8f5497041a463486"
 ---
 
 # 4. fejezet: Október 6.: Az Európai Unió állásfoglalása
 
 A nyomtatványok Brüsszelbe küldése és a hivatalos állásfoglalás között hetek teltek el a számomra örökérvényűnek tűnő feszült nyugalom.
 
-Az Európai Bizottság minden egyes polgári kezdeményezést könyörtelen jogi vizsgálatnak vet alá, mielőtt feldolgozásra elfogadná azokat. Ez az a szűrő, ahol a polgári javaslatok túlnyomó többsége hajótörést szenved: az Európai Unió jogászai minden vesszőt alaposan átvizsgálnak, hogy ellenőrizzék, a kérelem tárgya „nyilvánvalóan kívül esik-e a Bizottság hatáskörén”, vagy nem illeszkedik-e a közösségi szerződésekbe.
+Az Európai Bizottság minden egyes polgári kezdeményezést könyörtelen jogi vizsgálatnak vet alá, mielőtt feldolgozásra elfogadná. Ez az a szűrő, ahol a polgári javaslatok túlnyomó többsége hajótörést szenved: az Európai Unió jogászai minden vesszőt alaposan átvizsgálnak, hogy ellenőrizzék, a kérelem tárgya „nyilvánvalóan kívül esik-e a Bizottság hatáskörén”, vagy nem illeszkedik-e a közösségi szerződésekbe.
 
 Tisztában voltam azzal, hogy ki ellen játszunk. Több mint két éve, az ICANN-tól a nemzetközi szakértőkig, azt mondták nekem, hogy a ".ia" ccTLD-re való törekvés anélkül, hogy ENSZ-állam lennék, technikai és jogi kiméra. Ha a brüsszeli jogi szolgálatok a legkisebb repedést is megtalálják, elutasító határozatot írnak alá, és ez az egész utazás diplomáciai ajtócsapással végződött volna.
 
@@ -29,7 +29,7 @@ Amikor Athénével elolvastam a jog alapjait, libabőrös lettem. A Bizottság j
 
 Ez az állásfoglalás módosítás volt mindazokhoz, akik évek óta azt mondták nekünk, hogy „ezt nem lehet megtenni”. Már nem álmodozók voltunk az interneten, vitatkoztunk a Web3 spekulánsaival, vagy nem hivatalos aláírásokat gyűjtöttünk. A kezünkben volt az Európai Unió kötelező érvényű jogi aktusa, amely igazolta, hogy a „.ia” eredetmegjelölés létrehozása Antikytherában legitim, életképes és közösségi hatáskörbe tartozik.
 
-![Európai digitális szuverenitás: az Európai Unió elismeri jogi hatáskörét a .ia tartományban és a mesterséges intelligencia irányításában](img/ia_sovereignty.png)
+![Európai digitális szuverenitás: az Európai Unió elismeri jogi hatáskörét a .ia tartomány és a mesterséges intelligencia irányítása terén](img/ia_sovereignty.png)
 
 ## A megkönnyebbüléstől a szédülésig: A millió aláírás
 
@@ -44,3 +44,11 @@ Szerencsére az európai szabályozás nem dob egyik napról a másikra ringbe. 
 Az aláírásgyűjtés lehető legnagyobb mértékű terjesztése érdekében létrehoztam egy találkozóoldalt támogatók toborzására: [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
 
 És pontosan ezen a ponton találjuk magunkat ma: a közösségi törvény támogatásával a kezünkben, egy egész kontinens mozgósításával, és azzal a bizonyossággal, hogy a labda már nem a brüsszeli bürokraták, hanem a polgárok kezében van: az Önhöz hasonló polgárok kezében, aláírási joggal, valamint baráti és családi környezettel, akik szintén részt vehetnek.
+
+---
+
+És itt a történet vége, a jelenben vagyunk, és ennek a történetnek a többi fejezete még megírásra vár, remélem tetszett, és hamarosan újra találkozunk.
+
+Minden jót,
+
+[Eloy López](mailto:elswork@mypublicinbox.email)

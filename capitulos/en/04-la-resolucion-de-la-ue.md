@@ -4,7 +4,7 @@ titulo: "October 6: The European Union resolution"
 subtitulo: "The day the College of Commissioners in Strasbourg declared the Denomination of Origin legally viable."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "fa1e19653b12dda0"
+fuente_hash: "8f5497041a463486"
 ---
 
 # Chapter 4: October 6: The European Union resolution
@@ -44,3 +44,11 @@ Fortunately, the European regulation does not throw you into the ring overnight.
 To try to spread the collection of signatures as much as possible, I created a meeting page to recruit supporters: [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
 
 And it is precisely at that point that we find ourselves today: with the support of the community law in hand, an entire continent to mobilize and the certainty that the ball is no longer in the court of the Brussels bureaucrats, but in the hands of citizens: citizens like you, with the right to sign and with an environment of friends and family that can also participate.
+
+---
+
+And that's the end of the story, we are in the present and the rest of the chapters of this story are yet to be written, I hope you liked it and that we will see each other again soon.
+
+All the best,
+
+[Eloy López](mailto:elswork@mypublicinbox.email)

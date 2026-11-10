@@ -4,14 +4,10 @@ titulo: "The most important idea of ​​my life"
 subtitulo: "Why does the most powerful technology of our time bear the seal of a Caribbean paradise and how was the idea of ​​creating the .ia Denomination of Origin born?"
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "73aec0a30ffc747d"
+fuente_hash: "c655f70e487ef263"
 ---
 
 # Chapter 1: The most important idea of ​​my life
-
-First and most important: welcome. I hope you find this story enjoyable and fun.
-
-We are going to make this book different from the rest, I want it to be collaborative and that several people can do their part, correcting, expanding and even publishing an entire chapter. It is published on a GitHub platform that allows just that; In any case, if you need help, ask me.
 
 Where do I start? To introduce myself: my name is Eloy López, I am 47 years old, I have lived in Alcorcón for twenty years, but I come from Tarragona. I work as a computer scientist and programmer, and I am a disastrous father. I have the pathetic ability of not being good at almost anything. Well, I lie: there is something I am good at, thinking. I can spend hours thinking about my moves. Since I was little I have always had the feeling that I thought more than the rest. This doesn't mean I'm smarter; On the contrary, I have always thought that in terms of intelligence I was one step behind average, but, thanks to that extra ability to think things through, I was capable of solving any problem that crossed my path.
 
@@ -33,7 +29,7 @@ I recently had the great satisfaction of contacting José María Álvarez-Pallet
 
 > **Dear Eloy:**
 > 
-> Thank you very much for your message and for what you detail in it. That that ABC article has given rise to an initiative like yours makes me very happy and I sincerely thank you for writing to tell me about it. I also take this opportunity to congratulate you on this, because I find it especially necessary in these times.
+> Thank you very much for your message and for what you detail in it. That that ABC article has given rise to an initiative like yours makes me very happy and I sincerely thank you for writing to tell me about it. I also take this opportunity to congratulate you on this, because it seems especially necessary in these times.
 > 
 > Best regards,  
 > **José M.ª**
@@ -45,4 +41,4 @@ Three years passed and I still had the idea in my head, until one day I decided 
 - [Isla Anticitera: the future of artificial intelligence](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
 - [Isla Anticitera: don't wait any longer, reserve your .ia domain now](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)
 
-At this point, my head made another "click" and I decided that it was time to take the next step, take my idea to the next level. In this way the **.IA Antikythera Island Project** or **Antikythera Project** for friends was born. And I made the most transcendental decision of my life: to make this project my lifelong project; That is, to dedicate myself body and soul to it until I achieve my goal or, if I do not achieve it in life, leave instructions for someone else to achieve it.
+At this point, my head made another "click" and I decided that it was time to take the next step, take my idea to the next level. In this way the **.IA Antikythera Island Project** or **Antikythera Project** for friends was born. And I made the most transcendental decision of my life: to make this project my lifelong project; that is, to dedicate myself body and soul to it until I achieve my goal or, if I do not achieve it in life, leave instructions for someone else to achieve it.

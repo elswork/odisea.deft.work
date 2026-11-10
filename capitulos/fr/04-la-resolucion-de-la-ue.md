@@ -4,12 +4,12 @@ titulo: "6 octobre : La résolution de l'Union européenne"
 subtitulo: "Le jour où le Collège des Commissaires de Strasbourg a déclaré l'Appellation d'Origine juridiquement viable."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "fa1e19653b12dda0"
+fuente_hash: "8f5497041a463486"
 ---
 
 # Chapitre 4 : 6 octobre : La résolution de l'Union européenne
 
-Entre l'envoi des formulaires à Bruxelles et la résolution officielle se sont écoulées des semaines de calme tendu qui me semblaient éternelles.
+Entre l’envoi des formulaires à Bruxelles et la résolution officielle se sont écoulées des semaines de calme tendu qui me semblaient éternelles.
 
 La Commission européenne soumet chaque initiative citoyenne à un contrôle juridique implacable avant de l'accepter pour traitement. C'est le filtre où font naufrage la grande majorité des propositions citoyennes : les juristes de l'Union européenne scrutent chaque virgule pour vérifier si l'objet de la demande sort "manifestement du cadre des pouvoirs de la Commission" ou s'il manque d'insertion dans les traités communautaires.
 
@@ -17,7 +17,7 @@ J'étais pleinement conscient de contre qui nous jouions. Depuis plus de deux an
 
 ## Le verdict de Strasbourg
 
-C'était un après-midi ordinaire devant l'écran chez moi à Alcorcón, avec le café déjà froid et la boîte de réception ouverte presque par inertie, sans trop me faire espérer. Soudain, un message avec un expéditeur institutionnel du Secrétariat général de la Commission européenne a brisé la routine. Il n'y a pas eu de félicitations ni de feux d'artifice en la matière, seulement la sobriété bureaucratique typique des institutions communautaires : la notification d'un acte formel adopté par le Collège des commissaires.
+It was an ordinary afternoon in front of the screen at my house in Alcorcón, with the coffee already cold and the inbox open almost by inertia, without getting my hopes up too much. Soudain, un message avec un expéditeur institutionnel du Secrétariat général de la Commission européenne a brisé la routine. There were no congratulations or fireworks in the matter, only the bureaucratic sobriety typical of community institutions: the notification of a formal act adopted by the College of Commissioners.
 
 J'ai ouvert la pièce jointe avec mon cœur dans la bouche.
 
@@ -44,3 +44,11 @@ Heureusement, la réglementation européenne ne vous jette pas sur le ring du jo
 Pour essayer de diffuser au maximum la collecte de signatures, j'ai créé une page de rencontre pour recruter des sympathisants : [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
 
 Et c’est précisément là que nous nous trouvons aujourd’hui : avec le soutien du droit communautaire en main, tout un continent à mobiliser et la certitude que la balle n’est plus dans le camp des bureaucrates bruxellois, mais dans les mains des citoyens : des citoyens comme vous, avec le droit de signer et avec un environnement d’amis et de famille qui peuvent aussi participer.
+
+---
+
+Et c'est la fin de l'histoire, nous sommes dans le présent et la suite des chapitres de cette histoire n'est pas encore écrite, j'espère que cela vous a plu et que nous nous reverrons bientôt.
+
+Tous mes vœux,
+
+[Eloy López](mailto:elswork@mypublicinbox.email)

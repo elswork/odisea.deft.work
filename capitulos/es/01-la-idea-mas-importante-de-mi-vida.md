@@ -5,23 +5,6 @@ subtitulo: "¿Por qué la tecnología más poderosa de nuestro tiempo lleva el s
 tiempo_lectura: "5 min"
 estado: "Publicado"
 ---
-## Agradecimientos
-
-A toda mi familia, sois increibles, os quiero.
-
-## Prologo
-
-Lo primero y más importante: bienvenido seas. Espero que este relato te resulte ameno y divertido.
-
-Este libro está abierto a todos los públicos -disponible para todo el mundo en [Odisea de la .IA](https://odisea.deft.work) — y destaca por un enfoque completamente colaborativo, está alojado en [Repositorio GitHub](https://github.com/elswork/odisea.deft.work/), permitiendo que varias personas pongan su granito de arena corrigiendo, ampliando o incluso publicando un capítulo entero (y recuerda que, si necesitas ayuda, puedes pedírmela)
-
-![Qrcode https://odisea.deft.work](img/qrcode_odisea.deft.eork.png)
-
-[La Odisea de la .IA](https://odisea.deft.work) ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work), ningún árbol 🎄 ha resultado dañado en el proceso.
-
-Podeis contactar conmigo en:
-
-[Eloy López](mailto:elswork@mypublicinbox.email) o [MyPublicInbox](https://mypublicinbox.com/elswork)
 
 # Capítulo 1: La idea más importante de mi vida
 

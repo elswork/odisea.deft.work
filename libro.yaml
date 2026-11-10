@@ -7,6 +7,8 @@ libro:
   subtitulo: "Crónica real de la Iniciativa Ciudadana Europea ECI(2026)000012"
   autor: "Eloy López Sánchez"
   dominio: "https://odisea.deft.work"
+  repositorio_url: "https://github.com/elswork/odisea.deft.work"
+  rama_edicion: "main"
   expediente_ue: "ECI(2026)000012"
   decision_ue: "C(2026) 7098 final"
   urna_ue_url: "https://anticitera.deft.work/es/6abril/"

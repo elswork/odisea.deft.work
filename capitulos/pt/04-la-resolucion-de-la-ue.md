@@ -4,7 +4,7 @@ titulo: "6 de outubro: A resolução da União Europeia"
 subtitulo: "O dia em que o Colégio de Comissários em Estrasburgo declarou a Denominação de Origem legalmente viável."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "fa1e19653b12dda0"
+fuente_hash: "8f5497041a463486"
 ---
 
 # Capítulo 4: 6 de outubro: A resolução da União Europeia
@@ -27,7 +27,7 @@ Reunido em Estrasburgo em **6 de outubro de 2026**, o Colégio de Comissários d
 
 Quando li os fundamentos do direito com Athena, fiquei arrepiado. Os juristas da Comissão reconheceram explicitamente que a União Europeia **tem plenos poderes legais** para legislar sobre infraestruturas soberanas da Internet e o domínio `.ia`, com base nos artigos 16, 114, 172 e 173 do Tratado sobre o Funcionamento da União Europeia (TFUE).
 
-Essa resolução foi uma emenda a todos aqueles que durante anos nos disseram que “isso não poderia ser feito”. Não éramos mais sonhadores na Internet discutindo com especuladores da Web3 ou coletando assinaturas informais. Tínhamos em mãos um ato jurídico vinculativo da União Europeia que certificava que a criação da Denominação de Origem '.ia' em Antikythera era legítima, viável e da competência comunitária.
+Essa resolução foi uma emenda a todos aqueles que durante anos nos disseram que “isso não poderia ser feito”. Já não éramos sonhadores na Internet, discutindo com especuladores da Web3 ou recolhendo assinaturas informais. Tínhamos em mãos um ato jurídico vinculativo da União Europeia que certificava que a criação da Denominação de Origem '.ia' em Antikythera era legítima, viável e da competência comunitária.
 
 ![Soberania digital europeia: a União Europeia reconhece a sua competência jurídica sobre o domínio .ia e a governação da inteligência artificial](img/ia_sovereignty.png)
 
@@ -44,3 +44,11 @@ Felizmente, o regulamento europeu não nos coloca no ringue da noite para o dia.
 Para tentar difundir ao máximo a coleta de assinaturas, criei uma página de encontro para recrutar apoiadores: [anticitera.deft.work/6abril](https://anticitera.deft.work/es/6abril/).
 
 E é precisamente nesse ponto que nos encontramos hoje: com o apoio do direito comunitário em mãos, um continente inteiro para mobilizar e a certeza de que a bola já não está no campo dos burocratas de Bruxelas, mas nas mãos dos cidadãos: cidadãos como você, com direito à assinatura e com um ambiente de amigos e familiares que também podem participar.
+
+---
+
+E esse é o fim da história, estamos no presente e o restante dos capítulos dessa história ainda estão para ser escritos, espero que tenham gostado e que nos veremos novamente em breve.
+
+Tudo de bom,
+
+[Eloy López](mailto:elswork@mypublicinbox.email)

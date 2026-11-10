@@ -1128,6 +1128,12 @@ blockquote.chapter-letter strong {
   margin: 0 auto;
 }
 
+.chapter-figure.is-qr img {
+  max-width: 180px;
+  padding: 0.5rem;
+  background-color: #ffffff;
+}
+
 .chapter-figure figcaption {
   font-family: var(--font-serif);
   font-size: 0.88rem;
@@ -1197,5 +1203,171 @@ blockquote.chapter-letter strong {
   color: #38bdf8;
   background: rgba(15, 23, 42, 1);
 }
+
+/* ==========================================================================
+   Acceso Directo al Repositorio GitHub y Botones de Edición por Capítulo
+   ========================================================================== */
+.sidebar-github {
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.format-pill.edit-pill {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.format-pill.edit-pill:hover {
+  background-color: var(--bg-subtle);
+}
+
+.chapter-meta {
+  justify-content: space-between;
+}
+
+.chapter-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.chapter-edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  min-block-size: 24px;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.chapter-edit-btn:hover {
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.chapter-edit-btn:focus-visible,
+.chapter-item-edit:focus-visible,
+.btn-edit-github:focus-visible,
+.btn-repo-github:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.chapter-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.chapter-item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.chapter-item-edit {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 26px;
+  min-block-size: 26px;
+  padding: 0.15rem 0.35rem;
+  border-radius: 5px;
+  font-size: 0.76rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.chapter-item-edit:hover {
+  color: var(--brand-primary);
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+.chapter-collab-bar {
+  margin: 1.75rem 0 0.5rem;
+  padding: 1rem 1.2rem;
+  background-color: var(--bg-subtle);
+  border: 1px dashed var(--border-color);
+  border-radius: 10px;
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.chapter-collab-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex: 1 1 260px;
+}
+
+.chapter-collab-text strong {
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.chapter-collab-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.btn-edit-github,
+.btn-repo-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  min-block-size: 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-edit-github {
+  background-color: var(--brand-primary);
+  color: #ffffff;
+  border: 1px solid var(--brand-primary);
+}
+
+.btn-repo-github {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-edit-github:hover,
+.btn-repo-github:hover {
+  opacity: 0.9;
+  border-color: var(--brand-primary);
+}
+
 
 

@@ -44,7 +44,7 @@
   <meta name="twitter:image" content="https://odisea.deft.work/img/og-odisea.jpg">
   <meta name="twitter:image:alt" content="Portada oficial del libro La Odisea de la .IA por Eloy López Sánchez">
 
-  <link rel="stylesheet" href="styles.css?v=20261108-1540">
+  <link rel="stylesheet" href="styles.css?v=20261110-1900">
 
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MGZGPZ99"></script>
@@ -74,9 +74,13 @@
           title="Descargar libro maquetado en PDF">
           📄 PDF
         </a>
-        <a id="top-mp3-link" href="audio/es/01-la-idea-mas-importante-de-mi-vida.mp3" download class="format-pill"
+        <a id="top-mp3-link" href="audio/es/00-prologo-y-agradecimientos.mp3" download class="format-pill"
           title="Descargar capítulo en MP3">
           🎧 MP3
+        </a>
+        <a id="top-repo-link" href="https://github.com/elswork/odisea.deft.work" target="_blank" rel="noopener noreferrer"
+          class="format-pill repo-pill" title="Abrir repositorio del libro en GitHub">
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: -2px; margin-right: 3px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span id="top-repo-text">GitHub</span>
         </a>
         <label for="lang-select" hidden>Idioma</label>
         <select id="lang-select" class="lang-select" aria-label="Seleccionar idioma">
@@ -123,22 +127,37 @@
         <a id="side-pdf-link" href="descargas/odisea-ia-es.pdf" download class="format-pill">
           📄 Descargar Libro (.pdf)
         </a>
-        <a id="side-mp3-link" href="audio/es/01-la-idea-mas-importante-de-mi-vida.mp3" download class="format-pill">
+        <a id="side-mp3-link" href="audio/es/00-prologo-y-agradecimientos.mp3" download class="format-pill">
           🎧 Descargar Audiolibro (.mp3)
+        </a>
+      </div>
+
+      <div class="sidebar-github">
+        <span id="github-heading" class="sidebar-heading">Libro Colaborativo (GitHub)</span>
+        <a id="side-edit-link" href="https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/00-prologo-y-agradecimientos.md" target="_blank" rel="noopener noreferrer" class="format-pill edit-pill">
+          ✏️ Editar capítulo actual
+        </a>
+        <a id="side-repo-link" href="https://github.com/elswork/odisea.deft.work" target="_blank" rel="noopener noreferrer" class="format-pill repo-pill">
+          💻 Ver Repositorio en GitHub
         </a>
       </div>
     </aside>
 
     <article class="chapter-reader">
       <div class="chapter-meta">
-        <span id="chapter-pill" class="chapter-pill">Capítulo 1 de 10</span>
-        <span id="reading-time">Lectura: 4 min · Por Eloy López Sánchez</span>
+        <div class="chapter-meta-info">
+          <span id="chapter-pill" class="chapter-pill">Capítulo 0 de 10</span>
+          <span id="reading-time">Lectura: 2 min · Por Eloy López Sánchez</span>
+        </div>
+        <a id="chapter-edit-btn" href="https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/00-prologo-y-agradecimientos.md" target="_blank" rel="noopener noreferrer" class="chapter-edit-btn">
+          <span aria-hidden="true">✏️</span>
+          <span id="chapter-edit-text">Editar en GitHub</span>
+        </a>
       </div>
 
-      <h1 id="chapter-title" class="chapter-title">La idea más importante de mi vida</h1>
+      <h1 id="chapter-title" class="chapter-title">Prólogo y Agradecimientos</h1>
       <p id="chapter-lead" class="chapter-lead">
-        ¿Por qué la tecnología más poderosa de nuestro tiempo lleva el sello de un paraíso caribeño y cómo nació la idea
-        de crear la Denominación de Origen .ia?
+        Bienvenida a una obra abierta, libre y colaborativa por la soberanía digital europea
       </p>
 
       <!-- Reproductor de Audiolibro + Karaoke a la inversa (Read-Along) -->
@@ -153,7 +172,7 @@
         </div>
 
         <!-- Above-the-fold audio element: omit loading="lazy" and use preload="metadata" -->
-        <audio id="chapter-audio" preload="metadata" src="audio/es/01-la-idea-mas-importante-de-mi-vida.mp3"></audio>
+        <audio id="chapter-audio" preload="metadata" src="audio/es/00-prologo-y-agradecimientos.mp3"></audio>
 
         <div class="audiobook-controls">
           <button type="button" id="play-pause-btn" class="play-btn">
@@ -183,6 +202,22 @@
       </section>
 
       <div id="chapter-body" class="chapter-body"></div>
+
+      <!-- Barra de Edición Colaborativa en GitHub -->
+      <div id="chapter-collab-bar" class="chapter-collab-bar">
+        <div class="chapter-collab-text">
+          <strong id="collab-title">🤝 Obra abierta y colaborativa</strong>
+          <span id="collab-desc">¿Has visto una errata o quieres mejorar o ampliar este capítulo? Edítalo directamente en GitHub.</span>
+        </div>
+        <div class="chapter-collab-actions">
+          <a id="bottom-edit-btn" href="https://github.com/elswork/odisea.deft.work/edit/main/capitulos/es/00-prologo-y-agradecimientos.md" target="_blank" rel="noopener noreferrer" class="btn-edit-github">
+            <span aria-hidden="true">✏️</span> <span id="bottom-edit-text">Editar este capítulo en GitHub</span>
+          </a>
+          <a id="bottom-repo-btn" href="https://github.com/elswork/odisea.deft.work" target="_blank" rel="noopener noreferrer" class="btn-repo-github">
+            <span aria-hidden="true">💻</span> <span id="bottom-repo-text">Repositorio completo</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Barra de Compartición RRSS y Patrocinio Económico -->
       <section class="share-sponsor-bar" aria-label="Compartir y patrocinar">
@@ -280,14 +315,15 @@
     </div>
     <div>
       Generado con <a href="https://homero.deft.work" target="_blank" rel="noopener"><strong>Homero</strong></a> ·
+      <a href="https://github.com/elswork/odisea.deft.work" target="_blank" rel="noopener">Repositorio GitHub</a> ·
       <a href="https://citizens-initiative.europa.eu/initiatives/details/2026/000012_en" target="_blank"
         rel="noopener">Registro Oficial UE</a> ·
       <a href="https://anticitera.deft.work" target="_blank" rel="noopener">anticitera.deft.work</a>
     </div>
   </footer>
 
-  <script src="homero-bundle.js?v=20261108-1505"></script>
-  <script src="app.js?v=20261108-1505"></script>
+  <script src="homero-bundle.js?v=20261110-1900"></script>
+  <script src="app.js?v=20261110-1900"></script>
 </body>
 
 </html>

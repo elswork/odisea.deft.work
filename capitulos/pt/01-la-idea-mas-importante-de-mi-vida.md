@@ -4,14 +4,10 @@ titulo: "A ideia mais importante da minha vida"
 subtitulo: "Por que a tecnologia mais poderosa do nosso tempo traz o selo de um paraíso caribenho e como nasceu a ideia de criar a Denominação de Origem .ia?"
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "73aec0a30ffc747d"
+fuente_hash: "c655f70e487ef263"
 ---
 
 # Capítulo 1: A ideia mais importante da minha vida
-
-Primeiro e mais importante: seja bem-vindo. Espero que você ache esta história agradável e divertida.
-
-Vamos fazer esse livro diferente dos demais, quero que seja colaborativo e que várias pessoas possam fazer a sua parte, corrigindo, ampliando e até publicando um capítulo inteiro. É publicado em uma plataforma GitHub que permite exatamente isso; De qualquer forma, se precisar de ajuda, pergunte-me.
 
 Por onde eu começo? Para me apresentar: meu nome é Eloy López, tenho 47 anos, moro em Alcorcón há vinte anos, mas venho de Tarragona. Trabalho como cientista da computação e programador e sou um pai desastroso. Tenho a capacidade patética de não ser bom em quase nada. Bem, eu minto: há algo em que sou bom, em pensar. Posso passar horas pensando em meus movimentos. Desde pequeno sempre tive a sensação de que pensava mais que os outros. Isso não significa que sou mais inteligente; Pelo contrário, sempre pensei que em termos de inteligência estava um passo atrás da média, mas, graças a essa capacidade extra de reflexão, fui capaz de resolver qualquer problema que cruzasse o meu caminho.
 
@@ -33,7 +29,7 @@ Recentemente tive a grande satisfação de entrar em contato com José María Á
 
 > **Caro Eloy:**
 > 
-> Muito obrigado pela sua mensagem e pelo que você detalha nela. Que aquele artigo da ABC tenha dado origem a uma iniciativa como a sua me deixa muito feliz e agradeço sinceramente por me escrever sobre isso. Aproveito também para vos felicitar por isto, porque considero-o especialmente necessário nestes tempos.
+> Muito obrigado pela sua mensagem e pelo que você detalha nela. Que aquele artigo da ABC tenha dado origem a uma iniciativa como a sua me deixa muito feliz e agradeço sinceramente por me escrever sobre isso. Aproveito também esta oportunidade para vos felicitar por isto, porque parece especialmente necessário nestes tempos.
 > 
 > Atenciosamente,  
 > **José M.ª**
@@ -45,4 +41,4 @@ Três anos se passaram e eu ainda tinha a ideia na cabeça, até que um dia deci
 - [Isla Anticitera: o futuro da inteligência artificial](https://deft.work/blog/2023/04/03/isla-anticitera-el-futuro-de-la-inteligencia-artificial/)
 - [Isla Anticitera: não espere mais, reserve já o seu domínio .ia](https://deft.work/blog/2023/04/13/isla-anticitera-no-esperes-m%C3%A1s-reserva-ahora-tu-dominio-.ia/)
 
-Nesse momento minha cabeça deu outro “clique” e decidi que era hora de dar o próximo passo, levar minha ideia para o próximo nível. Assim nasceu o **.IA Antikythera Island Project** ou **Antikythera Project** para amigos. E tomei a decisão mais transcendental da minha vida: fazer deste projeto o meu projeto para toda a vida; Ou seja, dedicar-me de corpo e alma a isso até atingir meu objetivo ou, caso não o alcance na vida, deixar instruções para que outra pessoa o alcance.
+Nesse momento minha cabeça deu outro “clique” e decidi que era hora de dar o próximo passo, levar minha ideia para o próximo nível. Assim nasceu o **.IA Antikythera Island Project** ou **Antikythera Project** para amigos. E tomei a decisão mais transcendental da minha vida: fazer deste projeto o meu projeto para toda a vida; isto é, dedicar-me de corpo e alma a isso até atingir meu objetivo ou, se não conseguir na vida, deixar instruções para outra pessoa alcançá-lo.
