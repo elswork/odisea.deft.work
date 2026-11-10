@@ -13,11 +13,11 @@ A toda mi familia, sois increibles, os quiero.
 
 Lo primero y más importante: bienvenido seas. Espero que este relato te resulte ameno y divertido.
 
-Este libro está abierto a todos los públicos —disponible para todo el mundo en [Odisea de la .IA](https://odisea.deft.work) — y destaca por un enfoque completamente colaborativo alojado en [Repositorio GitHub](https://github.com/elswork/odisea.deft.work/), permitiendo que varias personas pongan su granito de arena corrigiendo, ampliando o incluso publicando un capítulo entero (y recuerda que, si necesitas ayuda, puedes pedírmela)
+Este libro está abierto a todos los públicos -disponible para todo el mundo en [Odisea de la .IA](https://odisea.deft.work) — y destaca por un enfoque completamente colaborativo, está alojado en [Repositorio GitHub](https://github.com/elswork/odisea.deft.work/), permitiendo que varias personas pongan su granito de arena corrigiendo, ampliando o incluso publicando un capítulo entero (y recuerda que, si necesitas ayuda, puedes pedírmela)
 
 ![Qrcode https://odisea.deft.work](img/qrcode_odisea.deft.eork.png)
 
-La Odisea de la .IA ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work).
+[La Odisea de la .IA](https://odisea.deft.work) ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work), ningún árbol 🎄 ha resultado dañado en el proceso.
 
 Podeis contactar conmigo en:
 
