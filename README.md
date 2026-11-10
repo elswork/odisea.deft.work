@@ -51,3 +51,11 @@ docker run --rm -v /home/pirate/docker/odisea.deft.work:/book homero:latest buil
    git push
    ```
 4. **Despliegue automático:** GitHub Pages detecta los cambios y actualiza https://odisea.deft.work en menos de 30 segundos.
+
+
+---
+
+Actualizar este README.md
+Prologo + Agradecimiento
+Editame en GitHub 
+Ending
