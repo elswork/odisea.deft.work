@@ -96,3 +96,9 @@ odisea.deft.work/
 ├── index.html, styles.css, app.js  # Lector web interactivo con modo claro/oscuro y Karaoke
 └── homero-bundle.js            # Paquete de datos autocompilado por Homero para la web
 ```
+1.1
+1.2
+1.3
+2.1
+3.1
+3.2
