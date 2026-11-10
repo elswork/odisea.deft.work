@@ -55,7 +55,7 @@ docker run --rm -v /home/pirate/docker/odisea.deft.work:/book homero:latest buil
 
 ---
 
-Actualizar este README.md ==> Hay que actualizar este Readme.md (odisea) y todo el repositorio de (homero) para que las instrucciones de uso de la plataforma sean fáciles y sencillas.
+Actualizar este README.md ==> Hay que actualizar este Readme.md (odisea) y la escaleta y todo el repositorio de (homero) para que las instrucciones de uso de la plataforma sean fáciles y sencillas.
 
 Prologo + Agradecimiento ==> Meter en el capítulo 0
 
