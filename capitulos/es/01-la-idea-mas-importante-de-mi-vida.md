@@ -19,7 +19,7 @@ Este libro está abierto a todos los públicos —disponible para todo el mundo 
 
 Podeis contactar conmigo en:
 
-elswork@mypublicinbox.email o [MyPublicInbox](https://mypublicinbox.com/elswork)
+[Eloy López](mailto:elswork@mypublicinbox.email) o [MyPublicInbox](https://mypublicinbox.com/elswork)
 
 # Capítulo 1: La idea más importante de mi vida
 
