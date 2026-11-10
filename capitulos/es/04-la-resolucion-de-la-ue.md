@@ -22,14 +22,7 @@ Abrí el archivo adjunto con el corazón en un puño.
 
 Reunido en Estrasburgo el **6 de octubre de 2026**, el Colegio de Comisarios de la Unión Europea había adoptado formalmente la **Decisión de Ejecución C(2026) 7098 final**. No solo admitían a trámite nuestra propuesta; declaraban oficialmente registrada la iniciativa bajo el código legal **`ECI(2026)000012`**:
 
-> [!NOTE]
-> ### 📂 Expediente ECI · Acto Jurídico de la Comisión Europea
-> **Decisión de Ejecución C(2026) 7098 final — Registro Oficial `ECI(2026)000012`**  
-> *Estrasburgo, 6 de octubre de 2026 · Colegio de Comisarios de la Unión Europea*
->
-> **Objeto:** «Creación del Distrito Digital Europeo (.IA) para la Gobernanza de la Inteligencia Artificial Soberana».  
-> **Base Jurídica TFUE admitida:** Artículos 16 (protección de datos), 114 (mercado interior), 172 (redes transeuropeas) y 173 (competitividad industrial europea).  
-> **Estatus:** Plena competencia de la Unión Europea para legislar y crear la Denominación de Origen digital `.ia`.
+> **«Creación del Distrito Digital Europeo (.IA) para la Gobernanza de la Inteligencia Artificial Soberana»**.
 
 Cuando leí los fundamentos de derecho junto a Athena, se me puso la piel de gallina. Los juristas de la Comisión reconocían explícitamente que la Unión Europea **posee competencias legales plenas** para legislar sobre la infraestructura soberana de internet y el dominio `.ia`, amparándose en los artículos 16, 114, 172 y 173 del Tratado de Funcionamiento de la Unión Europea (TFUE).
 

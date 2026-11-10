@@ -1587,26 +1587,6 @@ blockquote.chapter-letter strong {
   padding-left: 0.2rem;
 }
 
-/* ==========================================================================
-   Cajas de Expediente ECI / Documentos Oficiales en Markdown
-   ========================================================================== */
-.chapter-body blockquote.chapter-letter {
-  position: relative;
-  border-left: 4px solid var(--brand-primary);
-  background: var(--bg-subtle);
-  border-radius: 0 10px 10px 0;
-  padding: 1rem 1.4rem;
-  margin: 1.5rem 0;
-}
-
-.chapter-body blockquote h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1.05rem;
-  color: var(--brand-primary);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
 
 .chapter-collab-text {
   display: flex;
