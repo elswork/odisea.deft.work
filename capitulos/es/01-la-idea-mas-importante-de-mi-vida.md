@@ -15,6 +15,8 @@ Lo primero y más importante: bienvenido seas. Espero que este relato te resulte
 
 Este libro está abierto a todos los públicos —disponible para todo el mundo en [Odisea de la .IA](https://odisea.deft.work) — y destaca por un enfoque completamente colaborativo alojado en [Repositorio GitHub](https://github.com/elswork/odisea.deft.work/), permitiendo que varias personas pongan su granito de arena corrigiendo, ampliando o incluso publicando un capítulo entero (y recuerda que, si necesitas ayuda, puedes pedírmela)
 
+![Qrcode https://odisea.deft.work](img/qrcode_odisea.deft.eork.png)
+
 Podeis contactar conmigo en:
 
 elswork@mypublicinbox.email o [MyPublicInbox](https://mypublicinbox.com/elswork)
