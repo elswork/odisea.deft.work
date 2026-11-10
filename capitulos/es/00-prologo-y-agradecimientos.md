@@ -10,7 +10,11 @@ estado: "Publicado"
 
 ## Agradecimientos
 
-A toda mi familia, sois increíbles, os quiero.
+A toda mi familia: sois increíbles, os quiero.
+
+A mis compañeros de trabajo por soportarme y tener paciencia conmigo: no sé qué haría sin vosotros.
+
+A mis compañeros del chat 🐈‍⬛ «El Lado del Mal» 👿, hacéis que la rutina diaria sea más llevadera: @Martatp, @Anso, @curramas... y en especial a @Mmaria, cuyas sugerencias están incluidas en este libro.
 
 ---
 
@@ -18,11 +22,11 @@ A toda mi familia, sois increíbles, os quiero.
 
 Lo primero y más importante: bienvenido seas. Espero que este relato te resulte ameno y divertido.
 
-Este libro está abierto a todos los públicos —disponible para todo el mundo en [Odisea de la .IA](https://odisea.deft.work)— y destaca por un enfoque completamente colaborativo: está alojado en su [Repositorio GitHub](https://github.com/elswork/odisea.deft.work/), permitiendo que varias personas pongan su granito de arena corrigiendo, ampliando o incluso publicando un capítulo entero (y recuerda que, si necesitas ayuda, puedes pedírmela).
+Este libro está abierto a todos los públicos —disponible para todo el mundo en [Odisea de la .IA](https://odisea.deft.work)— y destaca por un enfoque completamente colaborativo: está alojado en su [repositorio en GitHub](https://github.com/elswork/odisea.deft.work/), permitiendo que varias personas pongan su granito de arena corrigiendo, ampliando o incluso publicando un capítulo entero (y recuerda que, si necesitas ayuda, puedes pedírmela).
 
 ![Código QR para acceder a https://odisea.deft.work](img/qrcode_odisea.deft.work.png)
 
-[La Odisea de la .IA](https://odisea.deft.work) ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work), ningún árbol 🎄 ha resultado dañado en el proceso.
+[La Odisea de la .IA](https://odisea.deft.work) ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work); ningún árbol 🎄 ha resultado dañado en el proceso.
 
 Podéis contactar conmigo en:
 

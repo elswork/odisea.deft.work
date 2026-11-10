@@ -46,7 +46,7 @@ Y es precisamente en ese punto en el que nos encontramos hoy: con el respaldo de
 
 ---
 
-Y hasta aquí el relato, nos encontramos en el presente y el resto de capitulos de esta historia esta por escribir, espero que os haya gustado y que pronto nos volvamos a ver. 
+Y hasta aquí el relato: nos encontramos en el presente y el resto de capítulos de esta historia está por escribir. Espero que os haya gustado y que pronto nos volvamos a ver. 
 
 Un saludo,
 
