@@ -17,6 +17,8 @@ Este libro está abierto a todos los públicos —disponible para todo el mundo 
 
 ![Qrcode https://odisea.deft.work](img/qrcode_odisea.deft.eork.png)
 
+La Odisea de la .IA ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work).
+
 Podeis contactar conmigo en:
 
 [Eloy López](mailto:elswork@mypublicinbox.email) o [MyPublicInbox](https://mypublicinbox.com/elswork)
