@@ -585,7 +585,11 @@ function renderLanguage(langCode, chapterIdx) {
   document.getElementById("theme-toggle").setAttribute("aria-label", ui.themeBtnLabel);
 
   const chNum = (chapter && typeof chapter.capitulo === "number") ? chapter.capitulo : activeChapterIndex;
-  document.getElementById("chapter-pill").textContent = effKey === "en" ? `Chapter ${chNum} of 10` : `Capítulo ${chNum} de 10`;
+  const totalPublished = chapters.length || 5;
+  const humanIndex = activeChapterIndex + 1;
+  document.getElementById("chapter-pill").textContent = effKey === "en"
+    ? `Chapter ${chNum} (${humanIndex} of ${totalPublished})`
+    : `Capítulo ${chNum} (${humanIndex} de ${totalPublished})`;
   document.getElementById("audiobook-label").textContent = ui.audiobookLabel;
   document.getElementById("audiobook-hint").textContent = ui.audiobookHint;
   updatePlayerToggleUI();
@@ -1330,6 +1334,10 @@ function initCalendarReminder() {
   });
 }
 
+/* ==========================================================================
+   Control de Modo Claro / Oscuro (Two-State Toggle conforme a modern-web-guidance)
+   ========================================================================== */
+function initThemeToggle() {
   const meta = document.querySelector('meta[name="color-scheme"]');
   const toggleBtn = document.getElementById("theme-toggle");
 
