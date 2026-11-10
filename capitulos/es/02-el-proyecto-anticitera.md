@@ -51,6 +51,14 @@ Paralelamente, yo estaba intentando utilizar el dominio HNS **`.anticitera`** pa
 
 Athena encontró la rendija en la coraza normativa: la figura jurídica de la **«Reserva Excepcional»** (*Exceptional Reservation*). Se trata de un mecanismo extraordinario de la Agencia de Mantenimiento de la ISO (ISO 3166/MA) en Ginebra que permite asignar códigos de dos letras a territorios o entidades que no son países soberanos cuando existen imperativos de interés público, cultural o institucional. Fue exactamente la fórmula con la que en su día se autorizaron dominios históricos como **`.eu`** para la Unión Europea o **`.uk`** para el Reino Unido.
 
+> [!NOTE]
+> ### 📂 Expediente ECI · Fundamento Jurídico ISO 3166-1
+> **Cláusula de Reserva Excepcional (*Exceptional Reservation*)**  
+> *Norma ISO 3166-1 / Agencia de Mantenimiento ISO (Ginebra) & Delegación IANA*
+>
+> Precedentes directos aplicados con éxito: **`.eu`** (Unión Europea) y **`.uk`** (Reino Unido).  
+> Permite asignar el código ccTLD de dos letras **`.ia`** para el territorio de **Isla Anticitera** bajo amparo institucional europeo sin exigir la condición de Estado soberano de la ONU.
+
 La llave maestra, por tanto, no exigía que Anticitera declarase su independencia, sino una estrategia diplomática de dos pasos: primero, que el organismo nacional de normalización griego (ELOT) solicitase formalmente ante la ISO la reserva excepcional del código **`IA`** para el territorio de Anticitera; y segundo, que la IANA procediese a su delegación técnica en la raíz de internet.
 
 Pero para que Grecia y Bruselas escuchasen la propuesta de un ciudadano de a pie desde Alcorcón, hacía falta un instrumento legal de máxima jerarquía democrática. Y ese instrumento existía: la **Iniciativa Ciudadana Europea (ICE)**, el mecanismo oficial del Tratado de Lisboa que obliga a la Comisión Europea a pronunciarse y legislar si se reúne el apoyo de un millón de ciudadanos.

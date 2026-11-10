@@ -1358,18 +1358,254 @@ blockquote.chapter-letter strong {
   border-color: var(--border-color);
 }
 
-.chapter-collab-bar {
-  margin: 1.75rem 0 0.5rem;
-  padding: 1rem 1.2rem;
-  background-color: var(--bg-subtle);
-  border: 1px dashed var(--border-color);
-  border-radius: 10px;
+/* ==========================================================================
+   Muro de Coautores y Colaboradores de GitHub
+   ========================================================================== */
+.contributors-section {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.4rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   font-family: var(--font-sans);
+}
+
+.contributors-header {
+  margin-bottom: 0.9rem;
+}
+
+.contributors-title {
+  margin: 0 0 0.25rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-main);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 0.45rem;
+}
+
+.contributors-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.contributors-list {
+  display: flex;
   flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.contributor-loading {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.contributor-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.25rem 0.65rem 0.25rem 0.3rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.contributor-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-primary);
+}
+
+.contributor-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.contributor-commits {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+}
+
+/* ==========================================================================
+   Botón Calendario 6 de Abril
+   ========================================================================== */
+.conversion-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.btn-calendar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-block-size: 44px;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-calendar:hover {
+  background-color: var(--border-color);
+  transform: translateY(-1px);
+}
+
+.btn-calendar:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.cal-status {
+  display: block;
+  font-size: 0.78rem;
+  color: #10b981;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Banner "Continuar Lectura" (Bookmark)
+   ========================================================================== */
+.resume-banner {
+  margin: 0.75rem 0 1rem;
+}
+
+.resume-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.85rem;
+  background: linear-gradient(135deg, rgba(0, 51, 153, 0.08), rgba(218, 165, 32, 0.12));
+  border: 1px solid var(--gold-border, #daa520);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(218, 165, 32, 0.2);
+}
+
+.resume-icon {
+  font-size: 1.1rem;
+}
+
+.resume-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-primary);
+}
+
+.resume-info {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Marca de capítulo completado en el sidebar */
+.chapter-completed-badge {
+  color: #10b981;
+  font-size: 0.85rem;
+  margin-left: 0.35rem;
+}
+
+/* ==========================================================================
+   Popover de Compartición de Frase (Deep Linking)
+   ========================================================================== */
+.sentence-share-popover {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+}
+
+.sentence-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.5rem;
+  min-block-size: 26px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.sentence-share-btn:hover {
+  background-color: var(--border-color);
+}
+
+.sentence-share-tip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #10b981;
+  padding-left: 0.2rem;
+}
+
+/* ==========================================================================
+   Cajas de Expediente ECI / Documentos Oficiales en Markdown
+   ========================================================================== */
+.chapter-body blockquote.chapter-letter {
+  position: relative;
+  border-left: 4px solid var(--brand-primary);
+  background: var(--bg-subtle);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+
+.chapter-body blockquote h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .chapter-collab-text {

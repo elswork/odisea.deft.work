@@ -26,12 +26,12 @@ Fue en 2019 cuando, al leer el artículo [«Inteligencia artificial en español�
 
 Recientemente he tenido la gran satisfacción de contactar con José María Álvarez-Pallete a través de [MyPublicInbox](https://mypublicinbox.com/jmalvpal) y contarle que su artículo fue la espita que encendió la mecha de mi idea. Esta fue su respuesta:
 
-> **Estimado Eloy:**
-> 
-> Muchas gracias por tu mensaje y por lo que en él me detallas. Que aquel artículo de ABC haya dado lugar a una iniciativa como la tuya me da mucha alegría y te agradezco muy sinceramente que me hayas escrito para contármelo. Aprovecho además para felicitarte por ello, porque me parece especialmente necesario en estos tiempos.
-> 
-> Un cordial saludo,  
-> **José M.ª**
+> [!NOTE]
+> ### 📂 Expediente ECI · Prueba Documental
+> **Carta de felicitación de D. José María Álvarez-Pallete a Eloy López**  
+> *Presidente Ejecutivo de Telefónica (vía MyPublicInbox)*
+>
+> «Estimado Eloy: Muchas gracias por tu mensaje y por lo que en él me detallas. Que aquel artículo de ABC haya dado lugar a una iniciativa como la tuya me da mucha alegría y te agradezco muy sinceramente que me hayas escrito para contármelo. Aprovecho además para felicitarte por ello, porque me parece especialmente necesario en estos tiempos. Un cordial saludo, **José M.ª**»
 
 ## Primeros pasos
 

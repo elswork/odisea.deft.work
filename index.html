@@ -119,6 +119,16 @@
       </p>
       <ol id="chapter-list" class="chapter-list"></ol>
 
+      <div id="resume-banner" class="resume-banner" hidden>
+        <button type="button" id="resume-btn" class="resume-btn">
+          <span class="resume-icon" aria-hidden="true">🔖</span>
+          <span class="resume-text-wrap">
+            <span class="resume-label">Continuar lectura</span>
+            <span id="resume-info" class="resume-info">Capítulo 0</span>
+          </span>
+        </button>
+      </div>
+
       <div class="sidebar-downloads">
         <span id="downloads-heading" class="sidebar-heading">Formatos Abiertos (Homero)</span>
         <a id="side-epub-link" href="descargas/odisea-ia-es.epub" download class="format-pill">
@@ -225,6 +235,19 @@
         </div>
       </div>
 
+      <!-- Muro de Coautores y Colaboradores en GitHub -->
+      <section id="contributors-section" class="contributors-section" aria-labelledby="contributors-title">
+        <div class="contributors-header">
+          <h4 id="contributors-title" class="contributors-title">
+            <span aria-hidden="true">👥</span> Coautores y Colaboradores de esta Obra
+          </h4>
+          <span class="contributors-subtitle">Ciudadanos que han mejorado y revisado los capítulos en GitHub</span>
+        </div>
+        <div id="contributors-list" class="contributors-list" role="list">
+          <div class="contributor-loading">Cargando colaboradores de la comunidad...</div>
+        </div>
+      </section>
+
       <!-- Barra de Compartición RRSS y Patrocinio Económico -->
       <section class="share-sponsor-bar" aria-label="Compartir y patrocinar">
         <div class="share-box">
@@ -305,9 +328,15 @@
               En España y en la UE basta con tu Nombre y DNI (lleva menos de 45 segundos). Conoce la iniciativa oficial
               y comprométete con el 6 de abril.
             </p>
-            <a id="eu-btn" href="https://anticitera.deft.work/6abril/" target="_blank" rel="noopener" class="btn-eu">
-              Ir a la Plataforma Oficial ICE →
-            </a>
+            <div class="conversion-card-actions">
+              <a id="eu-btn" href="https://anticitera.deft.work/6abril/" target="_blank" rel="noopener" class="btn-eu">
+                Ir a la Plataforma Oficial ICE →
+              </a>
+              <button type="button" id="cal-reminder-btn" class="btn-calendar" aria-label="Añadir recordatorio del 6 de abril a mi calendario">
+                <span aria-hidden="true">📅</span> <span id="cal-reminder-text">Guardar 6 de abril en mi calendario</span>
+              </button>
+            </div>
+            <span id="cal-reminder-status" class="cal-status" role="status" aria-live="polite"></span>
           </div>
         </div>
       </section>
@@ -327,6 +356,20 @@
       <a href="https://anticitera.deft.work" target="_blank" rel="noopener">anticitera.deft.work</a>
     </div>
   </footer>
+
+  <!-- Popover flotante para compartir / enlazar frase exacta (Deep-Linking) -->
+  <div id="sentence-share-popover" class="sentence-share-popover" role="dialog" aria-label="Compartir frase" hidden>
+    <button type="button" id="copy-sentence-link-btn" class="sentence-share-btn">
+      <span aria-hidden="true">🔗</span> <span>Copiar enlace al segundo</span>
+    </button>
+    <a id="share-sentence-x-btn" href="#" target="_blank" rel="noopener" class="sentence-share-btn">
+      <span aria-hidden="true">𝕏</span> <span>Citar en X</span>
+    </a>
+    <a id="share-sentence-wa-btn" href="#" target="_blank" rel="noopener" class="sentence-share-btn">
+      <span aria-hidden="true">💬</span> <span>WhatsApp</span>
+    </a>
+    <span id="sentence-share-tip" class="sentence-share-tip" role="status" aria-live="polite"></span>
+  </div>
 
   <script src="homero-bundle.js?v=20261110-1900"></script>
   <script src="app.js?v=20261110-1900"></script>

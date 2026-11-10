@@ -461,6 +461,9 @@ function syncKaraokeHighlight(currentTime) {
     }
   }
 
+  // Guardar progreso de lectura para el marcador
+  saveReadingProgress(activeChapterIndex, currentTime);
+
   if (currentSentId !== lastActiveSentenceId) {
     if (lastActiveSentenceId !== null) {
       const prevS = document.getElementById(`s-${lastActiveSentenceId}`);
@@ -642,6 +645,9 @@ function renderLanguage(langCode, chapterIdx) {
     document.getElementById("chapter-title").innerHTML = chapter.title_html || chapter.title;
     document.getElementById("chapter-lead").innerHTML = chapter.subtitle_html || chapter.subtitle;
 
+    // Actualizar Media Session API (pantalla de bloqueo, coche y auriculares)
+    setupMediaSession(chapter);
+
     let teaserHtml = "";
     const teaserData = {
       es: [
@@ -790,10 +796,12 @@ function renderLanguage(langCode, chapterIdx) {
 
   const listEl = document.getElementById("chapter-list");
   listEl.innerHTML = "";
+  const completedCaps = getCompletedChapters();
   if (chapters.length > 0) {
     chapters.forEach((ch, idx) => {
       const li = document.createElement("li");
       const isActive = idx === activeChapterIndex;
+      const isCompleted = completedCaps.includes(idx);
       li.className = `chapter-item ${isActive ? "is-active" : "is-clickable"}`;
       li.style.cursor = "pointer";
       const numLabel = effKey === "en" ? `Chapter ${ch.capitulo}` : `Capítulo ${ch.capitulo}`;
@@ -801,11 +809,12 @@ function renderLanguage(langCode, chapterIdx) {
       const editAria = effKey === "en"
         ? `Edit ${numLabel}: ${ch.title} on GitHub`
         : `Editar ${numLabel}: ${ch.title} en GitHub`;
+      const completedIcon = isCompleted ? '<span class="chapter-completed-badge" title="Capítulo completado">✓</span>' : '';
 
       li.innerHTML = `
         <div class="chapter-item-row">
           <div class="chapter-item-main">
-            <span class="chapter-num">${numLabel}</span>${ch.title}
+            <span class="chapter-num">${numLabel}</span>${ch.title}${completedIcon}
           </div>
           <a href="${chEditHref}" target="_blank" rel="noopener noreferrer" class="chapter-item-edit" aria-label="${editAria}">
             <span aria-hidden="true">✏️</span>
@@ -904,6 +913,25 @@ function initAudiobookPlayer() {
     playBtn.textContent = ui.playText;
     cancelAnimationFrame(rafId);
     clearKaraokeHighlights();
+
+    // Marcar capítulo como completado
+    markChapterCompleted(activeChapterIndex);
+
+    // 1.2 Autoplay continuo al siguiente capítulo si existe
+    const bundleLang =
+      window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+    const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+    if (activeChapterIndex + 1 < chapters.length) {
+      setTimeout(() => {
+        goToChapter(activeChapterIndex + 1);
+        setTimeout(() => {
+          const nextAudio = document.getElementById("chapter-audio");
+          if (nextAudio) {
+            nextAudio.play().catch(() => {});
+          }
+        }, 400);
+      }, 1000);
+    }
   });
 
   audio.addEventListener("loadedmetadata", () => {
@@ -979,7 +1007,329 @@ function initPlayerCollapse() {
 /* ==========================================================================
    Control de Modo Claro / Oscuro (Two-State Toggle conforme a modern-web-guidance)
    ========================================================================== */
-function initThemeToggle() {
+/* ==========================================================================
+   Media Session API (Pantalla de Bloqueo, Smartwatch, CarPlay / Android Auto)
+   ========================================================================== */
+function setupMediaSession(chapter) {
+  if (!("mediaSession" in navigator)) return;
+
+  const audio = document.getElementById("chapter-audio");
+  const chNum = typeof chapter.capitulo === "number" ? chapter.capitulo : activeChapterIndex;
+  const numLabel = activeLang === "en" ? `Chapter ${chNum}` : `Capítulo ${chNum}`;
+
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: `${numLabel}: ${chapter.title}`,
+    artist: "Eloy López Sánchez",
+    album: "La Odisea de la .IA (ECI(2026)000012)",
+    artwork: [
+      { src: "img/portada-la-odisea-de-la-ia.jpg", sizes: "512x512", type: "image/jpeg" },
+      { src: "img/og-odisea.jpg", sizes: "1200x630", type: "image/jpeg" }
+    ]
+  });
+
+  navigator.mediaSession.setActionHandler("play", () => {
+    audio.play().catch(() => {});
+  });
+  navigator.mediaSession.setActionHandler("pause", () => {
+    audio.pause();
+  });
+  navigator.mediaSession.setActionHandler("seekbackward", (details) => {
+    const skip = details.seekOffset || 10;
+    audio.currentTime = Math.max(audio.currentTime - skip, 0);
+  });
+  navigator.mediaSession.setActionHandler("seekforward", (details) => {
+    const skip = details.seekOffset || 10;
+    audio.currentTime = Math.min(audio.currentTime + skip, audio.duration || 0);
+  });
+  navigator.mediaSession.setActionHandler("previoustrack", () => {
+    if (activeChapterIndex > 0) {
+      goToChapter(activeChapterIndex - 1);
+    }
+  });
+  navigator.mediaSession.setActionHandler("nexttrack", () => {
+    const bundleLang =
+      window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+    const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+    if (activeChapterIndex + 1 < chapters.length) {
+      goToChapter(activeChapterIndex + 1);
+    }
+  });
+}
+
+/* ==========================================================================
+   Marcador de Lectura y Capítulos Completados (LocalStorage)
+   ========================================================================== */
+function getCompletedChapters() {
+  try {
+    const saved = localStorage.getItem("odisea_completed_chapters");
+    return saved ? JSON.parse(saved) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function markChapterCompleted(chapterIdx) {
+  try {
+    const list = getCompletedChapters();
+    if (!list.includes(chapterIdx)) {
+      list.push(chapterIdx);
+      localStorage.setItem("odisea_completed_chapters", JSON.stringify(list));
+      const li = document.querySelectorAll("#chapter-list .chapter-item")[chapterIdx];
+      if (li && !li.querySelector(".chapter-completed-badge")) {
+        const titleEl = li.querySelector(".chapter-item-main");
+        if (titleEl) {
+          titleEl.insertAdjacentHTML("beforeend", '<span class="chapter-completed-badge" title="Capítulo completado">✓</span>');
+        }
+      }
+    }
+  } catch (e) {}
+}
+
+let lastSaveTime = 0;
+function saveReadingProgress(chapterIdx, currentTime) {
+  const now = Date.now();
+  if (now - lastSaveTime < 3000) return; // guardar máx cada 3s
+  lastSaveTime = now;
+  try {
+    localStorage.setItem(
+      "odisea_reading_bookmark",
+      JSON.stringify({
+        chapterIndex: chapterIdx,
+        time: currentTime,
+        date: now
+      })
+    );
+  } catch (e) {}
+}
+
+function initBookmarkResume() {
+  try {
+    const savedRaw = localStorage.getItem("odisea_reading_bookmark");
+    if (!savedRaw) return;
+    const saved = JSON.parse(savedRaw);
+    if (typeof saved.chapterIndex !== "number") return;
+
+    const banner = document.getElementById("resume-banner");
+    const resumeInfo = document.getElementById("resume-info");
+    const resumeBtn = document.getElementById("resume-btn");
+    if (!banner || !resumeBtn) return;
+
+    const bundleLang =
+      window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+    const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+    const targetChapter = chapters[saved.chapterIndex];
+    if (!targetChapter) return;
+
+    const chNum = typeof targetChapter.capitulo === "number" ? targetChapter.capitulo : saved.chapterIndex;
+    const timeFormatted = formatSeconds(saved.time || 0);
+    resumeInfo.textContent = `Capítulo ${chNum} (${timeFormatted})`;
+    banner.hidden = false;
+
+    resumeBtn.addEventListener("click", () => {
+      goToChapter(saved.chapterIndex);
+      setTimeout(() => {
+        const audio = document.getElementById("chapter-audio");
+        if (audio && saved.time) {
+          audio.currentTime = saved.time;
+          syncKaraokeHighlight(saved.time);
+        }
+      }, 400);
+      banner.hidden = true;
+    });
+  } catch (e) {}
+}
+
+/* ==========================================================================
+   1.1 Deep-Linking por Frase y Popover de Citas en RRSS
+   ========================================================================== */
+function initSentenceSharePopover() {
+  const popover = document.getElementById("sentence-share-popover");
+  const copyBtn = document.getElementById("copy-sentence-link-btn");
+  const shareXBtn = document.getElementById("share-sentence-x-btn");
+  const shareWaBtn = document.getElementById("share-sentence-wa-btn");
+  const tip = document.getElementById("sentence-share-tip");
+  if (!popover || !copyBtn) return;
+
+  let currentTargetSentence = null;
+  let currentTargetSId = null;
+
+  document.addEventListener("click", (e) => {
+    // Si se pulsa dentro del popover, no cerrarlo
+    if (e.target.closest("#sentence-share-popover")) return;
+
+    const sent = e.target.closest(".hm-sentence");
+    if (!sent) {
+      popover.hidden = true;
+      return;
+    }
+
+    // Si se hace doble clic o clic largo sobre frase, o clic con tecla Alt / toque sostenido
+    // Para no entorpecer el salto de audio normal, mostramos popover si se pulsa sobre una frase
+    const sId = parseInt(sent.getAttribute("data-s"), 10);
+    currentTargetSentence = sent;
+    currentTargetSId = sId;
+
+    const rect = sent.getBoundingClientRect();
+    popover.style.top = `${window.scrollY + rect.bottom + 6}px`;
+    popover.style.left = `${Math.max(10, Math.min(window.scrollX + rect.left, window.innerWidth - 320))}px`;
+    popover.hidden = false;
+    tip.textContent = "";
+
+    const cleanText = sent.innerText.trim();
+    const shareUrl = `${window.location.origin}${window.location.pathname}?cap=${activeChapterIndex}&s=${sId}`;
+    const quoteText = `«${cleanText.slice(0, 150)}${cleanText.length > 150 ? "..." : ""}» — La Odisea de la .IA`;
+
+    shareXBtn.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(shareUrl)}`;
+    shareWaBtn.href = `https://wa.me/?text=${encodeURIComponent(quoteText + " " + shareUrl)}`;
+  });
+
+  copyBtn.addEventListener("click", async () => {
+    if (currentTargetSId === null) return;
+    const shareUrl = `${window.location.origin}${window.location.pathname}?cap=${activeChapterIndex}&s=${currentTargetSId}`;
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      tip.textContent = "✅ ¡Enlace copiado!";
+      setTimeout(() => {
+        popover.hidden = true;
+        tip.textContent = "";
+      }, 1600);
+    } catch (err) {
+      tip.textContent = "Enlace listo en URL";
+    }
+  });
+
+  // Salto inicial por URL (?cap=X&s=Y)
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const capParam = params.get("cap");
+    const sParam = params.get("s");
+    if (capParam !== null) {
+      const targetCap = parseInt(capParam, 10);
+      if (!isNaN(targetCap)) {
+        setTimeout(() => {
+          goToChapter(targetCap);
+          if (sParam !== null) {
+            const targetS = parseInt(sParam, 10);
+            setTimeout(() => {
+              const targetEl = document.getElementById(`s-${targetS}`);
+              if (targetEl) {
+                targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
+                targetEl.classList.add("is-active");
+                if (activeSyncData) {
+                  const sObj = (activeSyncData.sentences || []).find((s) => s.s === targetS);
+                  if (sObj) {
+                    const audio = document.getElementById("chapter-audio");
+                    if (audio) {
+                      audio.currentTime = sObj.start;
+                      syncKaraokeHighlight(sObj.start);
+                    }
+                  }
+                }
+              }
+            }, 500);
+          }
+        }, 300);
+      }
+    }
+  } catch (e) {}
+}
+
+/* ==========================================================================
+   3.1 Muro de Coautores y Colaboradores en GitHub (API Pública)
+   ========================================================================== */
+async function initGitHubContributors() {
+  const container = document.getElementById("contributors-list");
+  if (!container) return;
+
+  try {
+    const cached = sessionStorage.getItem("odisea_contributors");
+    let contributors = cached ? JSON.parse(cached) : null;
+
+    if (!contributors) {
+      const res = await fetch("https://api.github.com/repos/elswork/odisea.deft.work/contributors?per_page=20");
+      if (res.ok) {
+        contributors = await res.json();
+        sessionStorage.setItem("odisea_contributors", JSON.stringify(contributors));
+      }
+    }
+
+    if (Array.isArray(contributors) && contributors.length > 0) {
+      container.innerHTML = "";
+      contributors.forEach((user) => {
+        const chip = document.createElement("a");
+        chip.className = "contributor-chip";
+        chip.href = user.html_url;
+        chip.target = "_blank";
+        chip.rel = "noopener noreferrer";
+        chip.title = `${user.login} (${user.contributions} aportaciones)`;
+        chip.innerHTML = `
+          <img src="${user.avatar_url}&s=48" alt="${user.login}" class="contributor-avatar" loading="lazy" width="24" height="24">
+          <span>${user.login}</span>
+          <span class="contributor-commits">${user.contributions}</span>
+        `;
+        container.appendChild(chip);
+      });
+    } else {
+      container.innerHTML = '<span class="contributor-loading">Sé el primero en colaborar pulsando «✏️ Editar en GitHub»</span>';
+    }
+  } catch (err) {
+    container.innerHTML = '<a href="https://github.com/elswork/odisea.deft.work/graphs/contributors" target="_blank" rel="noopener" class="contributor-chip">Ver colaboradores en GitHub →</a>';
+  }
+}
+
+/* ==========================================================================
+   3.2 Guardar el 6 de Abril en mi Calendario (.ICS y enlaces directos)
+   ========================================================================== */
+function initCalendarReminder() {
+  const btn = document.getElementById("cal-reminder-btn");
+  const status = document.getElementById("cal-reminder-status");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    // Generar archivo estándar iCalendar (.ics)
+    const title = "🗳️ Día D: Firma de la Iniciativa Ciudadana Europea .IA (ECI(2026)000012)";
+    const desc = "Apertura oficial de la urna electrónica comunitaria de la Unión Europea para crear la Denominación de Origen digital .ia. Firma con tu DNI en menos de 45 segundos en: https://anticitera.deft.work/6abril/";
+    const location = "https://anticitera.deft.work/6abril/";
+
+    // 6 de abril de 2027 a las 09:00 UTC (11:00 CEST)
+    const icsContent = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Iniciativa Ciudadana Europea .IA//ES",
+      "CALSCALE:GREGORIAN",
+      "BEGIN:VEVENT",
+      "SUMMARY:" + title,
+      "DESCRIPTION:" + desc,
+      "URL:" + location,
+      "DTSTART:20270406T090000Z",
+      "DTEND:20270406T100000Z",
+      "STATUS:CONFIRMED",
+      "BEGIN:VALARM",
+      "TRIGGER:-PT1H",
+      "ACTION:DISPLAY",
+      "DESCRIPTION:Recordatorio: Hoy abre la urna europea de la .IA",
+      "END:VALARM",
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ].join("\r\n");
+
+    const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "6-de-abril-urna-eci-ia.ics";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    if (status) {
+      status.textContent = "✅ Evento descargado (.ics). ¡Añadido a tu calendario!";
+      setTimeout(() => {
+        status.textContent = "";
+      }, 4000);
+    }
+  });
+}
+
   const meta = document.querySelector('meta[name="color-scheme"]');
   const toggleBtn = document.getElementById("theme-toggle");
 
@@ -1198,6 +1548,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initAudiobookPlayer();
   initThemeToggle();
   initScrollProgressFallback();
+  initBookmarkResume();
+  initSentenceSharePopover();
+  initGitHubContributors();
+  initCalendarReminder();
 
   const copyBtn = document.getElementById("share-copy");
   copyBtn.addEventListener("click", () => {
