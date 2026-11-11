@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://odisea.deft.work/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://odisea.deft.work/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odisea.deft.work/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://odisea.deft.work/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://odisea.deft.work/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://odisea.deft.work/?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://odisea.deft.work/?lang=hu"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://odisea.deft.work/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://odisea.deft.work/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://odisea.deft.work/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odisea.deft.work/"/>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-es.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-es.epub</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-en.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-en.epub</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-fr.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-pt.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-el.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-hu.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-hr.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-zh.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://odisea.deft.work/descargas/odisea-ia-ru.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>

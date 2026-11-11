@@ -16,6 +16,14 @@
     content="Relato interactivo y audiolibro con karaoke inverso sobre la Iniciativa Ciudadana Europea ECI(2026)000012 para crear la Denominación de Origen .ia.">
   <link rel="canonical" href="https://odisea.deft.work/">
 
+  <!-- PWA & Mobile Web App -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#003399">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
   <!-- Favicon (SVG Emoji Clásico) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
 
@@ -44,7 +52,7 @@
   <meta name="twitter:image" content="https://odisea.deft.work/img/og-odisea.jpg">
   <meta name="twitter:image:alt" content="Portada oficial del libro La Odisea de la .IA por Eloy López Sánchez">
 
-  <link rel="stylesheet" href="styles.css?v=20261110-1900">
+  <link rel="stylesheet" href="styles.css?v=20261111-2200">
 
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MGZGPZ99"></script>
@@ -96,6 +104,9 @@
         </select>
         <button type="button" id="theme-toggle" class="theme-btn" aria-label="Cambiar tema de lectura">
           🌙 Modo Noche
+        </button>
+        <button type="button" id="reading-mode-toggle" class="reading-mode-btn" aria-label="Activar modo lectura sin distracciones" aria-pressed="false" title="Modo Lectura (sin distracciones: texto y audiolibro)">
+          📖 Modo Lectura
         </button>
       </div>
     </div>
@@ -218,6 +229,13 @@
       </section>
 
       <div id="chapter-body" class="chapter-body"></div>
+
+      <!-- Navegación limpia entre capítulos (exclusiva del Modo Lectura) -->
+      <nav id="reading-mode-nav" class="reading-mode-nav" aria-label="Navegación de lectura entre capítulos" hidden>
+        <button type="button" id="zen-prev-btn" class="zen-nav-btn">← Capítulo anterior</button>
+        <span id="zen-chapter-indicator" class="zen-chapter-indicator">Capítulo 0 de 5</span>
+        <button type="button" id="zen-next-btn" class="zen-nav-btn">Siguiente capítulo →</button>
+      </nav>
 
       <!-- Barra de Edición Colaborativa en GitHub -->
       <div id="chapter-collab-bar" class="chapter-collab-bar">
@@ -371,8 +389,8 @@
     <span id="sentence-share-tip" class="sentence-share-tip" role="status" aria-live="polite"></span>
   </div>
 
-  <script src="homero-bundle.js?v=20261110-1900"></script>
-  <script src="app.js?v=20261110-1900"></script>
+  <script src="homero-bundle.js?v=20261111-2200"></script>
+  <script src="app.js?v=20261111-2200"></script>
 </body>
 
 </html>

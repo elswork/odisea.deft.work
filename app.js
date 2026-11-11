@@ -20,6 +20,12 @@ const UI_STRINGS = {
     bottomEditText: "Editar este capítulo en GitHub",
     bottomRepoText: "Repositorio completo",
     themeBtnLabel: "Cambiar tema de lectura",
+    readingModeOn: "📖 Modo Lectura",
+    readingModeOff: "✕ Salir de Lectura",
+    readingModeAria: "Activar modo lectura sin distracciones (Texto y Voz)",
+    readingModeExitAria: "Salir del modo lectura sin distracciones",
+    zenPrev: "← Capítulo anterior",
+    zenNext: "Siguiente capítulo →",
     chapterPill: "Capítulo 0",
     readingTimePrefix: "Lectura:",
     byAuthor: "Por Eloy López Sánchez",
@@ -80,6 +86,12 @@ const UI_STRINGS = {
     bottomEditText: "Edit this chapter on GitHub",
     bottomRepoText: "Full repository",
     themeBtnLabel: "Toggle reading theme",
+    readingModeOn: "📖 Reading Mode",
+    readingModeOff: "✕ Exit Reading",
+    readingModeAria: "Activate distraction-free reading mode (Text & Voice)",
+    readingModeExitAria: "Exit distraction-free reading mode",
+    zenPrev: "← Previous chapter",
+    zenNext: "Next chapter →",
     chapterPill: "Chapter 0",
     readingTimePrefix: "Read time:",
     byAuthor: "By Eloy López Sánchez",
@@ -583,6 +595,7 @@ function renderLanguage(langCode, chapterIdx) {
   document.getElementById("side-pdf-link").textContent = ui.sidePdf;
   document.getElementById("side-mp3-link").textContent = ui.sideMp3;
   document.getElementById("theme-toggle").setAttribute("aria-label", ui.themeBtnLabel);
+  if (window.updateReadingModeUI) window.updateReadingModeUI();
 
   const chNum = (chapter && typeof chapter.capitulo === "number") ? chapter.capitulo : activeChapterIndex;
   const totalPublished = chapters.length || 5;
@@ -1517,6 +1530,121 @@ function detectBrowserLanguage(availableCodes) {
   return availableCodes.includes("es") ? "es" : availableCodes[0];
 }
 
+/* ==========================================================================
+   Modo Lectura Inmersivo (Sin Distracciones · Texto y Voz Sincronizada)
+   ========================================================================== */
+function initReadingMode() {
+  const toggleBtn = document.getElementById("reading-mode-toggle");
+  const prevBtn = document.getElementById("zen-prev-btn");
+  const nextBtn = document.getElementById("zen-next-btn");
+  const indicator = document.getElementById("zen-chapter-indicator");
+  const navEl = document.getElementById("reading-mode-nav");
+
+  function isReadingMode() {
+    return document.body.classList.contains("reading-mode");
+  }
+
+  function setReadingMode(active) {
+    const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+    if (active) {
+      document.body.classList.add("reading-mode");
+      if (navEl) navEl.hidden = false;
+      if (toggleBtn) {
+        toggleBtn.textContent = ui.readingModeOff || "✕ Salir de Lectura";
+        toggleBtn.setAttribute("aria-label", ui.readingModeExitAria || "Salir del modo lectura");
+        toggleBtn.setAttribute("aria-pressed", "true");
+      }
+      try { localStorage.setItem("odisea_reading_mode", "true"); } catch (_) {}
+    } else {
+      document.body.classList.remove("reading-mode");
+      if (navEl) navEl.hidden = true;
+      if (toggleBtn) {
+        toggleBtn.textContent = ui.readingModeOn || "📖 Modo Lectura";
+        toggleBtn.setAttribute("aria-label", ui.readingModeAria || "Activar modo lectura sin distracciones");
+        toggleBtn.setAttribute("aria-pressed", "false");
+      }
+      try { localStorage.removeItem("odisea_reading_mode"); } catch (_) {}
+    }
+    updateZenNav();
+  }
+
+  function updateZenNav() {
+    const bundleLang = window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+    const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+    const total = chapters.length || 5;
+    const current = activeChapterIndex + 1;
+    const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+
+    if (indicator) {
+      indicator.textContent = activeLang === "en"
+        ? `Chapter ${activeChapterIndex} (${current} of ${total})`
+        : `Capítulo ${activeChapterIndex} (${current} de ${total})`;
+    }
+    if (prevBtn) {
+      prevBtn.disabled = activeChapterIndex <= 0;
+      prevBtn.textContent = ui.zenPrev || "← Capítulo anterior";
+    }
+    if (nextBtn) {
+      nextBtn.disabled = activeChapterIndex >= total - 1;
+      nextBtn.textContent = ui.zenNext || "Siguiente capítulo →";
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      setReadingMode(!isReadingMode());
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      if (activeChapterIndex > 0) {
+        goToChapter(activeChapterIndex - 1);
+        updateZenNav();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      const bundleLang = window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+      const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+      if (activeChapterIndex < chapters.length - 1) {
+        goToChapter(activeChapterIndex + 1);
+        updateZenNav();
+      }
+    });
+  }
+
+  // Tecla Escape para salir rápidamente del modo lectura
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isReadingMode()) {
+      setReadingMode(false);
+    }
+  });
+
+  // Restaurar preferencia guardada
+  try {
+    if (localStorage.getItem("odisea_reading_mode") === "true") {
+      setReadingMode(true);
+    }
+  } catch (_) {}
+
+  window.updateReadingModeUI = function () {
+    const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+    if (toggleBtn) {
+      if (isReadingMode()) {
+        toggleBtn.textContent = ui.readingModeOff || "✕ Salir de Lectura";
+        toggleBtn.setAttribute("aria-label", ui.readingModeExitAria || "Salir del modo lectura");
+      } else {
+        toggleBtn.textContent = ui.readingModeOn || "📖 Modo Lectura";
+        toggleBtn.setAttribute("aria-label", ui.readingModeAria || "Activar modo lectura sin distracciones");
+      }
+    }
+    updateZenNav();
+  };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const langSelect = document.getElementById("lang-select");
 
@@ -1555,6 +1683,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initAudiobookPlayer();
   initThemeToggle();
+  initReadingMode();
   initScrollProgressFallback();
   initBookmarkResume();
   initSentenceSharePopover();
@@ -1630,4 +1759,13 @@ document.addEventListener("DOMContentLoaded", () => {
       subscribeBtn.textContent = prevBtnText;
     }
   });
+
+  // Registro de Service Worker para PWA (instalación en móvil/escritorio y lectura offline)
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js").catch((err) => {
+        console.warn("ServiceWorker registration failed:", err);
+      });
+    });
+  }
 });
