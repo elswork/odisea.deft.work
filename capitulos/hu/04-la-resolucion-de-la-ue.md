@@ -4,7 +4,7 @@ titulo: "Október 6.: Az Európai Unió állásfoglalása"
 subtitulo: "Azon a napon, amikor a strasbourgi biztosi testület jogilag életképesnek nyilvánította a származási felekezetet."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "8f5497041a463486"
+fuente_hash: "bcde5fb8cdfe5fb5"
 ---
 
 # 4. fejezet: Október 6.: Az Európai Unió állásfoglalása
@@ -47,7 +47,7 @@ Az aláírásgyűjtés lehető legnagyobb mértékű terjesztése érdekében l�
 
 ---
 
-És itt a történet vége, a jelenben vagyunk, és ennek a történetnek a többi fejezete még megírásra vár, remélem tetszett, és hamarosan újra találkozunk.
+És itt van a történet: a jelenben vagyunk, és ennek a történetnek a többi fejezetét még meg kell írni. Remélem tetszett és hamarosan újra találkozunk.
 
 Minden jót,
 

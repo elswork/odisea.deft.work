@@ -4,7 +4,7 @@ titulo: "October 6: The European Union resolution"
 subtitulo: "The day the College of Commissioners in Strasbourg declared the Denomination of Origin legally viable."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "8f5497041a463486"
+fuente_hash: "bcde5fb8cdfe5fb5"
 ---
 
 # Chapter 4: October 6: The European Union resolution
@@ -47,7 +47,7 @@ And it is precisely at that point that we find ourselves today: with the support
 
 ---
 
-And that's the end of the story, we are in the present and the rest of the chapters of this story are yet to be written, I hope you liked it and that we will see each other again soon.
+And here is the story: we are in the present and the rest of the chapters of this story have yet to be written. I hope you liked it and that we will see each other again soon.
 
 All the best,
 

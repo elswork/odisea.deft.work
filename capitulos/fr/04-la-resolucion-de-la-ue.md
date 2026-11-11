@@ -4,10 +4,10 @@ titulo: "6 octobre : La résolution de l'Union européenne"
 subtitulo: "Le jour où le Collège des Commissaires de Strasbourg a déclaré l'Appellation d'Origine juridiquement viable."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "8f5497041a463486"
+fuente_hash: "bcde5fb8cdfe5fb5"
 ---
 
-# Chapitre 4 : 6 octobre : La résolution de l'Union européenne
+# Chapitre 4 : 6 octobre : La résolution de l’Union européenne
 
 Entre l’envoi des formulaires à Bruxelles et la résolution officielle se sont écoulées des semaines de calme tendu qui me semblaient éternelles.
 
@@ -17,7 +17,7 @@ J'étais pleinement conscient de contre qui nous jouions. Depuis plus de deux an
 
 ## Le verdict de Strasbourg
 
-It was an ordinary afternoon in front of the screen at my house in Alcorcón, with the coffee already cold and the inbox open almost by inertia, without getting my hopes up too much. Soudain, un message avec un expéditeur institutionnel du Secrétariat général de la Commission européenne a brisé la routine. There were no congratulations or fireworks in the matter, only the bureaucratic sobriety typical of community institutions: the notification of a formal act adopted by the College of Commissioners.
+C'était un après-midi ordinaire devant l'écran chez moi à Alcorcón, avec le café déjà froid et la boîte de réception ouverte presque par inertie, sans trop me faire espérer. Soudain, un message avec un expéditeur institutionnel du Secrétariat général de la Commission européenne a brisé la routine. Il n'y a pas eu de félicitations ni de feux d'artifice en la matière, seulement la sobriété bureaucratique typique des institutions communautaires : la notification d'un acte formel adopté par le Collège des commissaires.
 
 J'ai ouvert la pièce jointe avec mon cœur dans la bouche.
 
@@ -47,7 +47,7 @@ Et c’est précisément là que nous nous trouvons aujourd’hui : avec le sout
 
 ---
 
-Et c'est la fin de l'histoire, nous sommes dans le présent et la suite des chapitres de cette histoire n'est pas encore écrite, j'espère que cela vous a plu et que nous nous reverrons bientôt.
+Et voici l'histoire : nous sommes dans le présent et le reste des chapitres de cette histoire reste à écrire. J'espère que cela vous a plu et que nous nous reverrons bientôt.
 
 Tous mes vœux,
 

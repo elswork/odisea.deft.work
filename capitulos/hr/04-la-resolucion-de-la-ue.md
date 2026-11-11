@@ -4,7 +4,7 @@ titulo: "6. listopada: Rezolucija Europske unije"
 subtitulo: "Dan kada je kolegij povjerenika u Strasbourgu proglasio denominaciju podrijetla pravno održivom."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "8f5497041a463486"
+fuente_hash: "bcde5fb8cdfe5fb5"
 ---
 
 # Poglavlje 4: 6. listopada: Rezolucija Europske unije
@@ -47,7 +47,7 @@ I upravo na toj točki nalazimo se danas: s potporom prava Zajednice u rukama, c
 
 ---
 
-I tu je priči kraj, mi smo u sadašnjosti i ostala poglavlja ove priče tek treba da se napišu, nadam se da vam se svidjelo i da se vidimo opet uskoro.
+I evo priče: mi smo u sadašnjosti i ostala poglavlja ove priče tek treba da budu napisana. Nadam se da vam se svidjelo i da se uskoro opet vidimo.
 
 sve najbolje,
 

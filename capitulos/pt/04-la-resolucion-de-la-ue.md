@@ -4,7 +4,7 @@ titulo: "6 de outubro: A resolução da União Europeia"
 subtitulo: "O dia em que o Colégio de Comissários em Estrasburgo declarou a Denominação de Origem legalmente viável."
 tiempo_lectura: "5 min"
 estado: "Publicado"
-fuente_hash: "8f5497041a463486"
+fuente_hash: "bcde5fb8cdfe5fb5"
 ---
 
 # Capítulo 4: 6 de outubro: A resolução da União Europeia
@@ -47,7 +47,7 @@ E é precisamente nesse ponto que nos encontramos hoje: com o apoio do direito c
 
 ---
 
-E esse é o fim da história, estamos no presente e o restante dos capítulos dessa história ainda estão para ser escritos, espero que tenham gostado e que nos veremos novamente em breve.
+E aqui está a história: estamos no presente e o resto dos capítulos desta história ainda não foram escritos. Espero que tenham gostado e que nos veremos novamente em breve.
 
 Tudo de bom,
 
