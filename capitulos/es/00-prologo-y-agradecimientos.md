@@ -28,6 +28,10 @@ Este libro está abierto a todos los públicos —disponible para todo el mundo 
 
 [La Odisea de la .IA](https://odisea.deft.work) ha sido generada gracias a [Homero](https://github.com/elswork/homero.deft.work); ningún árbol 🎄 ha resultado dañado en el proceso.
 
+Este libro tiene su propia red social en [free.deft.work](https://free.deft.work) en la que podeis hacer comentarios
+
+[![Visita https://free.deft.work/PVQ0M](/img/etiqueta-PVQ0M.png)](https://free.deft.work/PVQ0M)
+
 Podéis contactar conmigo en:
 
 [Eloy López](mailto:elswork@mypublicinbox.email) o [MyPublicInbox](https://mypublicinbox.com/elswork)
