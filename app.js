@@ -24,6 +24,10 @@ const UI_STRINGS = {
     readingModeOff: "✕ Salir de Lectura",
     readingModeAria: "Activar modo lectura sin distracciones (Texto y Voz)",
     readingModeExitAria: "Salir del modo lectura sin distracciones",
+    videobookOn: "🎬 Videolibro",
+    videobookOff: "✕ Salir del Videolibro",
+    videobookAria: "Activar modo videolibro inmersivo con intro, karaoke y créditos",
+    videobookExitAria: "Salir del modo videolibro",
     zenPrev: "← Capítulo anterior",
     zenNext: "Siguiente capítulo →",
     chapterPill: "Capítulo 0",
@@ -476,6 +480,26 @@ function syncKaraokeHighlight(currentTime) {
   // Guardar progreso de lectura para el marcador
   saveReadingProgress(activeChapterIndex, currentTime);
 
+  // Sincronización HUD y transiciones de Intro/Outro en Modo Videolibro
+  if (document.body.classList.contains("videobook-mode")) {
+    const introEl = document.getElementById("videobook-intro");
+    if (introEl && !introEl.hidden) {
+      if (currentTime >= 3.2) {
+        introEl.classList.add("is-fading");
+        setTimeout(() => { if (currentTime >= 3.2) introEl.hidden = true; }, 900);
+      }
+    }
+    const vbSeek = document.getElementById("vb-seek-slider");
+    const vbCur = document.getElementById("vb-time-current");
+    const vbTot = document.getElementById("vb-time-total");
+    if (vbSeek) {
+      vbSeek.max = audio.duration || 100;
+      vbSeek.value = currentTime;
+    }
+    if (vbCur) vbCur.textContent = formatSeconds(currentTime);
+    if (vbTot && audio.duration) vbTot.textContent = formatSeconds(audio.duration);
+  }
+
   if (currentSentId !== lastActiveSentenceId) {
     if (lastActiveSentenceId !== null) {
       const prevS = document.getElementById(`s-${lastActiveSentenceId}`);
@@ -485,12 +509,16 @@ function syncKaraokeHighlight(currentTime) {
       const nextS = document.getElementById(`s-${currentSentId}`);
       if (nextS) {
         nextS.classList.add("is-active");
-        const autoscroll = document.getElementById("autoscroll-toggle");
-        if (autoscroll && autoscroll.checked) {
-          const rect = nextS.getBoundingClientRect();
-          const vh = window.innerHeight;
-          if (rect.top < 110 || rect.bottom > vh - 120) {
-            nextS.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (document.body.classList.contains("videobook-mode")) {
+          nextS.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          const autoscroll = document.getElementById("autoscroll-toggle");
+          if (autoscroll && autoscroll.checked) {
+            const rect = nextS.getBoundingClientRect();
+            const vh = window.innerHeight;
+            if (rect.top < 110 || rect.bottom > vh - 120) {
+              nextS.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
           }
         }
       }
@@ -596,6 +624,7 @@ function renderLanguage(langCode, chapterIdx) {
   document.getElementById("side-mp3-link").textContent = ui.sideMp3;
   document.getElementById("theme-toggle").setAttribute("aria-label", ui.themeBtnLabel);
   if (window.updateReadingModeUI) window.updateReadingModeUI();
+  if (window.updateVideobookUI) window.updateVideobookUI();
 
   const chNum = (chapter && typeof chapter.capitulo === "number") ? chapter.capitulo : activeChapterIndex;
   const totalPublished = chapters.length || 5;
@@ -1645,6 +1674,260 @@ function initReadingMode() {
   };
 }
 
+/* ==========================================================================
+   Modo Videolibro Cinematográfico (Intro con Portada, Letra Gigante, Karaoke y Outro con QR)
+   ========================================================================== */
+function initVideobookMode() {
+  const toggleBtn = document.getElementById("videobook-toggle");
+  const introEl = document.getElementById("videobook-intro");
+  const outroEl = document.getElementById("videobook-outro");
+  const hudEl = document.getElementById("videobook-hud");
+  const audio = document.getElementById("chapter-audio");
+
+  const vbPlayBtn = document.getElementById("vb-play-btn");
+  const vbPrevBtn = document.getElementById("vb-prev-btn");
+  const vbNextBtn = document.getElementById("vb-next-btn");
+  const vbRewindBtn = document.getElementById("vb-rewind-btn");
+  const vbForwardBtn = document.getElementById("vb-forward-btn");
+  const vbSeekSlider = document.getElementById("vb-seek-slider");
+  const vbFullscreenBtn = document.getElementById("vb-fullscreen-btn");
+  const vbCloseBtn = document.getElementById("vb-close-btn");
+
+  const replayBtn = document.getElementById("videobook-replay-btn");
+  const nextChapterBtn = document.getElementById("videobook-next-btn");
+  const exitBtn = document.getElementById("videobook-exit-btn");
+
+  let hudTimeout = null;
+
+  function isVideobook() {
+    return document.body.classList.contains("videobook-mode");
+  }
+
+  function resetHudTimer() {
+    if (!isVideobook()) return;
+    if (hudEl) hudEl.classList.remove("is-hidden");
+    clearTimeout(hudTimeout);
+    hudTimeout = setTimeout(() => {
+      if (isVideobook() && audio && !audio.paused) {
+        if (hudEl) hudEl.classList.add("is-hidden");
+      }
+    }, 3500);
+  }
+
+  function setVideobook(active) {
+    const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+    if (active) {
+      document.body.classList.add("videobook-mode");
+      // Desactivar modo lectura estándar si estaba activo
+      document.body.classList.remove("reading-mode");
+      const readToggle = document.getElementById("reading-mode-toggle");
+      if (readToggle) {
+        readToggle.setAttribute("aria-pressed", "false");
+        readToggle.textContent = ui.readingModeOn || "📖 Modo Lectura";
+      }
+
+      if (toggleBtn) {
+        toggleBtn.textContent = ui.videobookOff || "✕ Salir del Videolibro";
+        toggleBtn.setAttribute("aria-pressed", "true");
+      }
+      if (hudEl) hudEl.hidden = false;
+
+      // Sincronizar metadatos de portada/intro
+      const bundleLang = window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+      const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+      const currentChapter = chapters[activeChapterIndex] || {};
+      const introChapterEl = document.getElementById("videobook-intro-chapter");
+      if (introChapterEl) {
+        introChapterEl.textContent = `${activeLang === "en" ? "Chapter" : "Capítulo"} ${activeChapterIndex}: ${currentChapter.title || ""}`;
+      }
+
+      // Si arranca en los primeros 2 segundos, reproducir intro con Ken Burns
+      if (audio && audio.currentTime < 2.5) {
+        if (introEl) {
+          introEl.hidden = false;
+          introEl.classList.remove("is-fading");
+        }
+        if (outroEl) outroEl.hidden = true;
+      } else {
+        if (introEl) introEl.hidden = true;
+        if (outroEl) outroEl.hidden = true;
+      }
+
+      // Iniciar reproducción de inmediato
+      if (audio && audio.paused) {
+        audio.play().catch(() => {});
+      }
+
+      resetHudTimer();
+    } else {
+      document.body.classList.remove("videobook-mode");
+      if (toggleBtn) {
+        toggleBtn.textContent = ui.videobookOn || "🎬 Videolibro";
+        toggleBtn.setAttribute("aria-pressed", "false");
+      }
+      if (introEl) {
+        introEl.hidden = true;
+        introEl.classList.remove("is-fading");
+      }
+      if (outroEl) outroEl.hidden = true;
+      if (hudEl) hudEl.hidden = true;
+      clearTimeout(hudTimeout);
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => setVideobook(!isVideobook()));
+  }
+
+  if (vbCloseBtn) {
+    vbCloseBtn.addEventListener("click", () => setVideobook(false));
+  }
+
+  if (exitBtn) {
+    exitBtn.addEventListener("click", () => setVideobook(false));
+  }
+
+  if (replayBtn) {
+    replayBtn.addEventListener("click", () => {
+      if (outroEl) outroEl.hidden = true;
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+      }
+      if (introEl) {
+        introEl.hidden = false;
+        introEl.classList.remove("is-fading");
+      }
+    });
+  }
+
+  if (nextChapterBtn) {
+    nextChapterBtn.addEventListener("click", () => {
+      if (outroEl) outroEl.hidden = true;
+      const bundleLang = window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+      const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+      if (activeChapterIndex < chapters.length - 1) {
+        goToChapter(activeChapterIndex + 1);
+        setTimeout(() => { if (isVideobook()) setVideobook(true); }, 400);
+      } else {
+        setVideobook(false);
+      }
+    });
+  }
+
+  if (vbPlayBtn) {
+    vbPlayBtn.addEventListener("click", () => {
+      if (!audio) return;
+      if (audio.paused) audio.play().catch(() => {});
+      else audio.pause();
+    });
+  }
+
+  if (vbPrevBtn) {
+    vbPrevBtn.addEventListener("click", () => {
+      if (activeChapterIndex > 0) {
+        goToChapter(activeChapterIndex - 1);
+        setTimeout(() => { if (isVideobook()) setVideobook(true); }, 400);
+      }
+    });
+  }
+
+  if (vbNextBtn) {
+    vbNextBtn.addEventListener("click", () => {
+      const bundleLang = window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
+      const chapters = bundleLang && bundleLang.chapters ? bundleLang.chapters : [];
+      if (activeChapterIndex < chapters.length - 1) {
+        goToChapter(activeChapterIndex + 1);
+        setTimeout(() => { if (isVideobook()) setVideobook(true); }, 400);
+      }
+    });
+  }
+
+  if (vbRewindBtn) {
+    vbRewindBtn.addEventListener("click", () => {
+      if (audio) {
+        audio.currentTime = Math.max(audio.currentTime - 10, 0);
+        syncKaraokeHighlight(audio.currentTime);
+      }
+    });
+  }
+
+  if (vbForwardBtn) {
+    vbForwardBtn.addEventListener("click", () => {
+      if (audio) {
+        audio.currentTime = Math.min(audio.currentTime + 10, audio.duration || 0);
+        syncKaraokeHighlight(audio.currentTime);
+      }
+    });
+  }
+
+  if (vbSeekSlider) {
+    vbSeekSlider.addEventListener("input", (e) => {
+      if (!audio) return;
+      const targetTime = parseFloat(e.target.value) || 0;
+      audio.currentTime = targetTime;
+      syncKaraokeHighlight(targetTime);
+    });
+  }
+
+  if (vbFullscreenBtn) {
+    vbFullscreenBtn.addEventListener("click", () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    });
+  }
+
+  window.addEventListener("mousemove", resetHudTimer);
+  window.addEventListener("touchstart", resetHudTimer, { passive: true });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isVideobook()) {
+      setVideobook(false);
+    } else if (e.key === " " && isVideobook() && e.target.tagName !== "INPUT") {
+      e.preventDefault();
+      if (audio) {
+        if (audio.paused) audio.play().catch(() => {});
+        else audio.pause();
+      }
+    }
+  });
+
+  if (audio) {
+    audio.addEventListener("play", () => {
+      if (vbPlayBtn) vbPlayBtn.textContent = "⏸";
+      if (outroEl) outroEl.hidden = true;
+      resetHudTimer();
+    });
+    audio.addEventListener("pause", () => {
+      if (vbPlayBtn) vbPlayBtn.textContent = "▶";
+      if (hudEl) hudEl.classList.remove("is-hidden");
+    });
+    audio.addEventListener("ended", () => {
+      if (isVideobook()) {
+        if (outroEl) outroEl.hidden = false;
+      }
+    });
+  }
+
+  window.updateVideobookUI = function () {
+    const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+    if (toggleBtn) {
+      if (isVideobook()) {
+        toggleBtn.textContent = ui.videobookOff || "✕ Salir del Videolibro";
+        toggleBtn.setAttribute("aria-label", ui.videobookExitAria || "Salir del modo videolibro");
+      } else {
+        toggleBtn.textContent = ui.videobookOn || "🎬 Videolibro";
+        toggleBtn.setAttribute("aria-label", ui.videobookAria || "Activar modo videolibro inmersivo");
+      }
+    }
+  };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const langSelect = document.getElementById("lang-select");
 
@@ -1684,6 +1967,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAudiobookPlayer();
   initThemeToggle();
   initReadingMode();
+  initVideobookMode();
   initScrollProgressFallback();
   initBookmarkResume();
   initSentenceSharePopover();

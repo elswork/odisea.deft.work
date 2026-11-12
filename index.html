@@ -52,7 +52,7 @@
   <meta name="twitter:image" content="https://odisea.deft.work/img/og-odisea.jpg">
   <meta name="twitter:image:alt" content="Portada oficial del libro La Odisea de la .IA por Eloy López Sánchez">
 
-  <link rel="stylesheet" href="styles.css?v=20261111-2200">
+  <link rel="stylesheet" href="styles.css?v=20261112-2015">
 
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MGZGPZ99"></script>
@@ -107,6 +107,9 @@
         </button>
         <button type="button" id="reading-mode-toggle" class="reading-mode-btn" aria-label="Activar modo lectura sin distracciones" aria-pressed="false" title="Modo Lectura (sin distracciones: texto y audiolibro)">
           📖 Modo Lectura
+        </button>
+        <button type="button" id="videobook-toggle" class="videobook-btn" aria-label="Activar modo videolibro inmersivo" aria-pressed="false" title="Modo Videolibro (karaoke inmersivo, intro con portada y outro con QR)">
+          🎬 Videolibro
         </button>
       </div>
     </div>
@@ -375,6 +378,77 @@
     </div>
   </footer>
 
+  <!-- Telón de Entrada del Videolibro (Intro con Portada Oficial y Efecto Ken Burns) -->
+  <div id="videobook-intro" class="videobook-intro" aria-hidden="true" hidden>
+    <div class="videobook-intro-card">
+      <div class="videobook-intro-cover-wrap">
+        <img id="videobook-intro-cover" src="img/portada-la-odisea-de-la-ia.jpg" alt="Portada de La Odisea de la .IA" class="videobook-intro-cover" />
+      </div>
+      <div class="videobook-intro-meta">
+        <span class="videobook-badge">🏛️ ECI(2026)000012 · Decisión C(2026) 7098 final</span>
+        <h2 id="videobook-intro-title" class="videobook-intro-title">La Odisea de la .IA</h2>
+        <p id="videobook-intro-chapter" class="videobook-intro-chapter">Capítulo 0: Prólogo y Agradecimientos</p>
+        <span class="videobook-intro-author">Por Eloy López Sánchez</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Telón de Cierre del Videolibro (Outro con Códigos QR y Contacto) -->
+  <div id="videobook-outro" class="videobook-outro" aria-hidden="true" hidden>
+    <div class="videobook-outro-card">
+      <span class="videobook-badge">🏛️ Fin del Capítulo</span>
+      <h2 id="videobook-outro-title" class="videobook-outro-title">La Odisea de la .IA</h2>
+      <p id="videobook-outro-subtitle" class="videobook-outro-subtitle">Por la Soberanía Digital Europea · 6 de Abril de 2027</p>
+
+      <div class="videobook-qr-grid">
+        <div class="videobook-qr-item">
+          <div class="videobook-qr-frame">
+            <img src="img/qrcode_odisea.deft.work.png" alt="Código QR odisea.deft.work" width="130" height="130" />
+          </div>
+          <span class="videobook-qr-desc">🌐 <strong>odisea.deft.work</strong><br>Leer y escuchar el libro</span>
+        </div>
+
+        <div class="videobook-qr-item">
+          <div class="videobook-qr-frame">
+            <img src="img/etiqueta-PVQ0M.png" alt="Insignia red social free.deft.work" width="130" height="130" />
+          </div>
+          <span class="videobook-qr-desc">💬 <strong>free.deft.work/PVQ0M</strong><br>Comentar en la red social</span>
+        </div>
+      </div>
+
+      <div class="videobook-contact">
+        <span class="videobook-contact-label">Contacto con el autor:</span>
+        <a href="mailto:elswork@mypublicinbox.email" class="videobook-contact-email">✉️ Eloy López · elswork@mypublicinbox.email</a>
+      </div>
+
+      <div class="videobook-outro-actions">
+        <button type="button" id="videobook-replay-btn" class="videobook-action-btn">🔁 Repetir capítulo</button>
+        <button type="button" id="videobook-next-btn" class="videobook-action-btn primary">⏭ Siguiente capítulo</button>
+        <button type="button" id="videobook-exit-btn" class="videobook-action-btn secondary">✕ Salir del videolibro</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HUD Flotante del Videolibro (Controles de Reproducción Cinematográficos) -->
+  <div id="videobook-hud" class="videobook-hud" role="region" aria-label="Controles del Videolibro" hidden>
+    <div class="videobook-hud-inner">
+      <button type="button" id="vb-prev-btn" class="vb-btn" aria-label="Capítulo anterior" title="Capítulo anterior">⏮</button>
+      <button type="button" id="vb-rewind-btn" class="vb-btn" aria-label="Retroceder 10 segundos" title="Retroceder 10s">↺ 10s</button>
+      <button type="button" id="vb-play-btn" class="vb-play-btn" aria-label="Reproducir o pausar">▶</button>
+      <button type="button" id="vb-forward-btn" class="vb-btn" aria-label="Avanzar 10 segundos" title="Avanzar 10s">10s ↻</button>
+      <button type="button" id="vb-next-btn" class="vb-btn" aria-label="Siguiente capítulo" title="Siguiente capítulo">⏭</button>
+
+      <div class="vb-time-bar">
+        <span id="vb-time-current" class="vb-time">0:00</span>
+        <input type="range" id="vb-seek-slider" class="vb-slider" min="0" max="100" step="0.1" value="0" aria-label="Progreso del videolibro">
+        <span id="vb-time-total" class="vb-time">0:00</span>
+      </div>
+
+      <button type="button" id="vb-fullscreen-btn" class="vb-btn" aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+      <button type="button" id="vb-close-btn" class="vb-btn close" aria-label="Salir del modo videolibro" title="Salir (Esc)">✕</button>
+    </div>
+  </div>
+
   <!-- Popover flotante para compartir / enlazar frase exacta (Deep-Linking) -->
   <div id="sentence-share-popover" class="sentence-share-popover" role="dialog" aria-label="Compartir frase" hidden>
     <button type="button" id="copy-sentence-link-btn" class="sentence-share-btn">
@@ -390,7 +464,7 @@
   </div>
 
   <script src="homero-bundle.js?v=20261111-2200"></script>
-  <script src="app.js?v=20261111-2200"></script>
+  <script src="app.js?v=20261112-2015"></script>
 </body>
 
 </html>
