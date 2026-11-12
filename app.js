@@ -450,7 +450,37 @@ function clearKaraokeHighlights() {
   }
 }
 
+function syncVideobookProgress(currentTime) {
+  if (!document.body.classList.contains("videobook-mode")) return;
+  const audio = document.getElementById("chapter-audio");
+  const introEl = document.getElementById("videobook-intro");
+  if (introEl && !introEl.hidden && !introEl.classList.contains("is-fading")) {
+    if (currentTime >= 2.2) {
+      if (typeof window.hideVideobookIntro === "function") {
+        window.hideVideobookIntro();
+      } else {
+        introEl.classList.add("is-fading");
+        setTimeout(() => {
+          introEl.hidden = true;
+          introEl.classList.remove("is-fading");
+        }, 900);
+      }
+    }
+  }
+  const vbSeek = document.getElementById("vb-seek-slider");
+  const vbCur = document.getElementById("vb-time-current");
+  const vbTot = document.getElementById("vb-time-total");
+  const dur = audio && isFinite(audio.duration) ? audio.duration : 0;
+  if (vbSeek) {
+    vbSeek.max = dur || 100;
+    vbSeek.value = currentTime;
+  }
+  if (vbCur) vbCur.textContent = formatSeconds(currentTime);
+  if (vbTot && dur) vbTot.textContent = formatSeconds(dur);
+}
+
 function syncKaraokeHighlight(currentTime) {
+  syncVideobookProgress(currentTime);
   if (!activeSyncData) return;
 
   // 1. Buscar palabra activa mediante búsqueda binaria o lineal rápida
@@ -479,26 +509,6 @@ function syncKaraokeHighlight(currentTime) {
 
   // Guardar progreso de lectura para el marcador
   saveReadingProgress(activeChapterIndex, currentTime);
-
-  // Sincronización HUD y transiciones de Intro/Outro en Modo Videolibro
-  if (document.body.classList.contains("videobook-mode")) {
-    const introEl = document.getElementById("videobook-intro");
-    if (introEl && !introEl.hidden) {
-      if (currentTime >= 3.2) {
-        introEl.classList.add("is-fading");
-        setTimeout(() => { if (currentTime >= 3.2) introEl.hidden = true; }, 900);
-      }
-    }
-    const vbSeek = document.getElementById("vb-seek-slider");
-    const vbCur = document.getElementById("vb-time-current");
-    const vbTot = document.getElementById("vb-time-total");
-    if (vbSeek) {
-      vbSeek.max = audio.duration || 100;
-      vbSeek.value = currentTime;
-    }
-    if (vbCur) vbCur.textContent = formatSeconds(currentTime);
-    if (vbTot && audio.duration) vbTot.textContent = formatSeconds(audio.duration);
-  }
 
   if (currentSentId !== lastActiveSentenceId) {
     if (lastActiveSentenceId !== null) {
@@ -1771,6 +1781,18 @@ function initVideobookMode() {
   const exitBtn = document.getElementById("videobook-exit-btn");
 
   let hudTimeout = null;
+  let introTimeout = null;
+
+  function hideVideobookIntro() {
+    clearTimeout(introTimeout);
+    if (!introEl || introEl.hidden || introEl.classList.contains("is-fading")) return;
+    introEl.classList.add("is-fading");
+    setTimeout(() => {
+      introEl.hidden = true;
+      introEl.classList.remove("is-fading");
+    }, 900);
+  }
+  window.hideVideobookIntro = hideVideobookIntro;
 
   function isVideobook() {
     return document.body.classList.contains("videobook-mode");
@@ -1821,11 +1843,13 @@ function initVideobookMode() {
         introChapterEl.textContent = `${activeLang === "en" ? "Chapter" : "Capítulo"} ${activeChapterIndex}: ${currentChapter.title || ""}`;
       }
 
-      // Si arranca en los primeros 2 segundos, reproducir intro con Ken Burns
-      if (audio && audio.currentTime < 2.5) {
+      // Si arranca en los primeros 2 segundos, reproducir intro con Ken Burns (máx 2.4s)
+      clearTimeout(introTimeout);
+      if (audio && audio.currentTime < 2.2) {
         if (introEl) {
           introEl.hidden = false;
           introEl.classList.remove("is-fading");
+          introTimeout = setTimeout(hideVideobookIntro, 2400);
         }
         if (outroEl) outroEl.hidden = true;
       } else {
@@ -1840,6 +1864,7 @@ function initVideobookMode() {
 
       resetHudTimer();
     } else {
+      clearTimeout(introTimeout);
       document.body.classList.remove("videobook-mode");
       if (toggleBtn) {
         toggleBtn.textContent = ui.videobookOn || "🎬 Videolibro";
@@ -1882,9 +1907,11 @@ function initVideobookMode() {
         audio.currentTime = 0;
         audio.play().catch(() => {});
       }
+      clearTimeout(introTimeout);
       if (introEl) {
         introEl.hidden = false;
         introEl.classList.remove("is-fading");
+        introTimeout = setTimeout(hideVideobookIntro, 2400);
       }
     });
   }
