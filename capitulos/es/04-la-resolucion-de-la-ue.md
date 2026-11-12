@@ -51,3 +51,5 @@ Y hasta aquí el relato: nos encontramos en el presente y el resto de capítulos
 Un saludo,
 
 [Eloy López](mailto:elswork@mypublicinbox.email)
+
+[![Visita https://free.deft.work/PVQ0M](img/etiqueta-PVQ0M.png)](https://free.deft.work/PVQ0M)
