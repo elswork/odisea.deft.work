@@ -136,6 +136,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   background-color: var(--bg-page);
@@ -2329,9 +2333,9 @@ body.videobook-mode .hm-word.is-active {
   text-decoration: none;
 }
 
-body.reading-mode .immersive-exit-btn,
-body.videobook-mode .immersive-exit-btn,
-body.is-fullscreen .immersive-exit-btn {
+body.reading-mode .immersive-exit-btn:not([hidden]),
+body.videobook-mode .immersive-exit-btn:not([hidden]),
+body.is-fullscreen .immersive-exit-btn:not([hidden]) {
   display: inline-flex !important;
 }
 

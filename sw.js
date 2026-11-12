@@ -3,7 +3,7 @@
    Permite instalar la web como App y lectura offline básica del libro
    ========================================================================== */
 
-const CACHE_NAME = "odisea-pwa-v3";
+const CACHE_NAME = "odisea-pwa-v4";
 const PRECACHE_ASSETS = [
   "./",
   "./index.html",
