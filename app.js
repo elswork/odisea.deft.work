@@ -1650,7 +1650,7 @@ function initReadingMode() {
       }
       if (immExitBtn) {
         immExitBtn.hidden = false;
-        if (immExitText) immExitText.textContent = ui.readingModeOff || "✕ Salir de Lectura";
+        if (immExitText) immExitText.textContent = (ui.readingModeOff || "Salir de Lectura").replace(/^✕\s*/, "");
       }
       try { localStorage.setItem("odisea_reading_mode", "true"); } catch (_) {}
     } else {
@@ -1831,7 +1831,7 @@ function initVideobookMode() {
       if (hudEl) hudEl.hidden = false;
       if (immExitBtn) {
         immExitBtn.hidden = false;
-        if (immExitText) immExitText.textContent = ui.videobookOff || "✕ Salir del Videolibro";
+        if (immExitText) immExitText.textContent = (ui.videobookOff || "Salir del Videolibro").replace(/^✕\s*/, "");
       }
 
       // Sincronizar metadatos de portada/intro
