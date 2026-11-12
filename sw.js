@@ -3,7 +3,7 @@
    Permite instalar la web como App y lectura offline básica del libro
    ========================================================================== */
 
-const CACHE_NAME = "odisea-pwa-v1";
+const CACHE_NAME = "odisea-pwa-v3";
 const PRECACHE_ASSETS = [
   "./",
   "./index.html",
@@ -54,8 +54,9 @@ self.addEventListener("fetch", (event) => {
 
   // Para peticiones del mismo origen:
   if (url.origin === self.location.origin) {
+    const isCodeOrDoc = req.mode === "navigate" || /\.(html|js|css)$/.test(url.pathname);
     event.respondWith(
-      fetch(req)
+      fetch(req, isCodeOrDoc ? { cache: "no-cache" } : undefined)
         .then((networkResp) => {
           if (networkResp && networkResp.status === 200) {
             const respClone = networkResp.clone();

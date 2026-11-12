@@ -1562,6 +1562,31 @@ function detectBrowserLanguage(availableCodes) {
 /* ==========================================================================
    Gestor Central de Salida de Modos Inmersivos (Lectura / Videolibro / Fullscreen)
    ========================================================================== */
+function getFullscreenElement() {
+  return document.fullscreenElement || document.webkitFullscreenElement || null;
+}
+
+function exitDocFullscreen() {
+  if (document.fullscreenElement && document.exitFullscreen) {
+    return document.exitFullscreen().catch(() => {});
+  }
+  if (document.webkitFullscreenElement && document.webkitExitFullscreen) {
+    try { document.webkitExitFullscreen(); } catch (_) {}
+  }
+  return Promise.resolve();
+}
+
+function requestDocFullscreen() {
+  const el = document.documentElement;
+  if (el.requestFullscreen) {
+    return el.requestFullscreen().catch(() => {});
+  }
+  if (el.webkitRequestFullscreen) {
+    try { el.webkitRequestFullscreen(); } catch (_) {}
+  }
+  return Promise.resolve();
+}
+
 function exitAllImmersiveModes() {
   if (typeof window.exitReadingMode === "function") {
     window.exitReadingMode();
@@ -1575,11 +1600,10 @@ function exitAllImmersiveModes() {
     document.body.classList.remove("videobook-mode");
   }
 
+  document.body.classList.remove("is-fullscreen");
   try { localStorage.removeItem("odisea_reading_mode"); } catch (_) {}
 
-  if (document.fullscreenElement) {
-    document.exitFullscreen().catch(() => {});
-  }
+  exitDocFullscreen();
 
   const immExitBtn = document.getElementById("immersive-exit-btn");
   if (immExitBtn) immExitBtn.hidden = true;
@@ -1936,10 +1960,10 @@ function initVideobookMode() {
 
   if (vbFullscreenBtn) {
     vbFullscreenBtn.addEventListener("click", () => {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(() => {});
+      if (!getFullscreenElement()) {
+        requestDocFullscreen();
       } else {
-        document.exitFullscreen().catch(() => {});
+        exitDocFullscreen();
       }
     });
   }
@@ -1972,21 +1996,29 @@ function initVideobookMode() {
     });
   }
 
-  document.addEventListener("fullscreenchange", () => {
-    const isFs = Boolean(document.fullscreenElement);
+  function handleFullscreenChange() {
+    const isFs = Boolean(getFullscreenElement());
+    document.body.classList.toggle("is-fullscreen", isFs);
+    if (immExitBtn) {
+      const anyImmersive = isFs || isVideobook() || document.body.classList.contains("reading-mode");
+      immExitBtn.hidden = !anyImmersive;
+    }
     if (vbFullscreenBtn) {
       vbFullscreenBtn.textContent = isFs ? "🗗" : "⛶";
       vbFullscreenBtn.setAttribute("aria-label", isFs ? "Salir de pantalla completa" : "Pantalla completa");
       vbFullscreenBtn.setAttribute("title", isFs ? "Salir de pantalla completa (Esc)" : "Pantalla completa");
     }
     resetHudTimer();
-  });
+  }
+
+  document.addEventListener("fullscreenchange", handleFullscreenChange);
+  document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
 
   window.addEventListener("mousemove", resetHudTimer);
   window.addEventListener("touchstart", resetHudTimer, { passive: true });
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      if (document.body.classList.contains("videobook-mode") || document.body.classList.contains("reading-mode") || document.fullscreenElement) {
+      if (document.body.classList.contains("videobook-mode") || document.body.classList.contains("reading-mode") || getFullscreenElement()) {
         exitAllImmersiveModes();
       }
     } else if (e.key === " " && isVideobook() && e.target.tagName !== "INPUT") {

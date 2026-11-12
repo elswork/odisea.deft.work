@@ -2310,7 +2310,7 @@ body.videobook-mode .hm-word.is-active {
   position: fixed;
   top: 1.15rem;
   right: 1.25rem;
-  z-index: 100005;
+  z-index: 100010;
   display: none;
   align-items: center;
   gap: 0.55rem;
@@ -2330,7 +2330,8 @@ body.videobook-mode .hm-word.is-active {
 }
 
 body.reading-mode .immersive-exit-btn,
-body.videobook-mode .immersive-exit-btn {
+body.videobook-mode .immersive-exit-btn,
+body.is-fullscreen .immersive-exit-btn {
   display: inline-flex !important;
 }
 
@@ -2365,8 +2366,8 @@ body.videobook-mode .immersive-exit-btn {
 
 .videobook-intro-skip-btn {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1.15rem;
+  left: 1.25rem;
   z-index: 100006;
   background: rgba(15, 23, 42, 0.82);
   color: #e2e8f0;
