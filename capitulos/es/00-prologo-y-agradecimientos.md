@@ -12,6 +12,8 @@ estado: "Publicado"
 
 A toda mi familia: sois increíbles, os quiero.
 
+A mi mentor Carlos Omar que siempre esta ahí para echarme una mano.
+
 A mis compañeros de trabajo por soportarme y tener paciencia conmigo: no sé qué haría sin vosotros.
 
 A mis compañeros del chat 🐈‍⬛ «El Lado del Mal» 👿, hacéis que la rutina diaria sea más llevadera: @Martatp, @Anso, @curramas... y en especial a @Mmaria, cuyas sugerencias están incluidas en este libro.

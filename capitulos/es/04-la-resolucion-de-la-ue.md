@@ -51,3 +51,5 @@ Y hasta aquí el relato: nos encontramos en el presente y el resto de capítulos
 Un saludo,
 
 [Eloy López](mailto:elswork@mypublicinbox.email)
+
+¿Alguien se atreve a predecir el futuro? Haz un "Pull request" y escribe los nuevos capitulos de mi odisea.
