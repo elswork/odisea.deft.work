@@ -52,7 +52,7 @@
   <meta name="twitter:image" content="https://odisea.deft.work/img/og-odisea.jpg">
   <meta name="twitter:image:alt" content="Portada oficial del libro La Odisea de la .IA por Eloy López Sánchez">
 
-  <link rel="stylesheet" href="styles.css?v=20261112-2015">
+  <link rel="stylesheet" href="styles.css?v=20261112-2035">
 
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MGZGPZ99"></script>
@@ -238,6 +238,7 @@
         <button type="button" id="zen-prev-btn" class="zen-nav-btn">← Capítulo anterior</button>
         <span id="zen-chapter-indicator" class="zen-chapter-indicator">Capítulo 0 de 5</span>
         <button type="button" id="zen-next-btn" class="zen-nav-btn">Siguiente capítulo →</button>
+        <button type="button" id="zen-exit-btn" class="zen-nav-btn zen-exit-btn" aria-label="Salir del modo lectura">✕ Salir de lectura</button>
       </nav>
 
       <!-- Barra de Edición Colaborativa en GitHub -->
@@ -380,6 +381,9 @@
 
   <!-- Telón de Entrada del Videolibro (Intro con Portada Oficial y Efecto Ken Burns) -->
   <div id="videobook-intro" class="videobook-intro" aria-hidden="true" hidden>
+    <button type="button" id="videobook-intro-skip-btn" class="videobook-intro-skip-btn" aria-label="Saltar intro o salir" title="Saltar intro (Esc)">
+      <span>Saltar intro</span> <kbd>Esc</kbd>
+    </button>
     <div class="videobook-intro-card">
       <div class="videobook-intro-cover-wrap">
         <img id="videobook-intro-cover" src="img/portada-la-odisea-de-la-ia.jpg" alt="Portada de La Odisea de la .IA" class="videobook-intro-cover" />
@@ -449,6 +453,13 @@
     </div>
   </div>
 
+  <!-- Botón flotante universal para salir de cualquier modo inmersivo (Lectura o Videolibro) -->
+  <button type="button" id="immersive-exit-btn" class="immersive-exit-btn" aria-label="Salir de la vista inmersiva (Esc)" title="Salir (Esc)" hidden>
+    <span class="immersive-exit-icon" aria-hidden="true">✕</span>
+    <span id="immersive-exit-text" class="immersive-exit-text">Salir</span>
+    <kbd class="immersive-exit-kbd">Esc</kbd>
+  </button>
+
   <!-- Popover flotante para compartir / enlazar frase exacta (Deep-Linking) -->
   <div id="sentence-share-popover" class="sentence-share-popover" role="dialog" aria-label="Compartir frase" hidden>
     <button type="button" id="copy-sentence-link-btn" class="sentence-share-btn">
@@ -464,7 +475,7 @@
   </div>
 
   <script src="homero-bundle.js?v=20261111-2200"></script>
-  <script src="app.js?v=20261112-2015"></script>
+  <script src="app.js?v=20261112-2035"></script>
 </body>
 
 </html>

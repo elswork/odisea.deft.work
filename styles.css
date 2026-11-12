@@ -1771,6 +1771,20 @@ body.reading-mode .reading-mode-nav {
   font-weight: 600;
 }
 
+.zen-nav-btn.zen-exit-btn {
+  background-color: rgba(220, 38, 38, 0.08);
+  border-color: rgba(220, 38, 38, 0.25);
+  color: #dc2626;
+  margin-left: auto;
+}
+
+.zen-nav-btn.zen-exit-btn:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(220, 38, 38, 0.25);
+}
+
 @media (max-width: 600px) {
   body.reading-mode .reading-mode-nav {
     flex-direction: column;
@@ -2288,6 +2302,101 @@ body.videobook-mode .hm-word.is-active {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Botón Universal de Salida Inmersiva (Modo Lectura y Videolibro)
+   ========================================================================== */
+.immersive-exit-btn {
+  position: fixed;
+  top: 1.15rem;
+  right: 1.25rem;
+  z-index: 100005;
+  display: none;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  padding: 0.55rem 1.15rem;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+body.reading-mode .immersive-exit-btn,
+body.videobook-mode .immersive-exit-btn {
+  display: inline-flex !important;
+}
+
+.immersive-exit-btn:hover {
+  background: #dc2626;
+  border-color: #ef4444;
+  color: #ffffff;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.45);
+}
+
+.immersive-exit-btn:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+.immersive-exit-icon {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.immersive-exit-kbd {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.videobook-intro-skip-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 100006;
+  background: rgba(15, 23, 42, 0.82);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+  border-radius: 9999px;
+  padding: 0.5rem 1.05rem;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+}
+
+.videobook-intro-skip-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.videobook-intro-skip-btn kbd {
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+}
+
 
 
 

@@ -1560,12 +1560,40 @@ function detectBrowserLanguage(availableCodes) {
 }
 
 /* ==========================================================================
+   Gestor Central de Salida de Modos Inmersivos (Lectura / Videolibro / Fullscreen)
+   ========================================================================== */
+function exitAllImmersiveModes() {
+  if (typeof window.exitReadingMode === "function") {
+    window.exitReadingMode();
+  } else {
+    document.body.classList.remove("reading-mode");
+  }
+
+  if (typeof window.exitVideobookMode === "function") {
+    window.exitVideobookMode();
+  } else {
+    document.body.classList.remove("videobook-mode");
+  }
+
+  try { localStorage.removeItem("odisea_reading_mode"); } catch (_) {}
+
+  if (document.fullscreenElement) {
+    document.exitFullscreen().catch(() => {});
+  }
+
+  const immExitBtn = document.getElementById("immersive-exit-btn");
+  if (immExitBtn) immExitBtn.hidden = true;
+}
+window.exitAllImmersiveModes = exitAllImmersiveModes;
+
+/* ==========================================================================
    Modo Lectura Inmersivo (Sin Distracciones · Texto y Voz Sincronizada)
    ========================================================================== */
 function initReadingMode() {
   const toggleBtn = document.getElementById("reading-mode-toggle");
   const prevBtn = document.getElementById("zen-prev-btn");
   const nextBtn = document.getElementById("zen-next-btn");
+  const zenExitBtn = document.getElementById("zen-exit-btn");
   const indicator = document.getElementById("zen-chapter-indicator");
   const navEl = document.getElementById("reading-mode-nav");
 
@@ -1575,6 +1603,9 @@ function initReadingMode() {
 
   function setReadingMode(active) {
     const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+    const immExitBtn = document.getElementById("immersive-exit-btn");
+    const immExitText = document.getElementById("immersive-exit-text");
+
     if (active) {
       document.body.classList.add("reading-mode");
       if (navEl) navEl.hidden = false;
@@ -1582,6 +1613,10 @@ function initReadingMode() {
         toggleBtn.textContent = ui.readingModeOff || "✕ Salir de Lectura";
         toggleBtn.setAttribute("aria-label", ui.readingModeExitAria || "Salir del modo lectura");
         toggleBtn.setAttribute("aria-pressed", "true");
+      }
+      if (immExitBtn) {
+        immExitBtn.hidden = false;
+        if (immExitText) immExitText.textContent = ui.readingModeOff || "✕ Salir de Lectura";
       }
       try { localStorage.setItem("odisea_reading_mode", "true"); } catch (_) {}
     } else {
@@ -1592,10 +1627,18 @@ function initReadingMode() {
         toggleBtn.setAttribute("aria-label", ui.readingModeAria || "Activar modo lectura sin distracciones");
         toggleBtn.setAttribute("aria-pressed", "false");
       }
+      if (immExitBtn && !document.body.classList.contains("videobook-mode")) {
+        immExitBtn.hidden = true;
+      }
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
       try { localStorage.removeItem("odisea_reading_mode"); } catch (_) {}
     }
     updateZenNav();
   }
+
+  window.exitReadingMode = () => setReadingMode(false);
 
   function updateZenNav() {
     const bundleLang = window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
@@ -1622,6 +1665,12 @@ function initReadingMode() {
   if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
       setReadingMode(!isReadingMode());
+    });
+  }
+
+  if (zenExitBtn) {
+    zenExitBtn.addEventListener("click", () => {
+      setReadingMode(false);
     });
   }
 
@@ -1716,6 +1765,9 @@ function initVideobookMode() {
 
   function setVideobook(active) {
     const ui = UI_STRINGS[activeLang] || UI_STRINGS.es;
+    const immExitBtn = document.getElementById("immersive-exit-btn");
+    const immExitText = document.getElementById("immersive-exit-text");
+
     if (active) {
       document.body.classList.add("videobook-mode");
       // Desactivar modo lectura estándar si estaba activo
@@ -1731,6 +1783,10 @@ function initVideobookMode() {
         toggleBtn.setAttribute("aria-pressed", "true");
       }
       if (hudEl) hudEl.hidden = false;
+      if (immExitBtn) {
+        immExitBtn.hidden = false;
+        if (immExitText) immExitText.textContent = ui.videobookOff || "✕ Salir del Videolibro";
+      }
 
       // Sincronizar metadatos de portada/intro
       const bundleLang = window.HOMERO_BOOK && window.HOMERO_BOOK.idiomas ? window.HOMERO_BOOK.idiomas[activeLang] : null;
@@ -1772,11 +1828,16 @@ function initVideobookMode() {
       if (outroEl) outroEl.hidden = true;
       if (hudEl) hudEl.hidden = true;
       clearTimeout(hudTimeout);
+      if (immExitBtn && !document.body.classList.contains("reading-mode")) {
+        immExitBtn.hidden = true;
+      }
       if (document.fullscreenElement) {
         document.exitFullscreen().catch(() => {});
       }
     }
   }
+
+  window.exitVideobookMode = () => setVideobook(false);
 
   if (toggleBtn) {
     toggleBtn.addEventListener("click", () => setVideobook(!isVideobook()));
@@ -1883,11 +1944,51 @@ function initVideobookMode() {
     });
   }
 
+  const introSkipBtn = document.getElementById("videobook-intro-skip-btn");
+  if (introSkipBtn) {
+    introSkipBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (introEl) {
+        introEl.hidden = true;
+        introEl.classList.remove("is-fading");
+      }
+      if (audio && audio.paused) audio.play().catch(() => {});
+    });
+  }
+
+  if (introEl) {
+    introEl.addEventListener("click", (e) => {
+      if (e.target.closest("button")) return;
+      introEl.hidden = true;
+      introEl.classList.remove("is-fading");
+      if (audio && audio.paused) audio.play().catch(() => {});
+    });
+  }
+
+  const immExitBtn = document.getElementById("immersive-exit-btn");
+  if (immExitBtn) {
+    immExitBtn.addEventListener("click", () => {
+      exitAllImmersiveModes();
+    });
+  }
+
+  document.addEventListener("fullscreenchange", () => {
+    const isFs = Boolean(document.fullscreenElement);
+    if (vbFullscreenBtn) {
+      vbFullscreenBtn.textContent = isFs ? "🗗" : "⛶";
+      vbFullscreenBtn.setAttribute("aria-label", isFs ? "Salir de pantalla completa" : "Pantalla completa");
+      vbFullscreenBtn.setAttribute("title", isFs ? "Salir de pantalla completa (Esc)" : "Pantalla completa");
+    }
+    resetHudTimer();
+  });
+
   window.addEventListener("mousemove", resetHudTimer);
   window.addEventListener("touchstart", resetHudTimer, { passive: true });
   window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isVideobook()) {
-      setVideobook(false);
+    if (e.key === "Escape") {
+      if (document.body.classList.contains("videobook-mode") || document.body.classList.contains("reading-mode") || document.fullscreenElement) {
+        exitAllImmersiveModes();
+      }
     } else if (e.key === " " && isVideobook() && e.target.tagName !== "INPUT") {
       e.preventDefault();
       if (audio) {
