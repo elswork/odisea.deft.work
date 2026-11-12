@@ -52,4 +52,6 @@ Un saludo,
 
 [Eloy López](mailto:elswork@mypublicinbox.email)
 
-¿Alguien se atreve a predecir el futuro? Haz un "Pull request" y escribe los nuevos capitulos de mi odisea.
+¿Alguien se atreve a predecir el futuro? Haz un "Pull request" y escribe los nuevos capítulos de mi odisea.
+
+[![Visita https://free.deft.work/PVQ0M](img/etiqueta-PVQ0M.png)](https://free.deft.work/PVQ0M)

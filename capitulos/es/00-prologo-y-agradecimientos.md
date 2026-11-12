@@ -12,7 +12,7 @@ estado: "Publicado"
 
 A toda mi familia: sois increíbles, os quiero.
 
-A mi mentor Carlos Omar que siempre esta ahí para echarme una mano.
+A mi mentor Carlos Omar que siempre está ahí para echarme una mano.
 
 A mis compañeros de trabajo por soportarme y tener paciencia conmigo: no sé qué haría sin vosotros.
 
